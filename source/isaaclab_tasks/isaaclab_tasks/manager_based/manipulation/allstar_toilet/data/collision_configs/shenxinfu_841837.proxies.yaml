@@ -1,0 +1,473 @@
+schema_version: 1
+scene: toilet
+scene_root_path: /World/toilet
+proxy_root_name: _collision_proxy
+created_at: '2026-07-23T15:21:07'
+notes: Editable collision proxies exported from Isaac Sim. center/size are meters;
+  yaw is radians.
+proxies:
+- name: partition_Door_YS2H_LeftJamb_8f24adc5e9
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Door_YS2H_LeftJamb_8f24adc5e9
+  source: /World/toilet/Augmentation_01/CollisionFix/DoorFrames/Door_YS2H_LeftJamb
+  auto_reason: auto_object
+  center:
+  - 2.472
+  - -0.05199999999999999
+  - 1.263
+  size:
+  - 0.14000000059604645
+  - 0.11999999731779099
+  - 2.5420000553131104
+  yaw: 0.0
+- name: partition_Door_YS2H_RightJamb_185733ac12
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Door_YS2H_RightJamb_185733ac12
+  source: /World/toilet/Augmentation_01/CollisionFix/DoorFrames/Door_YS2H_RightJamb
+  auto_reason: auto_object
+  center:
+  - 3.264
+  - -0.05199999999999999
+  - 1.263
+  size:
+  - 0.14000000059604645
+  - 0.11999999731779099
+  - 2.5420000553131104
+  yaw: 0.0
+- name: partition_Door_YS2H_Lintel_947ee39ec3
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Door_YS2H_Lintel_947ee39ec3
+  source: /World/toilet/Augmentation_01/CollisionFix/DoorFrames/Door_YS2H_Lintel
+  auto_reason: auto_object
+  center:
+  - 2.868
+  - -0.05199999999999999
+  - 2.464
+  size:
+  - 0.7319999933242798
+  - 0.11999999731779099
+  - 0.3499999940395355
+  yaw: 0.0
+- name: partition_Door_YS3U_LeftJamb_02b16554c9
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Door_YS3U_LeftJamb_02b16554c9
+  source: /World/toilet/Augmentation_01/CollisionFix/DoorFrames/Door_YS3U_LeftJamb
+  auto_reason: auto_object
+  center:
+  - 1.271
+  - -0.04000000000000001
+  - 1.27
+  size:
+  - 0.1599999964237213
+  - 0.11999999731779099
+  - 2.5799999237060547
+  yaw: 0.0
+- name: partition_Door_YS3U_RightJamb_d0a434342e
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Door_YS3U_RightJamb_d0a434342e
+  source: /World/toilet/Augmentation_01/CollisionFix/DoorFrames/Door_YS3U_RightJamb
+  auto_reason: auto_object
+  center:
+  - 2.372
+  - -0.04000000000000001
+  - 1.27
+  size:
+  - 0.1599999964237213
+  - 0.11999999731779099
+  - 2.5799999237060547
+  yaw: 0.0
+- name: partition_Door_YS3U_Lintel_6c1357f104
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Door_YS3U_Lintel_6c1357f104
+  source: /World/toilet/Augmentation_01/CollisionFix/DoorFrames/Door_YS3U_Lintel
+  auto_reason: auto_object
+  center:
+  - 1.8209999999999997
+  - -0.04000000000000001
+  - 2.48
+  size:
+  - 1.0210000276565552
+  - 0.11999999731779099
+  - 0.3499999940395355
+  yaw: 0.0
+- name: door_Static_38dc170255
+  enabled: false
+  kind: door
+  prim_path: /World/toilet/_collision_proxy/door_Static_38dc170255
+  source: /World/toilet/Meshes/Assets/Door_0000/Geom/Static
+  auto_reason: recursive_child_of:/World/toilet/Meshes/Assets/Door_0000
+  center:
+  - -3.397499918937683
+  - -0.9547650218009949
+  - 1.1764999628067017
+  size:
+  - 0.2600000202655792
+  - 0.96847003698349
+  - 2.3929998874664307
+  yaw: 0.0
+- name: door_A06865e7a93064541911395c3271e1c34_cd7f043505
+  enabled: false
+  kind: door
+  prim_path: /World/toilet/_collision_proxy/door_A06865e7a93064541911395c3271e1c34_cd7f043505
+  source: /World/toilet/Meshes/Assets/Door_0000/Geom/A06865e7a93064541911395c3271e1c34
+  auto_reason: recursive_child_of:/World/toilet/Meshes/Assets/Door_0000
+  center:
+  - -2.94099683659398
+  - -1.3214107603602345
+  - 1.1545006429399354
+  size:
+  - 0.8624701499938965
+  - 0.20194028317928314
+  - 2.3310000896453857
+  yaw: 0.0
+- name: door_Door_202664be7d
+  enabled: false
+  kind: door
+  prim_path: /World/toilet/_collision_proxy/door_Door_202664be7d
+  source: /World/toilet/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Geom/Door
+  auto_reason: recursive_child_of:/World/toilet/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe
+  center:
+  - 2.6269116359156537
+  - -0.37405690003962616
+  - 1.1633076655644763
+  size:
+  - 0.11100003123283386
+  - 0.6440001130104065
+  - 2.3359999656677246
+  yaw: 0.0
+- name: partition_Door_Frame_left_jamb_fe44e3cd6a
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Door_Frame_left_jamb_fe44e3cd6a
+  source: /World/toilet/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Geom/Door_Frame
+  auto_reason: left_jamb_of:/World/toilet/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Geom/Door_Frame
+  center:
+  - 2.461929448843004
+  - -0.052099264226853875
+  - 1.2633076906204224
+  size:
+  - 0.11999999731779099
+  - 0.07999999821186066
+  - 2.5420000553131104
+  yaw: 0.0
+- name: partition_Door_Frame_right_jamb_5318b05f56
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Door_Frame_right_jamb_5318b05f56
+  source: /World/toilet/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Geom/Door_Frame
+  auto_reason: right_jamb_of:/World/toilet/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Geom/Door_Frame
+  center:
+  - 3.2739294683933275
+  - -0.052099264226853875
+  - 1.2633076906204224
+  size:
+  - 0.11999999731779099
+  - 0.07999999821186066
+  - 2.5420000553131104
+  yaw: 0.0
+- name: partition_Door_Frame_lintel_e38e864326
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Door_Frame_lintel_e38e864326
+  source: /World/toilet/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Geom/Door_Frame
+  auto_reason: lintel_of:/World/toilet/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Geom/Door_Frame
+  center:
+  - 2.867929458618166
+  - -0.052099264226853875
+  - 2.474307737350464
+  size:
+  - 0.7720000147819519
+  - 0.07999999821186066
+  - 0.3499999940395355
+  yaw: 0.0
+- name: door_Door_afdac88a66
+  enabled: false
+  kind: door
+  prim_path: /World/toilet/_collision_proxy/door_Door_afdac88a66
+  source: /World/toilet/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Geom/Door
+  auto_reason: recursive_child_of:/World/toilet/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP
+  center:
+  - 2.2066900954782183
+  - -0.34755284309683215
+  - 1.1322801855659606
+  size:
+  - 0.06300010532140732
+  - 0.6440003514289856
+  - 2.25600004196167
+  yaw: 0.0
+- name: partition_DoorFrame_left_jamb_839e331a41
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_DoorFrame_left_jamb_839e331a41
+  source: /World/toilet/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Geom/DoorFrame
+  auto_reason: left_jamb_of:/World/toilet/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Geom/DoorFrame
+  center:
+  - 1.2706953668594363
+  - -0.037923790514469126
+  - 1.2722798585891706
+  size:
+  - 0.11999999731779099
+  - 0.06300000101327896
+  - 2.5420000553131104
+  yaw: 0.0
+- name: partition_DoorFrame_right_jamb_9c501e27f9
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_DoorFrame_right_jamb_9c501e27f9
+  source: /World/toilet/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Geom/DoorFrame
+  auto_reason: right_jamb_of:/World/toilet/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Geom/DoorFrame
+  center:
+  - 2.37169536113739
+  - -0.037923790514469126
+  - 1.2722798585891706
+  size:
+  - 0.11999999731779099
+  - 0.06300000101327896
+  - 2.5420000553131104
+  yaw: 0.0
+- name: partition_DoorFrame_lintel_6601f22e41
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_DoorFrame_lintel_6601f22e41
+  source: /World/toilet/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Geom/DoorFrame
+  auto_reason: lintel_of:/World/toilet/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Geom/DoorFrame
+  center:
+  - 1.821195363998413
+  - -0.037923790514469126
+  - 2.483279905319212
+  size:
+  - 1.0609999895095825
+  - 0.06300000101327896
+  - 0.3499999940395355
+  yaw: 0.0
+- name: toilet_Toilet_YREQ63RVAJ2SUPTULA888888_YlDCP_8d16a8e3ad
+  enabled: true
+  kind: toilet
+  prim_path: /World/toilet/_collision_proxy/toilet_Toilet_YREQ63RVAJ2SUPTULA888888_YlDCP_8d16a8e3ad
+  source: /World/toilet/Meshes/Assets/Toilet_YREQ63RVAJ2SUPTULA888888_YlDCP
+  auto_reason: auto_object
+  center:
+  - 2.8863956928253174
+  - -1.1032815575599668
+  - 0.48452795197164605
+  size:
+  - 0.4324204623699188
+  - 0.5924792885780334
+  - 0.7889479994773865
+  yaw: 0.0
+- name: toilet_Toilet_YREQ6BBVAI7FMPTUJQ888888_KIiuW_802d43f6ed
+  enabled: true
+  kind: toilet
+  prim_path: /World/toilet/_collision_proxy/toilet_Toilet_YREQ6BBVAI7FMPTUJQ888888_KIiuW_802d43f6ed
+  source: /World/toilet/Meshes/Assets/Toilet_YREQ6BBVAI7FMPTUJQ888888_KIiuW
+  auto_reason: auto_object
+  center:
+  - 1.81028437614441
+  - -1.1921397149562822
+  - 0.43390349942609674
+  size:
+  - 0.4218527674674988
+  - 0.7459999322891235
+  - 0.910009503364563
+  yaw: 0.0
+- name: urinal_Edestalurinal_0000_e8738c644f
+  enabled: true
+  kind: urinal
+  prim_path: /World/toilet/_collision_proxy/urinal_Edestalurinal_0000_e8738c644f
+  source: /World/toilet/Meshes/Assets/Edestalurinal_0000
+  auto_reason: auto_object
+  center:
+  - 2.861556007450581
+  - 1.4117313999999999
+  - 0.5945
+  size:
+  - 0.36874064803123474
+  - 0.41653743386268616
+  - 1.2290045022964478
+  yaw: 0.0
+- name: urinal_Edestalurinal_0001_528b8012ae
+  enabled: true
+  kind: urinal
+  prim_path: /World/toilet/_collision_proxy/urinal_Edestalurinal_0001_528b8012ae
+  source: /World/toilet/Meshes/Assets/Edestalurinal_0001
+  auto_reason: auto_object
+  center:
+  - 2.0944998073120322
+  - 1.4126298
+  - 0.6395365453759355
+  size:
+  - 0.38599973917007446
+  - 0.4147402048110962
+  - 0.8950729370117188
+  yaw: 0.0
+- name: urinal_Edestalurinal_0002_2c7a7f6253
+  enabled: true
+  kind: urinal
+  prim_path: /World/toilet/_collision_proxy/urinal_Edestalurinal_0002_2c7a7f6253
+  source: /World/toilet/Meshes/Assets/Edestalurinal_0002
+  auto_reason: auto_object
+  center:
+  - 1.3089700850988388
+  - 1.4369695
+  - 0.8543840149011612
+  size:
+  - 0.4056878089904785
+  - 0.36606138944625854
+  - 0.7287678122520447
+  yaw: 0.0
+- name: urinal_Edestalurinal_0003_5023e1c02f
+  enabled: true
+  kind: urinal
+  prim_path: /World/toilet/_collision_proxy/urinal_Edestalurinal_0003_5023e1c02f
+  source: /World/toilet/Meshes/Assets/Edestalurinal_0003
+  auto_reason: auto_object
+  center:
+  - 0.510724
+  - 1.4325384925494196
+  - 0.5444680298023223
+  size:
+  - 0.3231162428855896
+  - 0.37492290139198303
+  - 0.732935905456543
+  yaw: 0.0
+- name: urinal_Edestalurinal_0004_cd05191d9d
+  enabled: true
+  kind: urinal
+  prim_path: /World/toilet/_collision_proxy/urinal_Edestalurinal_0004_cd05191d9d
+  source: /World/toilet/Meshes/Assets/Edestalurinal_0004
+  auto_reason: auto_object
+  center:
+  - -0.3141666
+  - 1.4692555
+  - 0.4839244850988389
+  size:
+  - 0.3577256202697754
+  - 0.3014894425868988
+  - 0.6338486075401306
+  yaw: 0.0
+- name: fixture_Fpd_0000_6d6f0d0ddf
+  enabled: true
+  kind: fixture
+  prim_path: /World/toilet/_collision_proxy/fixture_Fpd_0000_6d6f0d0ddf
+  source: /World/toilet/Meshes/Assets/Fpd_0000
+  auto_reason: auto_object
+  center:
+  - 2.089907671423219
+  - 1.3962351000000002
+  - 0.10599999999999998
+  size:
+  - 0.08999999612569809
+  - 0.09000000357627869
+  - 0.3499999940395355
+  yaw: 0.0
+- name: fixture_Fpd_0001_a4751b186c
+  enabled: true
+  kind: fixture
+  prim_path: /World/toilet/_collision_proxy/fixture_Fpd_0001_a4751b186c
+  source: /World/toilet/Meshes/Assets/Fpd_0001
+  auto_reason: auto_object
+  center:
+  - -0.3148468585767813
+  - 1.5296604000000005
+  - 0.10398551000000003
+  size:
+  - 0.08999999612569809
+  - 0.09000000357627869
+  - 0.3499999940395355
+  yaw: 0.0
+- name: partition_Partition_0000_1ad2eda936
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Partition_0000_1ad2eda936
+  source: /World/toilet/Meshes/Assets/Partition_0000
+  auto_reason: auto_object
+  center:
+  - 0.8920000195503235
+  - 1.4000000357627869
+  - 0.8505000025033951
+  size:
+  - 0.053000010550022125
+  - 0.4399999678134918
+  - 0.9409999847412109
+  yaw: 0.0
+- name: partition_Partition_0001_e2dc859fb0
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Partition_0001_e2dc859fb0
+  source: /World/toilet/Meshes/Assets/Partition_0001
+  auto_reason: auto_object
+  center:
+  - 1.6829999685287476
+  - 1.4000000357627869
+  - 0.8505000025033951
+  size:
+  - 0.053000010550022125
+  - 0.4399999678134918
+  - 0.9409999847412109
+  yaw: 0.0
+- name: partition_Partition_0002_1ce05e716d
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Partition_0002_1ce05e716d
+  source: /World/toilet/Meshes/Assets/Partition_0002
+  auto_reason: auto_object
+  center:
+  - -0.7490000128746033
+  - 1.4000000357627869
+  - 0.8505000025033951
+  size:
+  - 0.053000010550022125
+  - 0.4399999678134918
+  - 0.9409999847412109
+  yaw: 0.0
+- name: partition_Partition_0003_fc92aa976e
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Partition_0003_fc92aa976e
+  source: /World/toilet/Meshes/Assets/Partition_0003
+  auto_reason: auto_object
+  center:
+  - 0.09200000017881393
+  - 1.4000000357627869
+  - 0.8505000025033951
+  size:
+  - 0.05299999564886093
+  - 0.4399999678134918
+  - 0.9409999847412109
+  yaw: 0.0
+- name: partition_Partition_0004_40b5f9dbfb
+  enabled: true
+  kind: partition
+  prim_path: /World/toilet/_collision_proxy/partition_Partition_0004_40b5f9dbfb
+  source: /World/toilet/Meshes/Assets/Partition_0004
+  auto_reason: auto_object
+  center:
+  - 2.4749999046325684
+  - 1.4000000357627869
+  - 0.8505000025033951
+  size:
+  - 0.053000010550022125
+  - 0.4399999678134918
+  - 0.9409999847412109
+  yaw: 0.0
+- name: wall_Wall_0000_bda695b1a6
+  enabled: true
+  kind: wall
+  prim_path: /World/toilet/_collision_proxy/wall_Wall_0000_bda695b1a6
+  source: /World/toilet/Meshes/Base/Wall_0000
+  auto_reason: oversized_editable_fallback:wall_candidate_too_thick:3.490>0.800
+  center:
+  - 0.004999995231628418
+  - 0.0
+  - 1.399999976158142
+  size:
+  - 7.025000095367432
+  - 3.5299999713897705
+  - 2.8399999141693115
+  yaw: 0.0

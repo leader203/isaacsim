@@ -1,0 +1,1486 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (5, 0, 0)
+                double radius = 5
+            }
+            dictionary Perspective = {
+                double3 position = (-0.010042807623133088, 0.5971644570304812, 0.288107534373568)
+                double3 target = (0.04666696814839779, 0.19225218172817715, 0.31905537239101645)
+            }
+            dictionary Right = {
+                double3 position = (0, -5, 0)
+                double radius = 5
+            }
+            dictionary Top = {
+                double3 position = (0, 0, 5)
+                double radius = 5
+            }
+            string boundCamera = "/OmniverseKit_Persp"
+        }
+        dictionary omni_layer = {
+            string authoring_layer = "./start.usda"
+        }
+        dictionary renderSettings = {
+            double "rtx:sceneDb:ambientLightIntensity" = 0.2
+        }
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Scope "Root"
+{
+    def Scope "Meshes"
+    {
+        def Scope "Base"
+        {
+            def "Wall_0000" (
+                prepend references = @./meshes/Assets/Wall_Wall/Wall_Wall.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.004999995231628418, 0, 1.399999976158142)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def "Floor_0000" (
+                prepend references = @./meshes/Assets/Floor_Floor/Floor_Floor.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.004999995231628418, 0, -0.05999999865889549)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "A66" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSDFMeshCollisionAPI", "PhysxSphereFillCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A67" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A69" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A70" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A77" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A81" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A82" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A83" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A84" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A85" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A86" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A90" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A96" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A101" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A107" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A110" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A111" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A112" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A113" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A114" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A115" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A116" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A119" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A123" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A124" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A125" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A126" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A127" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A128" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A129" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A130" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A131" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A132" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A133" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A134" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A135" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A136" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A137" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A138" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A139" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A140" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A141" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A142" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A143" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A144" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A145" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A146" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A147" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A148" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A149" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A150" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A154" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A156" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A157" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A158" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A159" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A160" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A161" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A162" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A163" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A164" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A165" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A166" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A167" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A168" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A169" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A170" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A171" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A172" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A173" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A174" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A175" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A176" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A177" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A178" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A179" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A180" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A181" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A182" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A183" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A184" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A185" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A186" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A187" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A188" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A189" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A190" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A191" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A192" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A193" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A194" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A195" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A196" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A197" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A198" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A199" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A204" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A217" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A219" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A220" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A221" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A222" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A223" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A224" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A229" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A230" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A231" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A232" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A233" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A234" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A235" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A239" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A240" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A245" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+
+                    over "A262" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                        bool physics:collisionEnabled = 1
+                    }
+                }
+            }
+        }
+
+        def Scope "Assets"
+        {
+            def "Door_0000" (
+                prepend references = @./meshes/Assets/Door_Ac59e6c76c194105972c6f07f2fc79dd/Door_Ac59e6c76c194105972c6f07f2fc79dd.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-3.382765054702759, -0.9547650218009949, 1.1764999628067017)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "Static"
+                    {
+                    }
+
+                    over "A06865e7a93064541911395c3271e1c34"
+                    {
+                    }
+                }
+            }
+
+            def "Edestalurinal_0000" (
+                prepend references = @./meshes/Assets/Edestalurinal_YRJDV6ZVALZAIPTUKY888888/Edestalurinal_YRJDV6ZVALZAIPTUKY888888.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (2.861556007450581, 1.4117313999999999, 0.5945)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "body" (
+                        prepend apiSchemas = ["PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                    }
+                }
+            }
+
+            def "Edestalurinal_0001" (
+                prepend references = @./meshes/Assets/Edestalurinal_YRJDQHJVAIIZQPTULE888888/Edestalurinal_YRJDQHJVAIIZQPTULE888888.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (0.98140436, 0.98140436, 0.98140436)
+                double3 xformOp:translate = (2.0944998073120322, 1.4126298, 0.6395365453759355)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "body" (
+                        prepend apiSchemas = ["PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                    }
+                }
+            }
+
+            def "Edestalurinal_0002" (
+                prepend references = @./meshes/Assets/Edestalurinal_YRJDTZRVAIJAMPTUKE888888/Edestalurinal_YRJDTZRVAIJAMPTUKE888888.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (1.3089700850988388, 1.4369695, 0.8543840149011612)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "body" (
+                        prepend apiSchemas = ["PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                    }
+                }
+            }
+
+            def "Edestalurinal_0003" (
+                prepend references = @./meshes/Assets/Edestalurinal_YRJD7GJVAI7AAPTULE888888/Edestalurinal_YRJD7GJVAI7AAPTULE888888.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.510724, 1.4325384925494196, 0.5444680298023223)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "body" (
+                        prepend apiSchemas = ["PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                    }
+                }
+            }
+
+            def "Edestalurinal_0004" (
+                prepend references = @./meshes/Assets/Edestalurinal_YRJACHJVAJPLGPTUKM888888/Edestalurinal_YRJACHJVAJPLGPTUKM888888.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-0.3141666, 1.4692555, 0.48392448509883884)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "body" (
+                        prepend apiSchemas = ["PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                    }
+                }
+            }
+
+            def "Fpd_0000" (
+                prepend references = @./meshes/Assets/Fpd_ZDO7WWRVAIMLQPTULA888888/Fpd_ZDO7WWRVAIMLQPTULA888888.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (0.5682238, 0.46887162, 0.6307759)
+                double3 xformOp:translate = (2.089907671423219, 1.3962351000000002, 0.106)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            def "Fpd_0001" (
+                prepend references = @./meshes/Assets/Fpd_ZDO7WWRVAIMLQPTULA888888/Fpd_ZDO7WWRVAIMLQPTULA888888.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (0.5682238, 0.46887162, 0.61878824)
+                double3 xformOp:translate = (-0.31484685857678124, 1.5296604, 0.10398551)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+
+            
+            def "Toilet_YREQ63RVAJ2SUPTULA888888_YlDCP" (
+                prepend payload = @../Toilet_YREQ63RVAJ2SUPTULA888888_YlDCP/Toilet_YREQ63RVAJ2SUPTULA888888_YlDCP_open_seat.usda@
+            )
+            {
+                quatf xformOp:orient = (6.123234e-17, 0, 0, 1)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (2.8863956928253174, -1.1032815608074527, 0.46436)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                over "Materials"
+                {
+                    over "MI_6877962f1365ba0001eb4f51"
+                    {
+                        over "Shader"
+                        {
+                            color3f inputs:diffuse_color_constant = (1, 0.99999, 0.99999)
+                        }
+                    }
+                }
+
+                over "Geom"
+                {
+                    over "ToiletMain0001"
+                    {
+                    }
+
+                    over "ToiletSeat"
+                    {
+                    }
+
+                    over "ToiletLid"
+                    {
+                    }
+
+                    over "ToiletMain"
+                    {
+                    }
+
+                    over "ToiletKnob0001"
+                    {
+                    }
+
+                    over "ToiletKnob"
+                    {
+                    }
+                }
+            }
+
+            def "Toilet_YREQ6BBVAI7FMPTUJQ888888_KIiuW" (
+                prepend payload = @../Toilet_YREQ6BBVAI7FMPTUJQ888888_KIiuW/Toilet_YREQ6BBVAI7FMPTUJQ888888_KIiuW_open_seat.usda@
+            )
+            {
+                quatf xformOp:orient = (6.123234e-17, 0, 0, 1)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (1.8102844104702251, -1.1921396944858942, 0.3708209389066159)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "ToiletMain" (
+                        prepend apiSchemas = ["PhysxTriangleMeshCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                    )
+                    {
+                        uniform token physics:approximation = "sdf"
+                    }
+
+                    over "ToiletKnob" (
+                        prepend apiSchemas = ["PhysxRigidBodyAPI"]
+                    )
+                    {
+                        bool physxRigidBody:disableGravity = 1
+                    }
+
+                    over "ToiletKnob0001" (
+                        prepend apiSchemas = ["PhysxRigidBodyAPI"]
+                    )
+                    {
+                        bool physxRigidBody:disableGravity = 1
+                    }
+
+                    over "ToiletLid"
+                    {
+                    }
+
+                    over "ToiletSeat"
+                    {
+                    }
+                }
+            }
+
+            def "Door_YS2HVXZVALGD2PTUJQ888888_7qcYe" (
+                prepend payload = @../Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe.usda@
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (-1, -1, 1)
+                double3 xformOp:translate = (2.867929351490938, -0.03659926257706128, 1.2633076932659277)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "DoorFrame"
+                    {
+                    }
+
+                    over "Door"
+                    {
+                    }
+
+                    over "Door_Frame"
+                    {
+                    }
+                }
+            }
+
+            def "Door_YS3UEUZVAJ2V4PTUKU888888_mdynP" (
+                prepend payload = @../Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP.usda@
+            )
+            {
+                quatf xformOp:orient = (6.123234e-17, 0, 0, 1)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (1.8211953727422154, -0.0379237896355332, 1.2722798097149541)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "DoorFrame"
+                    {
+                    }
+
+                    over "Door"
+                    {
+                    }
+                }
+            }
+
+            def "Partition_0000" (
+                delete references = [
+                    @./meshes/Assets/Wardrobe_A89f40d820fb74faaA90dE4d2d890b893/Wardrobe_A89f40d820fb74faaA90dE4d2d890b893.usda@,
+                    @./meshes/Assets/Partition_A89f40d820fb74faaA90dE4d2d890b893/Partition_A89f40d820fb74faaA90dE4d2d890b893_payload.usda@
+                ]
+                prepend references = @./meshes/Assets/Wardrobe_A89f40d820fb74faaA90dE4d2d890b893/Wardrobe_A89f40d820fb74faaA90dE4d2d890b893_payload.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.8920000195503235, 1.4000000357627869, 0.8505000025033951)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "Static"
+                    {
+                        over "Fixed_Joint" (
+                            active = false
+                        )
+                        {
+                        }
+                    }
+                }
+            }
+
+            def "Partition_0001" (
+                delete references = @./meshes/Assets/Wardrobe_A6f1b77af49e54dbf92d1Dcdb54f8bc81/Wardrobe_A6f1b77af49e54dbf92d1Dcdb54f8bc81.usda@
+                prepend references = @./meshes/Assets/Wardrobe_A6f1b77af49e54dbf92d1Dcdb54f8bc81/Wardrobe_A6f1b77af49e54dbf92d1Dcdb54f8bc81_payload.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (1.6829999685287476, 1.4000000357627869, 0.8505000025033951)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "Static"
+                    {
+                        over "Fixed_Joint" (
+                            active = false
+                        )
+                        {
+                        }
+                    }
+                }
+            }
+
+            def "Partition_0002" (
+                delete references = @./meshes/Assets/Wardrobe_A24261731219b4f40817bC7c648597915/Wardrobe_A24261731219b4f40817bC7c648597915.usda@
+                prepend references = @./meshes/Assets/Wardrobe_A24261731219b4f40817bC7c648597915/Wardrobe_A24261731219b4f40817bC7c648597915_payload.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-0.7490000128746033, 1.4000000357627869, 0.8505000025033951)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "Static"
+                    {
+                        over "Fixed_Joint" (
+                            active = false
+                        )
+                        {
+                        }
+                    }
+                }
+            }
+
+            def "Partition_0003" (
+                delete references = @./meshes/Assets/Wardrobe_B346068cE0dc4223Af97Eb34e8078d2b/Wardrobe_B346068cE0dc4223Af97Eb34e8078d2b.usda@
+                prepend references = @./meshes/Assets/Wardrobe_B346068cE0dc4223Af97Eb34e8078d2b/Wardrobe_B346068cE0dc4223Af97Eb34e8078d2b_payload.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.09200000017881393, 1.4000000357627869, 0.8505000025033951)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "Static"
+                    {
+                        over "Fixed_Joint" (
+                            active = false
+                        )
+                        {
+                        }
+                    }
+                }
+            }
+
+            def "Partition_0004" (
+                delete references = @./meshes/Assets/Wardrobe_A1da26ad3B16b4a2d8e44Fc50a530777d/Wardrobe_A1da26ad3B16b4a2d8e44Fc50a530777d.usda@
+                prepend references = @./meshes/Assets/Wardrobe_A1da26ad3B16b4a2d8e44Fc50a530777d/Wardrobe_A1da26ad3B16b4a2d8e44Fc50a530777d_payload.usda@
+            )
+            {
+                float3 xformOp:rotateXYZ = (0, -0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (2.4749999046325684, 1.4000000357627869, 0.8505000025033951)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "Geom"
+                {
+                    over "Static"
+                    {
+                        over "Fixed_Joint" (
+                            active = false
+                        )
+                        {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    def Scope "Lights"
+    {
+        def RectLight "RectLight" (
+            prepend apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0), (0.5, 0.5, 0)]
+            float inputs:height = 1
+            float inputs:intensity = 6000
+            float inputs:shaping:cone:angle = 180
+            float inputs:shaping:cone:softness
+            float inputs:shaping:focus
+            color3f inputs:shaping:focusTint
+            asset inputs:shaping:ies:file
+            float inputs:specular = 0
+            float inputs:width = 1
+            quatd xformOp:orient = (0.7071067811865475, 0, 0, 0.7071067811865476)
+            double3 xformOp:scale = (2, 2, 1)
+            double3 xformOp:translate = (-1.1347190478173914, 0.17760024415672923, 2.4983967339377076)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def RectLight "RectLight_01" (
+            prepend apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0), (0.5, 0.5, 0)]
+            float inputs:height = 1
+            float inputs:intensity = 9000
+            float inputs:shaping:cone:angle = 180
+            float inputs:shaping:cone:softness
+            float inputs:shaping:focus
+            color3f inputs:shaping:focusTint
+            asset inputs:shaping:ies:file
+            float inputs:specular = 0
+            float inputs:width = 0.3
+            quatd xformOp:orient = (0.7071067811865475, 0, 0, 0.7071067811865476)
+            double3 xformOp:scale = (2, 2, 1)
+            double3 xformOp:translate = (1.5597937566655367, 0.7536934807678846, 2.4983967339377076)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def RectLight "RectLight_02" (
+            prepend apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0), (0.5, 0.5, 0)]
+            float inputs:exposure = 3
+            float inputs:height = 0.2
+            float inputs:intensity = 9000
+            float inputs:shaping:cone:angle = 35
+            float inputs:shaping:cone:softness
+            float inputs:shaping:focus
+            color3f inputs:shaping:focusTint
+            asset inputs:shaping:ies:file
+            float inputs:specular = 0
+            float inputs:width = 0.2
+            quatd xformOp:orient = (0.7071067811865475, 0, 0, 0.7071067811865476)
+            double3 xformOp:scale = (2, 2, 1)
+            double3 xformOp:translate = (2.868591232807432, -0.778918371952855, 2.4983967339377604)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def RectLight "RectLight_03" (
+            prepend apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0), (0.5, 0.5, 0)]
+            float inputs:exposure = 3
+            float inputs:height = 0.2
+            float inputs:intensity = 9000
+            float inputs:shaping:cone:angle = 35
+            float inputs:shaping:cone:softness
+            float inputs:shaping:focus
+            color3f inputs:shaping:focusTint
+            asset inputs:shaping:ies:file
+            float inputs:specular = 0
+            float inputs:width = 0.2
+            quatd xformOp:orient = (0.7071067811865475, 0, 0, 0.7071067811865476)
+            double3 xformOp:scale = (2, 2, 1)
+            double3 xformOp:translate = (1.8153115612445958, -0.7808333619180297, 2.4983967339377604)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def DomeLight "DomeLight" (
+            prepend apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float inputs:intensity = 1000
+            float inputs:shaping:cone:angle = 180
+            float inputs:shaping:cone:softness
+            float inputs:shaping:focus
+            color3f inputs:shaping:focusTint
+            asset inputs:shaping:ies:file
+            token inputs:texture:format = "latlong"
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+}

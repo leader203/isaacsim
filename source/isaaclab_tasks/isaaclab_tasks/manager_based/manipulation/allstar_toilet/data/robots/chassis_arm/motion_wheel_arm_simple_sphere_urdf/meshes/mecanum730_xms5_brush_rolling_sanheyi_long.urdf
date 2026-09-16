@@ -1,0 +1,3275 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="mecanum730_xms5_brush_rolling_sanheyi_long">
+    <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0" />
+    </material>
+    <material name="blue">
+        <color rgba="0.0 0.0 0.8 1.0" />
+    </material>
+    <material name="green">
+        <color rgba="0.0 0.8 0.0 1.0" />
+    </material>
+    <material name="grey">
+        <color rgba="0.2 0.2 0.2 1.0" />
+    </material>
+    <material name="orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0" />
+    </material>
+    <material name="brown">
+        <color rgba="0.870588235294 0.811764705882 0.764705882353 1.0" />
+    </material>
+    <material name="red">
+        <color rgba="0.8 0.0 0.0 1.0" />
+    </material>
+    <material name="white">
+        <color rgba="1.0 1.0 1.0 1.0" />
+    </material>
+    <material name="Beige">
+        <color rgba="1.0 0.784 0.5765 1.0" />
+    </material>
+    <link name="base_footprint" />
+    <link name="base_link" prim="/base_link">
+        <inertial>
+            <origin xyz="0 0 0.05" rpy="0 0 0" />
+            <mass value="50" />
+            <inertia ixx="0.5" ixy="0" ixz="0" iyy="0.5" iyz="0" izz="0.8" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/base_link_visual.stl" />
+            </geometry>
+        </visual>
+        <collision name="base_link_collision_01_mesh_surface_sphere_001">
+            <origin xyz="0.238987 0.188427 0.978700" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_002">
+            <origin xyz="0.238987 0.189690 0.913712" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_003">
+            <origin xyz="0.238987 0.190953 0.848724" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_004">
+            <origin xyz="0.238987 0.192216 0.783736" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_005">
+            <origin xyz="0.173987 0.177219 0.783445" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_006">
+            <origin xyz="0.238987 0.193479 0.718749" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_007">
+            <origin xyz="0.173987 0.193479 0.718749" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_008">
+            <origin xyz="0.238987 0.187243 0.653615" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_009">
+            <origin xyz="0.173987 0.187243 0.653615" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_010">
+            <origin xyz="0.238987 0.188506 0.588628" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_011">
+            <origin xyz="0.173987 0.188506 0.588628" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_012">
+            <origin xyz="0.108987 0.188506 0.588628" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_013">
+            <origin xyz="0.238987 0.189769 0.523640" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_014">
+            <origin xyz="0.173987 0.189769 0.523640" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_015">
+            <origin xyz="0.108987 0.189769 0.523640" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_016">
+            <origin xyz="0.238987 0.191032 0.458652" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_017">
+            <origin xyz="0.173987 0.191032 0.458652" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_018">
+            <origin xyz="0.108987 0.191032 0.458652" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_019">
+            <origin xyz="0.238987 0.192295 0.393664" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_020">
+            <origin xyz="0.173987 0.192295 0.393664" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_021">
+            <origin xyz="0.108987 0.192295 0.393664" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_022">
+            <origin xyz="0.238987 0.193558 0.328677" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_023">
+            <origin xyz="0.173987 0.193558 0.328677" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_024">
+            <origin xyz="0.108987 0.193558 0.328677" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_025">
+            <origin xyz="0.043987 0.193558 0.328677" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_026">
+            <origin xyz="0.238987 0.194821 0.263689" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_027">
+            <origin xyz="0.173987 0.194821 0.263689" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_028">
+            <origin xyz="0.108987 0.194821 0.263689" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_029">
+            <origin xyz="0.043987 0.194821 0.263689" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_030">
+            <origin xyz="0.238987 0.213581 0.199041" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.005000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_031">
+            <origin xyz="0.043987 0.203583 0.198847" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_032">
+            <origin xyz="0.221501 0.179665 1.043542" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_033">
+            <origin xyz="0.156501 0.187164 1.043687" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_034">
+            <origin xyz="0.091501 0.179665 1.043542" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_035">
+            <origin xyz="0.026501 0.179665 1.043542" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_036">
+            <origin xyz="-0.038499 0.179665 1.043542" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_037">
+            <origin xyz="-0.103499 0.179665 1.043542" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_038">
+            <origin xyz="-0.168499 0.179665 1.043542" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_039">
+            <origin xyz="-0.233499 0.187164 1.043687" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_040">
+            <origin xyz="0.156501 0.188427 0.978700" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_041">
+            <origin xyz="0.091501 0.188427 0.978700" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_042">
+            <origin xyz="0.026501 0.180928 0.978554" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_043">
+            <origin xyz="-0.038499 0.180928 0.978554" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_044">
+            <origin xyz="-0.103499 0.180928 0.978554" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_045">
+            <origin xyz="-0.168499 0.180928 0.978554" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_046">
+            <origin xyz="0.156501 0.189690 0.913712" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_047">
+            <origin xyz="0.091501 0.182191 0.913566" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_048">
+            <origin xyz="0.026501 0.182191 0.913566" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_049">
+            <origin xyz="-0.038499 0.182191 0.913566" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_050">
+            <origin xyz="-0.103499 0.182191 0.913566" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_051">
+            <origin xyz="-0.168499 0.182191 0.913566" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_052">
+            <origin xyz="0.156501 0.183454 0.848578" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_053">
+            <origin xyz="0.091501 0.183454 0.848578" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_054">
+            <origin xyz="0.026501 0.183454 0.848578" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_055">
+            <origin xyz="-0.038499 0.183454 0.848578" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_056">
+            <origin xyz="-0.103499 0.183454 0.848578" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_057">
+            <origin xyz="-0.168499 0.183454 0.848578" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_058">
+            <origin xyz="0.091501 0.184717 0.783591" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_059">
+            <origin xyz="0.026501 0.184717 0.783591" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_060">
+            <origin xyz="-0.038499 0.184717 0.783591" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_061">
+            <origin xyz="-0.103499 0.184717 0.783591" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_062">
+            <origin xyz="-0.168499 0.184717 0.783591" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_063">
+            <origin xyz="0.091501 0.185980 0.718603" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_064">
+            <origin xyz="0.026501 0.185980 0.718603" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_065">
+            <origin xyz="-0.038499 0.185980 0.718603" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_066">
+            <origin xyz="-0.103499 0.185980 0.718603" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_067">
+            <origin xyz="0.091501 0.187243 0.653615" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_068">
+            <origin xyz="0.026501 0.187243 0.653615" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_069">
+            <origin xyz="-0.038499 0.187243 0.653615" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_070">
+            <origin xyz="-0.103499 0.187243 0.653615" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_071">
+            <origin xyz="0.026501 0.188506 0.588628" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_072">
+            <origin xyz="-0.038499 0.188506 0.588628" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_073">
+            <origin xyz="-0.103499 0.188506 0.588628" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_074">
+            <origin xyz="0.026501 0.189769 0.523640" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_075">
+            <origin xyz="-0.038499 0.189769 0.523640" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_076">
+            <origin xyz="-0.103499 0.189769 0.523640" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_077">
+            <origin xyz="0.026501 0.191032 0.458652" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_078">
+            <origin xyz="-0.038499 0.191032 0.458652" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_079">
+            <origin xyz="0.026501 0.192295 0.393664" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_080">
+            <origin xyz="-0.038499 0.192295 0.393664" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_081">
+            <origin xyz="-0.038499 0.193558 0.328677" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_082">
+            <origin xyz="-0.241740 0.193426 0.978797" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_083">
+            <origin xyz="-0.241740 0.194689 0.913809" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_084">
+            <origin xyz="-0.241740 0.195952 0.848821" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_085">
+            <origin xyz="-0.241740 0.197215 0.783834" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_086">
+            <origin xyz="-0.176740 0.185980 0.718603" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_087">
+            <origin xyz="-0.241740 0.193479 0.718749" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_088">
+            <origin xyz="-0.176740 0.187243 0.653615" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_089">
+            <origin xyz="-0.241740 0.194742 0.653761" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_090">
+            <origin xyz="-0.176740 0.188506 0.588628" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_091">
+            <origin xyz="-0.241740 0.196005 0.588773" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_092">
+            <origin xyz="-0.176740 0.189769 0.523640" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_093">
+            <origin xyz="-0.241740 0.197268 0.523786" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_094">
+            <origin xyz="-0.111740 0.191032 0.458652" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_095">
+            <origin xyz="-0.176740 0.191032 0.458652" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_096">
+            <origin xyz="-0.241740 0.198531 0.458798" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_097">
+            <origin xyz="-0.111740 0.192295 0.393664" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_098">
+            <origin xyz="-0.176740 0.192295 0.393664" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_099">
+            <origin xyz="-0.241740 0.199794 0.393810" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_100">
+            <origin xyz="-0.111740 0.193558 0.328677" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_101">
+            <origin xyz="-0.176740 0.193558 0.328677" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_102">
+            <origin xyz="-0.241740 0.193558 0.328677" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_103">
+            <origin xyz="-0.046740 0.194821 0.263689" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_104">
+            <origin xyz="-0.111740 0.194821 0.263689" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_105">
+            <origin xyz="-0.176740 0.194821 0.263689" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_106">
+            <origin xyz="-0.241740 0.194821 0.263689" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_107">
+            <origin xyz="-0.046740 0.203583 0.198847" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_108">
+            <origin xyz="-0.111740 0.213581 0.199041" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.005000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_109">
+            <origin xyz="-0.241740 0.208582 0.198944" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_110">
+            <origin xyz="0.026501 0.132225 1.065492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_111">
+            <origin xyz="-0.038499 0.132225 1.065492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_112">
+            <origin xyz="-0.103499 0.132225 1.065492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_113">
+            <origin xyz="-0.075367 -0.038977 1.060492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_114">
+            <origin xyz="-0.075367 0.026023 1.045492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_115">
+            <origin xyz="-0.075367 0.091023 1.060492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_116">
+            <origin xyz="-0.140367 0.091023 1.045492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_117">
+            <origin xyz="-0.205367 0.156023 1.065492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_118">
+            <origin xyz="-0.075367 -0.168977 1.045492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_119">
+            <origin xyz="-0.140367 -0.168977 1.060492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_120">
+            <origin xyz="-0.205367 -0.168977 1.045492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_121">
+            <origin xyz="-0.075367 -0.103977 1.060492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_122">
+            <origin xyz="-0.140367 -0.103977 1.045492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_123">
+            <origin xyz="-0.205367 -0.103977 1.060492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_124">
+            <origin xyz="-0.140367 -0.038977 1.060492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_125">
+            <origin xyz="-0.205367 -0.038977 1.045492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_126">
+            <origin xyz="-0.140367 0.026023 1.060492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_127">
+            <origin xyz="-0.205367 0.026023 1.060492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_128">
+            <origin xyz="-0.205367 0.091023 1.060492" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_129">
+            <origin xyz="-0.236846 -0.031974 0.219291" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_130">
+            <origin xyz="-0.251843 -0.096974 0.219585" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_131">
+            <origin xyz="-0.236846 0.057389 0.219291" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_132">
+            <origin xyz="-0.251762 0.122389 0.223764" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_133">
+            <origin xyz="-0.227075 0.122389 0.718454" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_134">
+            <origin xyz="-0.243344 0.122389 0.653760" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_135">
+            <origin xyz="-0.229619 0.122389 0.588479" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_136">
+            <origin xyz="-0.245888 0.122389 0.523785" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_137">
+            <origin xyz="-0.230891 0.057389 0.523491" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_138">
+            <origin xyz="-0.232163 0.122389 0.458504" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_139">
+            <origin xyz="-0.247161 0.057389 0.458797" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_140">
+            <origin xyz="-0.248433 0.122389 0.393810" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_141">
+            <origin xyz="-0.233436 0.057389 0.393516" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_142">
+            <origin xyz="-0.234708 0.122389 0.328529" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_143">
+            <origin xyz="-0.249705 0.057389 0.328822" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_144">
+            <origin xyz="-0.255976 0.122389 0.263932" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_145">
+            <origin xyz="-0.242991 -0.031974 0.288604" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_146">
+            <origin xyz="-0.213260 -0.161974 0.913221" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.040000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_147">
+            <origin xyz="-0.244526 -0.161974 0.848820" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_148">
+            <origin xyz="-0.215804 -0.161974 0.783246" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.040000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_149">
+            <origin xyz="-0.247071 -0.161974 0.718845" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_150">
+            <origin xyz="-0.208351 -0.096974 0.653075" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.050000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_151">
+            <origin xyz="-0.248343 -0.161974 0.653858" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_152">
+            <origin xyz="-0.249615 -0.096974 0.588870" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_153">
+            <origin xyz="-0.237118 -0.161974 0.588626" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_154">
+            <origin xyz="-0.210895 -0.096974 0.523100" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.050000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_155">
+            <origin xyz="-0.250887 -0.161974 0.523883" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_156">
+            <origin xyz="-0.252160 -0.096974 0.458895" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_157">
+            <origin xyz="-0.239662 -0.161974 0.458650" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_158">
+            <origin xyz="-0.223438 -0.031974 0.393320" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.040000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_159">
+            <origin xyz="-0.253432 -0.096974 0.393908" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_160">
+            <origin xyz="-0.240934 -0.161974 0.393663" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_161">
+            <origin xyz="-0.259703 -0.031974 0.329018" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.005000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_162">
+            <origin xyz="-0.234708 -0.096974 0.328529" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_163">
+            <origin xyz="-0.249705 -0.161974 0.328822" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_164">
+            <origin xyz="-0.255976 -0.096974 0.263932" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_165">
+            <origin xyz="-0.235980 -0.161974 0.263541" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_166">
+            <origin xyz="-0.240710 0.105029 1.043783" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_167">
+            <origin xyz="-0.240710 0.040029 1.043783" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_168">
+            <origin xyz="-0.240710 -0.089971 1.043783" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_169">
+            <origin xyz="-0.211988 0.105029 0.978208" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.040000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_170">
+            <origin xyz="-0.241982 0.040029 0.978795" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_171">
+            <origin xyz="-0.229484 -0.024971 0.978551" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_172">
+            <origin xyz="-0.229484 -0.089971 0.978551" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_173">
+            <origin xyz="-0.241982 -0.154971 0.978795" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_174">
+            <origin xyz="-0.243254 0.105029 0.913808" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_175">
+            <origin xyz="-0.223258 0.040029 0.913417" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_176">
+            <origin xyz="-0.238255 -0.024971 0.913710" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_177">
+            <origin xyz="-0.238255 -0.089971 0.913710" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_178">
+            <origin xyz="-0.214532 0.105029 0.848233" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.040000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_179">
+            <origin xyz="-0.244526 0.040029 0.848820" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_180">
+            <origin xyz="-0.224530 -0.024971 0.848429" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_181">
+            <origin xyz="-0.239527 -0.089971 0.848723" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_182">
+            <origin xyz="-0.245799 0.105029 0.783833" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_183">
+            <origin xyz="-0.225802 0.040029 0.783441" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_184">
+            <origin xyz="-0.240800 -0.024971 0.783735" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_185">
+            <origin xyz="-0.240800 -0.089971 0.783735" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_186">
+            <origin xyz="-0.242072 0.040029 0.718747" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_187">
+            <origin xyz="-0.227075 -0.024971 0.718454" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_188">
+            <origin xyz="-0.247071 -0.089971 0.718845" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_189">
+            <origin xyz="-0.228347 0.040029 0.653466" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_190">
+            <origin xyz="-0.243344 -0.024971 0.653760" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_191">
+            <origin xyz="-0.244616 0.040029 0.588772" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_192">
+            <origin xyz="-0.229619 -0.024971 0.588479" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_193">
+            <origin xyz="-0.245888 -0.024971 0.523785" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_194">
+            <origin xyz="-0.252160 -0.024971 0.458895" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_195">
+            <origin xyz="0.246083 -0.192775 0.280247" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_196">
+            <origin xyz="0.252310 -0.192775 0.345381" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_197">
+            <origin xyz="0.251037 -0.192775 0.410368" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_198">
+            <origin xyz="0.249765 -0.192775 0.475356" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_199">
+            <origin xyz="0.248493 -0.192775 0.540344" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_200">
+            <origin xyz="0.247221 -0.192775 0.605331" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_201">
+            <origin xyz="0.245949 -0.192775 0.670319" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_203">
+            <origin xyz="0.259853 0.187389 0.215504" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_204">
+            <origin xyz="0.247355 0.122389 0.215259" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_205">
+            <origin xyz="0.247355 0.057389 0.215259" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_206">
+            <origin xyz="0.247355 -0.007611 0.215259" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_207">
+            <origin xyz="0.247355 -0.072611 0.215259" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_208">
+            <origin xyz="0.247355 -0.137611 0.215259" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_209">
+            <origin xyz="0.254854 -0.202611 0.215406" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_210">
+            <origin xyz="0.246083 0.122389 0.280247" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_211">
+            <origin xyz="0.246083 0.057389 0.280247" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_212">
+            <origin xyz="0.246083 -0.007611 0.280247" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_213">
+            <origin xyz="0.246083 -0.072611 0.280247" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_214">
+            <origin xyz="0.253582 -0.137611 0.280393" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_215">
+            <origin xyz="0.244811 0.122389 0.345234" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_216">
+            <origin xyz="0.244811 0.057389 0.345234" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_217">
+            <origin xyz="0.244811 -0.007611 0.345234" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_218">
+            <origin xyz="0.244811 -0.072611 0.345234" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_219">
+            <origin xyz="0.244811 -0.137611 0.345234" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_220">
+            <origin xyz="0.243539 0.122389 0.410222" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_221">
+            <origin xyz="0.243539 0.057389 0.410222" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_222">
+            <origin xyz="0.242267 0.122389 0.475209" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_223">
+            <origin xyz="0.249765 0.057389 0.475356" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_224">
+            <origin xyz="0.245949 0.057389 0.670319" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_225">
+            <origin xyz="0.240995 0.122389 0.540197" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_226">
+            <origin xyz="0.239722 0.122389 0.605184" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_227">
+            <origin xyz="0.238450 0.122389 0.670172" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_228">
+            <origin xyz="0.237178 0.122389 0.735159" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_229">
+            <origin xyz="0.237178 0.057389 0.735159" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_230">
+            <origin xyz="0.235906 0.122389 0.800147" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_231">
+            <origin xyz="0.247131 0.122389 0.865379" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_232">
+            <origin xyz="-0.010367 -0.182212 0.858328" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_233">
+            <origin xyz="-0.075367 -0.173451 0.923170" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_234">
+            <origin xyz="-0.075367 -0.192184 0.988547" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_235">
+            <origin xyz="-0.140367 -0.172188 0.988158" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_236">
+            <origin xyz="-0.205367 -0.192184 0.345238" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_237">
+            <origin xyz="-0.205367 -0.198420 0.410371" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_238">
+            <origin xyz="-0.140367 -0.172161 0.474873" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.040000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_239">
+            <origin xyz="-0.205367 -0.202156 0.475456" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_240">
+            <origin xyz="-0.140367 -0.200893 0.540444" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_241">
+            <origin xyz="-0.205367 -0.188395 0.540201" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_242">
+            <origin xyz="-0.075367 -0.159637 0.604654" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.050000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_243">
+            <origin xyz="-0.140367 -0.199630 0.605432" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_244">
+            <origin xyz="-0.205367 -0.199630 0.605432" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_245">
+            <origin xyz="-0.075367 -0.198367 0.670419" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_246">
+            <origin xyz="-0.140367 -0.185869 0.670176" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_247">
+            <origin xyz="-0.205367 -0.185869 0.670176" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_249">
+            <origin xyz="-0.075367 -0.197104 0.735407" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_250">
+            <origin xyz="-0.140367 -0.184606 0.735164" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_251">
+            <origin xyz="-0.205367 -0.202103 0.735504" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.005000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_252">
+            <origin xyz="-0.075367 -0.175844 0.800006" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_253">
+            <origin xyz="-0.140367 -0.190842 0.800298" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_254">
+            <origin xyz="-0.075367 -0.189579 0.865285" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_255">
+            <origin xyz="-0.140367 -0.174581 0.864994" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_256">
+            <origin xyz="-0.205367 -0.199577 0.865480" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.005000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_257">
+            <origin xyz="-0.140367 -0.188316 0.930273" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_258">
+            <origin xyz="-0.205367 -0.192052 0.995358" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_259">
+            <origin xyz="-0.075367 -0.194710 0.215262" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_260">
+            <origin xyz="-0.140367 -0.202209 0.215408" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_261">
+            <origin xyz="-0.205367 -0.202209 0.215408" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_262">
+            <origin xyz="-0.010367 -0.165952 0.279716" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.050000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_263">
+            <origin xyz="-0.075367 -0.205945 0.280493" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_264">
+            <origin xyz="-0.140367 -0.185948 0.280104" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_265">
+            <origin xyz="-0.205367 -0.205945 0.280493" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_266">
+            <origin xyz="-0.010367 -0.204682 0.345481" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_267">
+            <origin xyz="-0.075367 -0.192184 0.345238" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_268">
+            <origin xyz="-0.140367 -0.199683 0.345384" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_269">
+            <origin xyz="-0.010367 -0.163426 0.409691" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.050000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_270">
+            <origin xyz="-0.075367 -0.203419 0.410468" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_271">
+            <origin xyz="-0.140367 -0.203419 0.410468" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_272">
+            <origin xyz="-0.010367 -0.202156 0.475456" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_273">
+            <origin xyz="-0.075367 -0.202156 0.475456" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_274">
+            <origin xyz="-0.010367 -0.188395 0.540201" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_275">
+            <origin xyz="-0.075367 -0.200893 0.540444" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_276">
+            <origin xyz="-0.010367 -0.199630 0.605432" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_277">
+            <origin xyz="-0.010367 -0.198367 0.670419" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_278">
+            <origin xyz="0.032671 -0.199683 0.345384" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_279">
+            <origin xyz="0.097671 -0.182159 0.475068" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_280">
+            <origin xyz="0.032671 -0.197157 0.475359" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_281">
+            <origin xyz="0.097671 -0.195894 0.540347" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_282">
+            <origin xyz="0.032671 -0.203392 0.540493" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.007500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_283">
+            <origin xyz="0.162671 -0.194631 0.605335" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_284">
+            <origin xyz="0.097671 -0.194631 0.605335" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_285">
+            <origin xyz="0.032671 -0.194631 0.605335" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_286">
+            <origin xyz="0.162671 -0.178370 0.670031" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_287">
+            <origin xyz="0.097671 -0.193368 0.670322" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_288">
+            <origin xyz="0.032671 -0.193368 0.670322" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_291">
+            <origin xyz="0.173987 -0.202209 0.215408" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_292">
+            <origin xyz="0.108987 -0.202209 0.215408" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_293">
+            <origin xyz="0.043987 -0.194710 0.215262" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_294">
+            <origin xyz="0.173987 -0.185948 0.280104" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_295">
+            <origin xyz="0.108987 -0.200946 0.280396" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_296">
+            <origin xyz="0.043987 -0.210944 0.280590" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.005000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_297">
+            <origin xyz="0.173987 -0.199683 0.345384" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_298">
+            <origin xyz="0.108987 -0.184685 0.345092" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_299">
+            <origin xyz="0.173987 -0.183422 0.410080" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_300">
+            <origin xyz="0.108987 -0.198420 0.410371" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_301">
+            <origin xyz="0.173987 -0.197157 0.475359" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_302">
+            <origin xyz="0.173987 -0.195894 0.540347" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_303">
+            <origin xyz="-0.111740 0.057389 0.234225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.050000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_304">
+            <origin xyz="-0.176740 0.057389 0.194225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_305">
+            <origin xyz="-0.176740 -0.007611 0.199225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_306">
+            <origin xyz="-0.241740 -0.072611 0.189225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.005000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_307">
+            <origin xyz="0.173987 0.057389 0.214225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_308">
+            <origin xyz="0.108987 0.057389 0.199225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_309">
+            <origin xyz="0.173987 -0.007611 0.199225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_310">
+            <origin xyz="0.043987 0.122389 0.224225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.040000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_311">
+            <origin xyz="0.043987 0.057389 0.194225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_312">
+            <origin xyz="0.108987 -0.007611 0.214225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_313">
+            <origin xyz="0.043987 -0.007611 0.199225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_314">
+            <origin xyz="0.173987 -0.072611 0.214225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_315">
+            <origin xyz="0.108987 -0.072611 0.199225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_316">
+            <origin xyz="0.043987 -0.072611 0.214225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.030000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_317">
+            <origin xyz="0.043987 -0.137611 0.199225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_318">
+            <origin xyz="-0.046740 0.122389 0.206725" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_319">
+            <origin xyz="-0.046740 0.057389 0.194225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_320">
+            <origin xyz="-0.046740 -0.007611 0.206725" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_321">
+            <origin xyz="-0.111740 -0.007611 0.194225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_322">
+            <origin xyz="-0.046740 -0.072611 0.206725" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_323">
+            <origin xyz="-0.111740 -0.072611 0.206725" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_324">
+            <origin xyz="-0.176740 -0.072611 0.206725" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_325">
+            <origin xyz="-0.046740 -0.137611 0.199225" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_326">
+            <origin xyz="-0.058867 0.002225 0.793803" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.050000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_327">
+            <origin xyz="-0.018867 -0.062775 0.793803" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_328">
+            <origin xyz="-0.023867 -0.127775 0.793803" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_329">
+            <origin xyz="-0.018867 0.002225 0.858803" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_330">
+            <origin xyz="-0.018867 -0.062775 0.858803" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_331">
+            <origin xyz="-0.023867 -0.127775 0.858803" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_332">
+            <origin xyz="0.026501 0.105725 0.793803" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.040000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_333">
+            <origin xyz="0.026501 0.075725 0.858803" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_334">
+            <origin xyz="0.097671 0.080725 0.793803" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_335">
+            <origin xyz="0.209375 0.054199 0.462855" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_336">
+            <origin xyz="0.144375 0.094199 0.462855" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.050000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_337">
+            <origin xyz="0.209375 0.049199 0.657855" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.005000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_338">
+            <origin xyz="0.144375 0.049199 0.657855" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.005000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_339">
+            <origin xyz="0.144375 0.059199 0.722855" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_340">
+            <origin xyz="0.209375 -0.171523 0.468803" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.007500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_341">
+            <origin xyz="0.041090 -0.019301 0.462855" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_342">
+            <origin xyz="0.041090 -0.084301 0.462855" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.022500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_343">
+            <origin xyz="0.056090 -0.019301 0.722855" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.007500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_344">
+            <origin xyz="0.056090 -0.084301 0.722855" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.007500" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_345">
+            <origin xyz="0.144375 -0.100523 0.359355" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.040000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_346">
+            <origin xyz="0.209375 -0.100523 0.389355" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_347">
+            <origin xyz="0.209375 -0.035523 0.384355" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_collision_01_mesh_surface_sphere_348">
+            <origin xyz="0.144375 -0.035523 0.389355" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.010000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_001">
+            <origin xyz="0.245000 -0.172000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_002">
+            <origin xyz="0.245000 -0.155000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_003">
+            <origin xyz="0.245000 -0.138000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_004">
+            <origin xyz="0.245000 -0.121000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_005">
+            <origin xyz="0.245000 -0.104000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_006">
+            <origin xyz="0.245000 -0.087000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_007">
+            <origin xyz="0.245000 -0.070000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_008">
+            <origin xyz="0.245000 -0.053000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_009">
+            <origin xyz="0.245000 -0.036000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_010">
+            <origin xyz="0.245000 -0.019000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_011">
+            <origin xyz="0.245000 -0.002000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_012">
+            <origin xyz="0.245000 0.015000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_01_front_face_sphere_013">
+            <origin xyz="0.245000 0.032000 0.710000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.008000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_02_rear_face_sphere_001">
+            <origin xyz="0.235000 0.060000 1.045000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_02_rear_face_sphere_002">
+            <origin xyz="0.235000 0.093333 1.045000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_02_rear_face_sphere_003">
+            <origin xyz="0.235000 0.126667 1.045000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_02_rear_face_sphere_004">
+            <origin xyz="0.235000 0.160000 1.045000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_03_left_face_sphere_001">
+            <origin xyz="-0.010000 0.059000 1.045000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_03_left_face_sphere_002">
+            <origin xyz="0.026000 0.059000 1.045000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_03_left_face_sphere_003">
+            <origin xyz="0.062000 0.059000 1.045000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_03_left_face_sphere_004">
+            <origin xyz="0.098000 0.059000 1.045000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_03_left_face_sphere_005">
+            <origin xyz="0.134000 0.059000 1.045000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_03_left_face_sphere_006">
+            <origin xyz="0.170000 0.059000 1.045000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_04_right_face_sphere_001">
+            <origin xyz="0.240000 0.060000 0.795000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_04_right_face_sphere_002">
+            <origin xyz="0.240000 0.060000 0.826667" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_04_right_face_sphere_003">
+            <origin xyz="0.240000 0.060000 0.858333" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_04_right_face_sphere_004">
+            <origin xyz="0.240000 0.060000 0.890000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_04_right_face_sphere_005">
+            <origin xyz="0.240000 0.060000 0.921667" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_04_right_face_sphere_006">
+            <origin xyz="0.240000 0.060000 0.953333" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+        <collision name="base_link_manual_cylinder_mesh_04_right_face_sphere_007">
+            <origin xyz="0.240000 0.060000 0.985000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.015000" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_link_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="wheel_fl_link">
+        <inertial>
+            <origin xyz="1.19209335241e-09 -2.38418549595e-09 -3.21865090136e-09" rpy="0 0 2.02815925832e-07" />
+            <mass value="12" />
+            <inertia ixx="0.0179945928974" ixy="-1.1111971936e-08" ixz="8.20458197998e-08" iyy="0.0116347027099" iyz="-1.92956321647e-07" izz="0.0116351437482" />
+        </inertial>
+        <visual>
+            <origin xyz="1.19209335241e-09 -2.38418549595e-09 -3.21865090136e-09" rpy="0 0 2.02815925832e-07" />
+            <geometry>
+                <mesh filename="meshes/wheel_left_core.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="wheel_fr_link">
+        <inertial>
+            <origin xyz="-1.19209238531e-09 -2.3841859795e-09 -3.21865090136e-09" rpy="0 0 -3.14159245077" />
+            <mass value="12" />
+            <inertia ixx="0.0180079278628" ixy="-2.32145676917e-07" ixz="-7.71325895433e-08" iyy="0.011642249721" iyz="-4.46736965245e-08" izz="0.0116422698122" />
+        </inertial>
+        <visual>
+            <origin xyz="-1.19209238531e-09 -2.3841859795e-09 -3.21865090136e-09" rpy="0 0 -3.14159245077" />
+            <geometry>
+                <mesh filename="meshes/wheel_right_core.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="wheel_rl_link">
+        <inertial>
+            <origin xyz="1.19209238531e-09 2.3841859795e-09 -3.21865090136e-09" rpy="0 0 2.02815925832e-07" />
+            <mass value="12" />
+            <inertia ixx="0.0180079278628" ixy="-2.32145676917e-07" ixz="-7.71325895433e-08" iyy="0.011642249721" iyz="-4.46736965245e-08" izz="0.0116422698122" />
+        </inertial>
+        <visual>
+            <origin xyz="1.19209238531e-09 2.3841859795e-09 -3.21865090136e-09" rpy="0 0 2.02815925832e-07" />
+            <geometry>
+                <mesh filename="meshes/wheel_right_core.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="wheel_rr_link">
+        <inertial>
+            <origin xyz="-1.19209335241e-09 2.38418549595e-09 -3.21865090136e-09" rpy="0 0 -3.14159245077" />
+            <mass value="12" />
+            <inertia ixx="0.0179945928974" ixy="-1.1111971936e-08" ixz="8.20458197998e-08" iyy="0.0116347027099" iyz="-1.92956321647e-07" izz="0.0116351437482" />
+        </inertial>
+        <visual>
+            <origin xyz="-1.19209335241e-09 2.38418549595e-09 -3.21865090136e-09" rpy="0 0 -3.14159245077" />
+            <geometry>
+                <mesh filename="meshes/wheel_left_core.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_joint" type="continuous">
+        <origin xyz="0.157499998808 0.172499999404 0.0780000016093" rpy="0 0 1.57079632679" />
+        <parent link="base_link" />
+        <child link="wheel_fl_link" />
+        <axis xyz="1 0 0" />
+        <dynamics damping="1000" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_1_link">
+        <inertial>
+            <origin xyz="1.86434006144e-09 1.38344266929e-09 1.38344287858e-09" rpy="1.53691485957e-08 -2.81924612278e-08 -6.12561026293e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434006144e-09 1.38344266929e-09 1.38344287858e-09" rpy="1.53691485957e-08 -2.81924612278e-08 -6.12561026293e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_1_joint" type="continuous">
+        <origin xyz="-9.6803910668e-09 0.0536076439917 -0.0258160861731" rpy="0.785398163352 0.448798931081 1.57079657403" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_1_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_2_link">
+        <inertial>
+            <origin xyz="-2.741813665e-09 0 0" rpy="4.64407213416e-08 -2.68262712404e-08 1.11118041867e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.741813665e-09 0 0" rpy="4.64407213416e-08 -2.68262712404e-08 1.11118041867e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_2_joint" type="continuous">
+        <origin xyz="1.32596412201e-08 -0.0595000037551 -3.21865093839e-09" rpy="-2.35619454875 -3.8938610003e-08 -1.57079614011" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_2_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_3_link">
+        <inertial>
+            <origin xyz="-3.55407701284e-09 -5.64839140642e-10 -5.64839112954e-10" rpy="2.82145452478e-08 -9.17466672582e-09 2.59333389024e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407701284e-09 -5.64839140642e-10 -5.64839112954e-10" rpy="2.82145452478e-08 -9.17466672582e-09 2.59333389024e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_3_joint" type="continuous">
+        <origin xyz="-1.49318858624e-09 0.0132399931923 0.0580082093775" rpy="0.785398204827 -1.34639681424 1.57079644538" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_3_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_4_link">
+        <inertial>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 -1.38344305897e-09" rpy="8.03549506492e-09 1.12901189702e-08 2.28174279924e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 -1.38344305897e-09" rpy="8.03549506492e-09 1.12901189702e-08 2.28174279924e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_4_joint" type="continuous">
+        <origin xyz="-9.68039105142e-09 0.0536076439917 0.0258160797358" rpy="0.785398163352 -0.448798931081 1.5707964852" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_4_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_5_link">
+        <inertial>
+            <origin xyz="-3.55407683858e-09 5.64839219278e-10 5.64838622666e-10" rpy="3.14177840252e-08 -1.13666273607e-07 -6.4186922453e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407683858e-09 5.64839219278e-10 5.64838622666e-10" rpy="3.14177840252e-08 -1.13666273607e-07 -6.4186922453e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_5_joint" type="continuous">
+        <origin xyz="-1.4931886071e-09 0.0132399931923 -0.0580082158148" rpy="0.785397820847 1.3463968278 1.57079615821" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_5_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_6_link">
+        <inertial>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 -2.35301874001e-10" rpy="3.39623822802e-09 6.87529941695e-09 1.40920661923e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 -2.35301874001e-10" rpy="3.39623822802e-09 6.87529941695e-09 1.40920661923e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_6_joint" type="continuous">
+        <origin xyz="8.71608642071e-09 -0.037097646445 0.0465189707875" rpy="-2.35619451067 -0.897597904715 -1.57079610033" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_6_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_7_link">
+        <inertial>
+            <origin xyz="-2.31013119205e-09 2.35301919247e-10 2.35301911954e-10" rpy="-1.05598623837e-08 1.09752233335e-08 -1.19812018664e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013119205e-09 2.35301919247e-10 2.35301911954e-10" rpy="-1.05598623837e-08 1.09752233335e-08 -1.19812018664e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_7_joint" type="continuous">
+        <origin xyz="8.7160864375e-09 -0.037097646445 -0.0465189772248" rpy="-2.35619451067 0.897597904715 -1.57079614763" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_7_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <joint name="wheel_fr_joint" type="continuous">
+        <origin xyz="0.157499998808 -0.172499999404 0.0780000016093" rpy="0 0 1.57079615821" />
+        <parent link="base_link" />
+        <child link="wheel_fr_link" />
+        <axis xyz="1 0 0" />
+        <dynamics damping="1000" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_1_link">
+        <inertial>
+            <origin xyz="-3.55407706062e-09 5.64839108256e-10 -5.64838511644e-10" rpy="-3.1417787578e-08 1.13666273607e-07 -6.4186922453e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407706062e-09 5.64839108256e-10 -5.64838511644e-10" rpy="-3.1417787578e-08 1.13666273607e-07 -6.4186922453e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_1_joint" type="continuous">
+        <origin xyz="1.49318970817e-09 -0.0132399979606 0.0580082093775" rpy="-0.785397820847 -1.3463968278 -1.57079649538" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_1_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_2_link">
+        <inertial>
+            <origin xyz="-2.741813665e-09 0 0" rpy="-4.64407248943e-08 2.68262712404e-08 1.11118059631e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.741813665e-09 0 0" rpy="-4.64407248943e-08 2.68262712404e-08 1.11118059631e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_2_joint" type="continuous">
+        <origin xyz="-1.32596410959e-08 0.0594999989867 -3.21865101174e-09" rpy="2.35619454875 3.89386099475e-08 1.57079651348" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_2_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_3_link">
+        <inertial>
+            <origin xyz="-3.5540767908e-09 -5.64839196153e-10 5.64839168465e-10" rpy="-2.82145470241e-08 9.174667614e-09 2.59333406787e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.5540767908e-09 -5.64839196153e-10 5.64839168465e-10" rpy="-2.82145470241e-08 9.174667614e-09 2.59333406787e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_3_joint" type="continuous">
+        <origin xyz="1.49318976368e-09 -0.0132399979606 -0.0580082158148" rpy="-0.785398204827 1.34639681424 -1.5707962082" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_3_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_4_link">
+        <inertial>
+            <origin xyz="-2.31013141409e-09 2.35301697203e-10 -2.35301689909e-10" rpy="1.05598597191e-08 -1.09752224453e-08 -1.19812009782e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141409e-09 2.35301697203e-10 -2.35301689909e-10" rpy="1.05598597191e-08 -1.09752224453e-08 -1.19812009782e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_4_joint" type="continuous">
+        <origin xyz="-8.7160860499e-09 0.0370976416767 0.0465189707875" rpy="2.35619451067 -0.897597904715 1.57079650596" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_4_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_5_link">
+        <inertial>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 1.38344305897e-09" rpy="-8.03549950581e-09 -1.1290118082e-08 2.28174297688e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 1.38344305897e-09" rpy="-8.03549950581e-09 -1.1290118082e-08 2.28174297688e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_5_joint" type="continuous">
+        <origin xyz="9.68039275237e-09 -0.0536076487601 -0.0258160861731" rpy="-0.785398163352 0.448798931081 -1.57079616839" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_5_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_6_link">
+        <inertial>
+            <origin xyz="1.86434028349e-09 1.38344266929e-09 -1.38344287858e-09" rpy="-1.53691521485e-08 2.81924612278e-08 -6.12561026293e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434028349e-09 1.38344266929e-09 -1.38344287858e-09" rpy="-1.53691521485e-08 2.81924612278e-08 -6.12561026293e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_6_joint" type="continuous">
+        <origin xyz="9.68039275237e-09 -0.0536076487601 0.0258160797358" rpy="-0.785398163352 -0.448798931081 -1.57079607956" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_6_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_7_link">
+        <inertial>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 2.35301874001e-10" rpy="-3.39624089255e-09 -6.87529897286e-09 1.40920670805e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 2.35301874001e-10" rpy="-3.39624089255e-09 -6.87529897286e-09 1.40920670805e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_7_joint" type="continuous">
+        <origin xyz="-8.71608593887e-09 0.0370976416767 -0.0465189772248" rpy="2.35619451067 0.897597904715 1.57079655326" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_7_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <joint name="wheel_rl_joint" type="continuous">
+        <origin xyz="-0.157499998808 0.172499999404 0.0780000016093" rpy="0 0 1.57079632679" />
+        <parent link="base_link" />
+        <child link="wheel_rl_link" />
+        <axis xyz="1 0 0" />
+        <dynamics damping="1000" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_1_link">
+        <inertial>
+            <origin xyz="-3.55407706062e-09 5.64839108256e-10 -5.64838511644e-10" rpy="-3.1417787578e-08 1.13666273607e-07 -6.4186922453e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407706062e-09 5.64839108256e-10 -5.64838511644e-10" rpy="-3.1417787578e-08 1.13666273607e-07 -6.4186922453e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_1_joint" type="continuous">
+        <origin xyz="-1.49318952002e-09 0.0132399979606 0.0580082093775" rpy="-0.785397820847 -1.3463968278 1.57079615821" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_1_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_2_link">
+        <inertial>
+            <origin xyz="-2.741813665e-09 0 0" rpy="-4.64407248943e-08 2.68262712404e-08 1.11118059631e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.741813665e-09 0 0" rpy="-4.64407248943e-08 2.68262712404e-08 1.11118059631e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_2_joint" type="continuous">
+        <origin xyz="1.32596402503e-08 -0.0594999989867 -3.21865101174e-09" rpy="2.35619454875 3.8938610003e-08 -1.57079614011" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_2_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_3_link">
+        <inertial>
+            <origin xyz="-3.5540767908e-09 -5.64839196153e-10 5.64839168465e-10" rpy="-2.82145470241e-08 9.174667614e-09 2.59333406787e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.5540767908e-09 -5.64839196153e-10 5.64839168465e-10" rpy="-2.82145470241e-08 9.174667614e-09 2.59333406787e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_3_joint" type="continuous">
+        <origin xyz="-1.49318957553e-09 0.0132399979606 -0.0580082158148" rpy="-0.785398204827 1.34639681424 1.57079644538" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_3_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_4_link">
+        <inertial>
+            <origin xyz="-2.31013141409e-09 2.35301697203e-10 -2.35301689909e-10" rpy="1.05598597191e-08 -1.09752224453e-08 -1.19812009782e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141409e-09 2.35301697203e-10 -2.35301689909e-10" rpy="1.05598597191e-08 -1.09752224453e-08 -1.19812009782e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_4_joint" type="continuous">
+        <origin xyz="8.71608552271e-09 -0.0370976416767 0.0465189707875" rpy="2.35619451067 -0.897597904715 -1.57079614763" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_4_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_5_link">
+        <inertial>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 1.38344305897e-09" rpy="-8.03549950581e-09 -1.1290118082e-08 2.28174297688e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 1.38344305897e-09" rpy="-8.03549950581e-09 -1.1290118082e-08 2.28174297688e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_5_joint" type="continuous">
+        <origin xyz="-9.68039199056e-09 0.0536076487601 -0.0258160861731" rpy="-0.785398163352 0.448798931081 1.5707964852" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_5_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_6_link">
+        <inertial>
+            <origin xyz="1.86434028349e-09 1.38344266929e-09 -1.38344287858e-09" rpy="-1.53691521485e-08 2.81924612278e-08 -6.12561026293e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434028349e-09 1.38344266929e-09 -1.38344287858e-09" rpy="-1.53691521485e-08 2.81924612278e-08 -6.12561026293e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_6_joint" type="continuous">
+        <origin xyz="-9.68039199056e-09 0.0536076487601 0.0258160797358" rpy="-0.785398163352 -0.448798931081 1.57079657403" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_6_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_7_link">
+        <inertial>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 2.35301874001e-10" rpy="-3.39624089255e-09 -6.87529897286e-09 1.40920670805e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 2.35301874001e-10" rpy="-3.39624089255e-09 -6.87529897286e-09 1.40920670805e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_7_joint" type="continuous">
+        <origin xyz="8.71608541168e-09 -0.0370976416767 -0.0465189772248" rpy="2.35619451067 0.897597904715 -1.57079610033" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_7_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <joint name="wheel_rr_joint" type="continuous">
+        <origin xyz="-0.157499998808 -0.172499999404 0.0780000016093" rpy="0 0 1.57079615821" />
+        <parent link="base_link" />
+        <child link="wheel_rr_link" />
+        <axis xyz="1 0 0" />
+        <dynamics damping="1000" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_1_link">
+        <inertial>
+            <origin xyz="1.86434006144e-09 1.38344266929e-09 1.38344287858e-09" rpy="1.53691485957e-08 -2.81924612278e-08 -6.12561026293e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434006144e-09 1.38344266929e-09 1.38344287858e-09" rpy="1.53691485957e-08 -2.81924612278e-08 -6.12561026293e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_1_joint" type="continuous">
+        <origin xyz="9.68039182861e-09 -0.0536076439917 -0.0258160861731" rpy="0.785398163352 0.448798931081 -1.57079607956" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_1_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_2_link">
+        <inertial>
+            <origin xyz="-2.741813665e-09 0 0" rpy="4.64407213416e-08 -2.68262712404e-08 1.11118041867e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.741813665e-09 0 0" rpy="4.64407213416e-08 -2.68262712404e-08 1.11118041867e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_2_joint" type="continuous">
+        <origin xyz="-1.32596420656e-08 0.0595000037551 -3.21865093839e-09" rpy="-2.35619454875 -3.89386099475e-08 1.57079651348" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_2_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_3_link">
+        <inertial>
+            <origin xyz="-3.55407701284e-09 -5.64839140642e-10 -5.64839112954e-10" rpy="2.82145452478e-08 -9.17466672582e-09 2.59333389024e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407701284e-09 -5.64839140642e-10 -5.64839112954e-10" rpy="2.82145452478e-08 -9.17466672582e-09 2.59333389024e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_3_joint" type="continuous">
+        <origin xyz="1.49318877439e-09 -0.0132399931923 0.0580082093775" rpy="0.785398204827 -1.34639681424 -1.5707962082" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_3_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_4_link">
+        <inertial>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 -1.38344305897e-09" rpy="8.03549506492e-09 1.12901189702e-08 2.28174279924e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 -1.38344305897e-09" rpy="8.03549506492e-09 1.12901189702e-08 2.28174279924e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_4_joint" type="continuous">
+        <origin xyz="9.68039181323e-09 -0.0536076439917 0.0258160797358" rpy="0.785398163352 -0.448798931081 -1.57079616839" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_4_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_5_link">
+        <inertial>
+            <origin xyz="-3.55407683858e-09 5.64839219278e-10 5.64838622666e-10" rpy="3.14177840252e-08 -1.13666273607e-07 -6.4186922453e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407683858e-09 5.64839219278e-10 5.64838622666e-10" rpy="3.14177840252e-08 -1.13666273607e-07 -6.4186922453e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_5_joint" type="continuous">
+        <origin xyz="1.49318879525e-09 -0.0132399931923 -0.0580082158148" rpy="0.785397820847 1.3463968278 -1.57079649538" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_5_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_6_link">
+        <inertial>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 -2.35301874001e-10" rpy="3.39623822802e-09 6.87529941695e-09 1.40920661923e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 -2.35301874001e-10" rpy="3.39623822802e-09 6.87529941695e-09 1.40920661923e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_6_joint" type="continuous">
+        <origin xyz="-8.7160869479e-09 0.037097646445 0.0465189707875" rpy="-2.35619451067 -0.897597904715 1.57079655326" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_6_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_7_link">
+        <inertial>
+            <origin xyz="-2.31013119205e-09 2.35301919247e-10 2.35301911954e-10" rpy="-1.05598623837e-08 1.09752233335e-08 -1.19812018664e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013119205e-09 2.35301919247e-10 2.35301911954e-10" rpy="-1.05598623837e-08 1.09752233335e-08 -1.19812018664e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_7_joint" type="continuous">
+        <origin xyz="-8.71608696469e-09 0.037097646445 -0.0465189772248" rpy="-2.35619451067 0.897597904715 1.57079650596" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_7_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="XMS5-R800-W4G3B4C_base">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_base.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="3.167" />
+            <inertia ixx="0.03116799" ixy="-0.00000065" ixz="-0.00000427" iyy="0.03071271" iyz="-0.00223656" izz="0.00587740" />
+            <origin rpy="0 0 0" xyz="1.1e-05 -0.007992 0.23584200000000002" />
+        </inertial>
+    </link>
+    <link name="XMS5-R800-W4G3B4C_link1">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="3.167" />
+            <inertia ixx="0.03116799" ixy="-0.00000065" ixz="-0.00000427" iyy="0.03071271" iyz="-0.00223656" izz="0.00587740" />
+            <origin rpy="0 0 0" xyz="1.1e-05 -0.007992 0.23584200000000002" />
+        </inertial>
+    </link>
+    <link name="XMS5-R800-W4G3B4C_link2">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="4.291" />
+            <inertia ixx="0.14042515" ixy="0.00039009" ixz="0.01494819" iyy="0.14040198" iyz="-0.00255277" izz="0.01264775" />
+            <origin rpy="0 0 0" xyz="0.016666 -0.069301 0.184671" />
+        </inertial>
+        <collision name="XMS5-R800-W4G3B4C_link2_collision_01_original_sphere_mesh">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.044000" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_collision_02_cylinder_sphere_001">
+            <origin xyz="0.124000 -0.020000 -0.100000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.034000" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_collision_02_cylinder_sphere_002">
+            <origin xyz="0.256000 -0.020000 -0.100000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.034000" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="XMS5-R800-W4G3B4C_link3">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="2.018" />
+            <inertia ixx="0.02103842" ixy="-0.00048390" ixz="0.00402665" iyy="0.02167667" iyz="-0.00170490" izz="0.00429357" />
+            <origin rpy="0 0 0" xyz="0.0249 0.009986 0.08373900000000001" />
+        </inertial>
+        <collision name="XMS5-R800-W4G3B4C_link3_collision_01_original_sphere_mesh">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.040000" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_collision_02_cylinder_sphere_001">
+            <origin xyz="-0.031070 0.119858 -0.000000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.031000" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_collision_02_cylinder_sphere_002">
+            <origin xyz="-0.048130 0.255442 0.000000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.031000" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="XMS5-R800-W4G3B4C_link4">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link4.stl" scale=".001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="2.005" />
+            <inertia ixx="0.01325119" ixy="0.00000061" ixz="0.00000278" iyy="0.01255684" iyz="-0.00115731" izz="0.00274485" />
+            <origin rpy="0 0 0" xyz="6.6e-05 -0.008515 -0.068865" />
+        </inertial>
+        <collision name="XMS5-R800-W4G3B4C_link4_collision_01_original_sphere_mesh">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.032000" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link4_collision_02_cylinder_sphere_001">
+            <origin xyz="0.000000 0.067500 0.000000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.007500" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="XMS5-R800-W4G3B4C_link5">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.507" />
+            <inertia ixx="0.00503262" ixy="-0.00000608" ixz="-0.00000129" iyy="0.00261442" iyz="-0.00033165" izz="0.00394480" />
+            <origin rpy="0 0 0" xyz="3e-06 0.029172999999999998 0.007019" />
+        </inertial>
+        <collision name="XMS5-R800-W4G3B4C_link5_collision_01_original_sphere_mesh">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.026000" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_collision_02_cylinder_sphere_001">
+            <origin xyz="0.000000 0.056000 0.000000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.000851" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link6">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link6.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="0.634" />
+            <inertia ixx="0.00099702" ixy="-0.00000138" ixz="0.00000090" iyy="0.00100253" iyz="0.00000158" izz="0.00044795" />
+            <origin rpy="0 0 0" xyz="7.3e-05 7.9e-05 -0.044853000000000004" />
+        </inertial>
+        <collision name="link6_collision_01_original_sphere_mesh">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.001352" />
+            </geometry>
+        </collision>
+        <collision name="link6_collision_02_cylinder_sphere_001">
+            <origin xyz="0.000000 0.000000 -0.031000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.000649" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="tool_link">
+        <visual>
+            <geometry>
+                <mesh filename="sanheyi_mesh/tool_brush_sanheyi_long.STL" scale="1.0 1.0 1.0" />
+            </geometry>
+            <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="0.5" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+            <origin rpy="0 0 0" xyz="0 0 0.03" />
+        </inertial>
+        <collision name="tool_link_collision_01_box_sphere_001">
+            <origin xyz="-0.013299 0.004473 -0.016359" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.003217" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_collision_01_box_sphere_002">
+            <origin xyz="0.067213 0.004473 -0.016359" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.029108" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_collision_02_cylinder_sphere_001">
+            <origin xyz="0.000000 0.000000 0.245000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.035159" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_collision_03_original_sphere_mesh">
+            <origin xyz="0.000000 0.000000 0.354100" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.058941" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="tool_tip_link">
+        <visual>
+            <geometry>
+                <sphere radius="0.001" />
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 0.5" />
+            </material>
+        </visual>
+        <collision name="tool_tip_link_collision_01_original_sphere_mesh">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000" />
+            <geometry>
+                <sphere radius="0.000100" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint1" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_base" />
+        <child link="XMS5-R800-W4G3B4C_link1" />
+        <limit effort="113" lower="-1.57" upper="1.57" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="0 0 0" xyz="0.0 0.0 0.328" />
+    </joint>
+    <joint name="joint2" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_link1" />
+        <child link="XMS5-R800-W4G3B4C_link2" />
+        <limit effort="113" lower="-2.7925" upper="2.618" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="-1.5708 -1.446441 0.0" xyz="0.0 0.0 0.0" />
+    </joint>
+    <joint name="joint3" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_link2" />
+        <child link="XMS5-R800-W4G3B4C_link3" />
+        <limit effort="70" lower="-2.9671" upper="2.4435" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="3.1415926 0 1.446441" xyz="0.403113 0.0 0.0" />
+    </joint>
+    <joint name="joint4" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_link3" />
+        <child link="XMS5-R800-W4G3B4C_link4" />
+        <limit effort="25" lower="-3.2" upper="3.2" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="-1.5708 0 0" xyz="-0.05 0.4 0.0" />
+    </joint>
+    <joint name="joint5" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_link4" />
+        <child link="XMS5-R800-W4G3B4C_link5" />
+        <limit effort="25" lower="-3.2" upper="3.2" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="1.5708 0 0" xyz="0.0 0.136 0.0" />
+    </joint>
+    <joint name="joint6" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_link5" />
+        <child link="link6" />
+        <limit effort="19" lower="-3.49" upper="3.49" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="-1.5708 0.0 0" xyz="0.0 0.1035 0.0" />
+    </joint>
+    <joint name="joint_tool_fixed" type="fixed">
+        <parent link="link6" />
+        <child link="tool_link" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+    <joint name="joint_tip" type="fixed">
+        <parent link="tool_link" />
+        <child link="tool_tip_link" />
+        <origin xyz="0 0 0.421" rpy="0 0 0" />
+    </joint>
+    <transmission name="tran1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint1">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor1">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint2">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor2">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint3">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor3">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint4">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor4">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint5">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor5">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran6">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint6">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor6">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <joint name="root_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="XMS5-R800-W4G3B4C_base" />
+        <origin xyz="0.17 -0.062 0.52" rpy="0 0 0" />
+    </joint>
+</robot>

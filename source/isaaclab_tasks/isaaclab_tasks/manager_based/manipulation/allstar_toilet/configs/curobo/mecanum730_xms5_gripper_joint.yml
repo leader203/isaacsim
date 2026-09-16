@@ -1,0 +1,236 @@
+robot_cfg:
+  kinematics:
+    urdf_path: /home/stardust/haozhao/pro/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/allstar_toilet/data/robots/chassis_arm/motion_wheel_arm_simple_sphere_urdf/mecanum730_xms5_gripper_joint.urdf
+    asset_root_path: /home/stardust/haozhao/pro/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/allstar_toilet/data/robots/chassis_arm/motion_wheel_arm_simple_sphere_urdf
+    base_link: XMS5-R800-W4G3B4C_base
+    tool_frames:
+    - tool_tip_link
+    lock_joints: {}
+    extra_links: null
+    collision_link_names:
+    - XMS5-R800-W4G3B4C_link2
+    - XMS5-R800-W4G3B4C_link3
+    - XMS5-R800-W4G3B4C_link4
+    - XMS5-R800-W4G3B4C_link5
+    - link6
+    - tool_link
+    - tool_tip_link
+    collision_spheres:
+      XMS5-R800-W4G3B4C_link2:
+      - center:
+        - 0.0
+        - 0.0
+        - 0.0
+        radius: 0.044
+      - center:
+        - 0.124
+        - -0.02
+        - -0.1
+        radius: 0.034
+      - center:
+        - 0.256
+        - -0.02
+        - -0.1
+        radius: 0.034
+      XMS5-R800-W4G3B4C_link3:
+      - center:
+        - 0.0
+        - 0.0
+        - 0.0
+        radius: 0.04
+      - center:
+        - -0.03107
+        - 0.119858
+        - -0.0
+        radius: 0.031
+      - center:
+        - -0.04813
+        - 0.255442
+        - 0.0
+        radius: 0.031
+      XMS5-R800-W4G3B4C_link4:
+      - center:
+        - 0.0
+        - 0.0
+        - 0.0
+        radius: 0.032
+      - center:
+        - 0.0
+        - 0.0675
+        - 0.0
+        radius: 0.0075
+      XMS5-R800-W4G3B4C_link5:
+      - center:
+        - 0.0
+        - 0.0
+        - 0.0
+        radius: 0.026
+      - center:
+        - 0.0
+        - 0.056
+        - 0.0
+        radius: 0.000851
+      link6:
+      - center:
+        - 0.0
+        - 0.0
+        - 0.0
+        radius: 0.010936
+      - center:
+        - 0.0
+        - 0.0
+        - -0.031
+        radius: 0.000649
+      tool_link:
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.398
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.368364
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.338727
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.309091
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.279455
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.249818
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.220182
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.190545
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.160909
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.131273
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.101636
+        radius: 0.012
+      - center:
+        - 0.0005
+        - 0.0
+        - 0.072
+        radius: 0.012
+      - center:
+        - -0.002095
+        - 0.015
+        - 0.0015
+        radius: 0.01
+      - center:
+        - -0.002095
+        - -0.015
+        - 0.0015
+        radius: 0.01
+      - center:
+        - 0.027905
+        - 0.015
+        - 0.0015
+        radius: 0.01
+      - center:
+        - 0.027905
+        - -0.015
+        - 0.0015
+        radius: 0.01
+      tool_tip_link:
+      - center:
+        - 0.0
+        - 0.0
+        - 0.0
+        radius: 0.0001
+    collision_sphere_buffer: 0.01
+    extra_collision_spheres: {}
+    self_collision_ignore:
+      XMS5-R800-W4G3B4C_link2:
+      - XMS5-R800-W4G3B4C_link3
+      XMS5-R800-W4G3B4C_link3:
+      - XMS5-R800-W4G3B4C_link2
+      - XMS5-R800-W4G3B4C_link4
+      XMS5-R800-W4G3B4C_link4:
+      - XMS5-R800-W4G3B4C_link3
+      - XMS5-R800-W4G3B4C_link5
+      XMS5-R800-W4G3B4C_link5:
+      - XMS5-R800-W4G3B4C_link4
+      - link6
+      link6:
+      - XMS5-R800-W4G3B4C_link5
+      - tool_link
+      - tool_tip_link
+      tool_link:
+      - link6
+      - tool_tip_link
+      tool_tip_link:
+      - link6
+      - tool_link
+    self_collision_buffer:
+      XMS5-R800-W4G3B4C_link2: 0.0
+      XMS5-R800-W4G3B4C_link3: 0.0
+      XMS5-R800-W4G3B4C_link4: 0.0
+      XMS5-R800-W4G3B4C_link5: 0.0
+      link6: 0.0
+      tool_link: 0.0
+      tool_tip_link: 0.0
+    use_global_cumul: true
+    mesh_link_names: null
+    cspace:
+      joint_names:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+      default_joint_position:
+      - 0.0
+      - 0.561996
+      - -0.570723
+      - -0.561996
+      - 0.55676
+      - 0.0
+      null_space_weight:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      cspace_distance_weight:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      max_jerk: 500.0
+      max_acceleration: 15.0
+      position_limit_clip: 0.01

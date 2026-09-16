@@ -1,0 +1,15 @@
+--- "/home/stardust/czs/original repository/roboos-zh_curobo_simulation/source/isaaclab/isaaclab/scene/interactive_scene.py"	2026-06-06 17:20:29.000000000 +0800
++++ /home/stardust/czs/roboos/source/isaaclab/isaaclab/scene/interactive_scene.py	2026-07-14 09:39:06.861512963 +0800
+@@ -279,7 +279,11 @@
+ 
+             # 异构场景（replicate_physics=False）或 CPU 仿真时，
+             # enable_env_ids 无效，必须手动调用 filter_collisions()
+-            if (not self.cfg.replicate_physics and self.cfg.filter_collisions) or self.device == "cpu":
++            # GPT fix: num_envs=1 时跳过，单环境无需环境间过滤
++            if self.cfg.num_envs > 1 and (
++                (not self.cfg.replicate_physics and self.cfg.filter_collisions)
++                or self.device == "cpu"
++            ):
+                 self.filter_collisions(self._global_prim_paths)
+ 
+     def clone_environments(self, copy_from_source: bool = False):

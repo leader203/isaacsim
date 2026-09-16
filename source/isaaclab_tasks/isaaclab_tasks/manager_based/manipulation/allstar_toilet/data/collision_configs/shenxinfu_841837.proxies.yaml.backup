@@ -1,0 +1,323 @@
+schema_version: 1
+scene: shenxinfu_841837
+scene_root_path: /World/shenxinfu_841837
+proxy_root_name: _collision_proxy
+created_at: '2026-07-14T23:23:11'
+notes: Editable collision proxies exported from Isaac Sim. center/size are meters;
+  yaw is radians.
+proxies:
+- name: wall_Wall_0000_56fae1c5e2
+  enabled: true
+  kind: wall
+  prim_path: /World/shenxinfu_841837/_collision_proxy/wall_Wall_0000_56fae1c5e2
+  source: /World/shenxinfu_841837/Meshes/Base/Wall_0000
+  auto_reason: oversized_editable_fallback:wall_candidate_too_thick:3.490>0.800
+  center:
+  - 0.004999995231628418
+  - 0.0
+  - 1.399999976158142
+  size:
+  - 7.025000095367432
+  - 3.5299999713897705
+  - 2.8399999141693115
+  yaw: 0.0
+- name: door_Static_86a15371da
+  enabled: false
+  kind: door
+  prim_path: /World/shenxinfu_841837/_collision_proxy/door_Static_86a15371da
+  source: /World/shenxinfu_841837/Meshes/Assets/Door_0000/Geom/Static
+  auto_reason: recursive_child_of:/World/shenxinfu_841837/Meshes/Assets/Door_0000
+  center:
+  - -3.397499918937683
+  - -0.9547650218009949
+  - 1.1764999628067017
+  size:
+  - 0.2600000202655792
+  - 0.96847003698349
+  - 2.3929998874664307
+  yaw: 0.0
+- name: door_A06865e7a93064541911395c3271e1c34_893dd62ad2
+  enabled: false
+  kind: door
+  prim_path: /World/shenxinfu_841837/_collision_proxy/door_A06865e7a93064541911395c3271e1c34_893dd62ad2
+  source: /World/shenxinfu_841837/Meshes/Assets/Door_0000/Geom/A06865e7a93064541911395c3271e1c34
+  auto_reason: recursive_child_of:/World/shenxinfu_841837/Meshes/Assets/Door_0000
+  center:
+  - -2.9409961081476927
+  - -1.3214107366438859
+  - 1.154499975964578
+  size:
+  - 0.8624700903892517
+  - 0.20194010436534882
+  - 2.3309998512268066
+  yaw: 0.0
+- name: urinal_Edestalurinal_0000_65dc69e20a
+  enabled: true
+  kind: urinal
+  prim_path: /World/shenxinfu_841837/_collision_proxy/urinal_Edestalurinal_0000_65dc69e20a
+  source: /World/shenxinfu_841837/Meshes/Assets/Edestalurinal_0000
+  auto_reason: auto_object
+  center:
+  - 2.861556007450581
+  - 1.4117313999999999
+  - 0.5945
+  size:
+  - 0.36874064803123474
+  - 0.41653743386268616
+  - 1.2290045022964478
+  yaw: 0.0
+- name: urinal_Edestalurinal_0001_2f44a92108
+  enabled: true
+  kind: urinal
+  prim_path: /World/shenxinfu_841837/_collision_proxy/urinal_Edestalurinal_0001_2f44a92108
+  source: /World/shenxinfu_841837/Meshes/Assets/Edestalurinal_0001
+  auto_reason: auto_object
+  center:
+  - 2.0944998073120322
+  - 1.4126298
+  - 0.6395365453759355
+  size:
+  - 0.38599973917007446
+  - 0.4147402048110962
+  - 0.8950729370117188
+  yaw: 0.0
+- name: urinal_Edestalurinal_0002_2c512309d7
+  enabled: true
+  kind: urinal
+  prim_path: /World/shenxinfu_841837/_collision_proxy/urinal_Edestalurinal_0002_2c512309d7
+  source: /World/shenxinfu_841837/Meshes/Assets/Edestalurinal_0002
+  auto_reason: auto_object
+  center:
+  - 1.3089700850988388
+  - 1.4369695
+  - 0.8543840149011612
+  size:
+  - 0.4056878089904785
+  - 0.36606138944625854
+  - 0.7287678122520447
+  yaw: 0.0
+- name: urinal_Edestalurinal_0003_35a19942ac
+  enabled: true
+  kind: urinal
+  prim_path: /World/shenxinfu_841837/_collision_proxy/urinal_Edestalurinal_0003_35a19942ac
+  source: /World/shenxinfu_841837/Meshes/Assets/Edestalurinal_0003
+  auto_reason: auto_object
+  center:
+  - 0.510724
+  - 1.4325384925494196
+  - 0.5444680298023223
+  size:
+  - 0.3231162428855896
+  - 0.37492290139198303
+  - 0.732935905456543
+  yaw: 0.0
+- name: urinal_Edestalurinal_0004_00a32bf0de
+  enabled: true
+  kind: urinal
+  prim_path: /World/shenxinfu_841837/_collision_proxy/urinal_Edestalurinal_0004_00a32bf0de
+  source: /World/shenxinfu_841837/Meshes/Assets/Edestalurinal_0004
+  auto_reason: auto_object
+  center:
+  - -0.3141666
+  - 1.4692555
+  - 0.4839244850988389
+  size:
+  - 0.3577256202697754
+  - 0.3014894425868988
+  - 0.6338486075401306
+  yaw: 0.0
+- name: fixture_Fpd_0000_eb8b9b8be9
+  enabled: true
+  kind: fixture
+  prim_path: /World/shenxinfu_841837/_collision_proxy/fixture_Fpd_0000_eb8b9b8be9
+  source: /World/shenxinfu_841837/Meshes/Assets/Fpd_0000
+  auto_reason: auto_object
+  center:
+  - 2.089907671423219
+  - 1.3962351000000002
+  - 0.10599999999999998
+  size:
+  - 0.08999999612569809
+  - 0.09000000357627869
+  - 0.3499999940395355
+  yaw: 0.0
+- name: fixture_Fpd_0001_61bf02ba9d
+  enabled: true
+  kind: fixture
+  prim_path: /World/shenxinfu_841837/_collision_proxy/fixture_Fpd_0001_61bf02ba9d
+  source: /World/shenxinfu_841837/Meshes/Assets/Fpd_0001
+  auto_reason: auto_object
+  center:
+  - -0.3148468585767813
+  - 1.5296604000000005
+  - 0.10398551000000003
+  size:
+  - 0.08999999612569809
+  - 0.09000000357627869
+  - 0.3499999940395355
+  yaw: 0.0
+- name: toilet_Toilet_YREQ63RVAJ2SUPTULA888888_YlDCP_54e77d2b3f
+  enabled: true
+  kind: toilet
+  prim_path: /World/shenxinfu_841837/_collision_proxy/toilet_Toilet_YREQ63RVAJ2SUPTULA888888_YlDCP_54e77d2b3f
+  source: /World/shenxinfu_841837/Meshes/Assets/Toilet_YREQ63RVAJ2SUPTULA888888_YlDCP
+  auto_reason: auto_object
+  center:
+  - 2.8863956928253174
+  - -1.1032815608074527
+  - 0.46436
+  size:
+  - 0.4324204623699188
+  - 0.592479407787323
+  - 0.7486122250556946
+  yaw: 0.0
+- name: toilet_Toilet_YREQ6BBVAI7FMPTUJQ888888_KIiuW_914e4b458e
+  enabled: true
+  kind: toilet
+  prim_path: /World/shenxinfu_841837/_collision_proxy/toilet_Toilet_YREQ6BBVAI7FMPTUJQ888888_KIiuW_914e4b458e
+  source: /World/shenxinfu_841837/Meshes/Assets/Toilet_YREQ6BBVAI7FMPTUJQ888888_KIiuW
+  auto_reason: auto_object
+  center:
+  - 1.8102844104702251
+  - -1.1921396944858942
+  - 0.37082093890661594
+  size:
+  - 0.4218527674674988
+  - 0.7459999322891235
+  - 0.7838444113731384
+  yaw: 0.0
+- name: door_Door_1b785a9c7a
+  enabled: false
+  kind: door
+  prim_path: /World/shenxinfu_841837/_collision_proxy/door_Door_1b785a9c7a
+  source: /World/shenxinfu_841837/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Geom/Door
+  auto_reason: recursive_child_of:/World/shenxinfu_841837/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe
+  center:
+  - 2.626911613652614
+  - -0.3740567098143882
+  - 1.1633076694241211
+  size:
+  - 0.11100000143051147
+  - 0.6439999938011169
+  - 2.3359999656677246
+  yaw: 0.0
+- name: door_Door_Frame_3900d3025e
+  enabled: false
+  kind: door
+  prim_path: /World/shenxinfu_841837/_collision_proxy/door_Door_Frame_3900d3025e
+  source: /World/shenxinfu_841837/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe/Geom/Door_Frame
+  auto_reason: recursive_child_of:/World/shenxinfu_841837/Meshes/Assets/Door_YS2HVXZVALGD2PTUJQ888888_7qcYe
+  center:
+  - 2.867929351490938
+  - -0.052099263255064115
+  - 1.2633076932659275
+  size:
+  - 0.9320000410079956
+  - 0.07999999821186066
+  - 2.5420000553131104
+  yaw: 0.0
+- name: door_Door_3fa8c25a88
+  enabled: false
+  kind: door
+  prim_path: /World/shenxinfu_841837/_collision_proxy/door_Door_3fa8c25a88
+  source: /World/shenxinfu_841837/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Geom/Door
+  auto_reason: recursive_child_of:/World/shenxinfu_841837/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP
+  center:
+  - 2.2066900223777246
+  - -0.3475529263427736
+  - 1.1322797942177472
+  size:
+  - 0.06300000101327896
+  - 0.6439999938011169
+  - 2.25600004196167
+  yaw: 0.0
+- name: door_DoorFrame_f31157bbd4
+  enabled: false
+  kind: door
+  prim_path: /World/shenxinfu_841837/_collision_proxy/door_DoorFrame_f31157bbd4
+  source: /World/shenxinfu_841837/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP/Geom/DoorFrame
+  auto_reason: recursive_child_of:/World/shenxinfu_841837/Meshes/Assets/Door_YS3UEUZVAJ2V4PTUKU888888_mdynP
+  center:
+  - 1.8211953727422152
+  - -0.0379237896355332
+  - 1.272279809714954
+  size:
+  - 1.2209999561309814
+  - 0.06300000101327896
+  - 2.5420000553131104
+  yaw: 0.0
+- name: partition_Partition_0000_448f131d66
+  enabled: true
+  kind: partition
+  prim_path: /World/shenxinfu_841837/_collision_proxy/partition_Partition_0000_448f131d66
+  source: /World/shenxinfu_841837/Meshes/Assets/Partition_0000
+  auto_reason: auto_object
+  center:
+  - 0.8920000195503235
+  - 1.4000000357627869
+  - 0.8505000025033951
+  size:
+  - 0.053000010550022125
+  - 0.4399999678134918
+  - 0.9409999847412109
+  yaw: 0.0
+- name: partition_Partition_0001_5816e7d493
+  enabled: true
+  kind: partition
+  prim_path: /World/shenxinfu_841837/_collision_proxy/partition_Partition_0001_5816e7d493
+  source: /World/shenxinfu_841837/Meshes/Assets/Partition_0001
+  auto_reason: auto_object
+  center:
+  - 1.6829999685287476
+  - 1.4000000357627869
+  - 0.8505000025033951
+  size:
+  - 0.053000010550022125
+  - 0.4399999678134918
+  - 0.9409999847412109
+  yaw: 0.0
+- name: partition_Partition_0002_a7d61bc99a
+  enabled: true
+  kind: partition
+  prim_path: /World/shenxinfu_841837/_collision_proxy/partition_Partition_0002_a7d61bc99a
+  source: /World/shenxinfu_841837/Meshes/Assets/Partition_0002
+  auto_reason: auto_object
+  center:
+  - -0.7490000128746033
+  - 1.4000000357627869
+  - 0.8505000025033951
+  size:
+  - 0.053000010550022125
+  - 0.4399999678134918
+  - 0.9409999847412109
+  yaw: 0.0
+- name: partition_Partition_0003_99a0293ded
+  enabled: true
+  kind: partition
+  prim_path: /World/shenxinfu_841837/_collision_proxy/partition_Partition_0003_99a0293ded
+  source: /World/shenxinfu_841837/Meshes/Assets/Partition_0003
+  auto_reason: auto_object
+  center:
+  - 0.09200000017881393
+  - 1.4000000357627869
+  - 0.8505000025033951
+  size:
+  - 0.05299999564886093
+  - 0.4399999678134918
+  - 0.9409999847412109
+  yaw: 0.0
+- name: partition_Partition_0004_6906fb49b8
+  enabled: true
+  kind: partition
+  prim_path: /World/shenxinfu_841837/_collision_proxy/partition_Partition_0004_6906fb49b8
+  source: /World/shenxinfu_841837/Meshes/Assets/Partition_0004
+  auto_reason: auto_object
+  center:
+  - 2.4749999046325684
+  - 1.4000000357627869
+  - 0.8505000025033951
+  size:
+  - 0.053000010550022125
+  - 0.4399999678134918
+  - 0.9409999847412109
+  yaw: 0.0

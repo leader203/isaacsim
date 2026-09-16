@@ -1,0 +1,3539 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="mecanum730_xms5_brush_rolling_sanheyi_short">
+    <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0" />
+    </material>
+    <material name="blue">
+        <color rgba="0.0 0.0 0.8 1.0" />
+    </material>
+    <material name="green">
+        <color rgba="0.0 0.8 0.0 1.0" />
+    </material>
+    <material name="grey">
+        <color rgba="0.2 0.2 0.2 1.0" />
+    </material>
+    <material name="orange">
+        <color rgba="1.0 0.423529411765 0.0392156862745 1.0" />
+    </material>
+    <material name="brown">
+        <color rgba="0.870588235294 0.811764705882 0.764705882353 1.0" />
+    </material>
+    <material name="red">
+        <color rgba="0.8 0.0 0.0 1.0" />
+    </material>
+    <material name="white">
+        <color rgba="1.0 1.0 1.0 1.0" />
+    </material>
+    <material name="Beige">
+        <color rgba="1.0 0.784 0.5765 1.0" />
+    </material>
+    <link name="base_footprint" />
+    <link name="base_link" prim="/base_link">
+        <inertial>
+            <origin xyz="0 0 0.05" rpy="0 0 0" />
+            <mass value="50" />
+            <inertia ixx="0.5" ixy="0" ixz="0" iyy="0.5" iyz="0" izz="0.8" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/base_link_visual.stl" />
+            </geometry>
+        </visual>
+        <collision name="base_link_robotbuilder_sphere_001">
+            <origin xyz="-0.129167616 0.0898014754 0.634808362" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.144592315" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_002">
+            <origin xyz="0.0255680308 -0.0252140034 0.512346268" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0480429578" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_003">
+            <origin xyz="0.202471256 -0.175422981 0.633312762" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0169794694" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_004">
+            <origin xyz="-0.0393617786 -0.162035182 0.820115626" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0737963617" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_005">
+            <origin xyz="0.179687366 -0.188599467 0.614819705" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0253386945" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_006">
+            <origin xyz="-0.100728154 -0.184771061 0.762669384" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.047891248" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_007">
+            <origin xyz="0.15409866 0.183391079 0.624232471" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0286418404" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_008">
+            <origin xyz="0.0732519701 -0.126046345 0.67426306" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0150263571" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_009">
+            <origin xyz="0.090905115 -0.161232799 0.674954712" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0258981847" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_010">
+            <origin xyz="-0.0120297149 -0.165615529 0.693321943" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0238681156" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_011">
+            <origin xyz="0.0668548271 -0.087367475 0.684356749" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00521880945" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_012">
+            <origin xyz="-0.212196156 0.18674618 0.732854128" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0168874916" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_013">
+            <origin xyz="-0.223843649 -0.185311615 0.577587306" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0439757742" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_014">
+            <origin xyz="0.06790106 -0.0364989676 0.689638436" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00423543228" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_015">
+            <origin xyz="-0.230222389 -0.178369179 0.746270716" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.015004728" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_016">
+            <origin xyz="-0.229221046 0.176330566 0.759856582" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0182275977" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_017">
+            <origin xyz="0.159870759 0.157527879 0.742581844" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0860591531" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_018">
+            <origin xyz="-0.204030648 0.0749725625 0.244808704" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0523030385" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_019">
+            <origin xyz="-0.114546597 0.208643064 0.331574321" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0808758587" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_020">
+            <origin xyz="-0.194443002 0.0904661566 0.22002697" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0526889265" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_021">
+            <origin xyz="0.0584085658 -0.210346356 0.282451749" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0284222048" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_022">
+            <origin xyz="-0.152167305 0.00405869959 0.361889899" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0421634652" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_023">
+            <origin xyz="-0.00549971126 -0.155735895 0.253300369" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0443269424" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_024">
+            <origin xyz="-0.190881401 -0.175275296 0.397642314" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.129132733" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_025">
+            <origin xyz="0.184091479 0.211532533 0.30789873" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0383957624" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_026">
+            <origin xyz="0.182093412 0.162010863 0.24060002" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0352833048" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_027">
+            <origin xyz="-0.143432796 0.0266803317 0.244488552" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.029193582" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_028">
+            <origin xyz="0.0324480683 0.214043811 0.398743898" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.069446519" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_029">
+            <origin xyz="0.157278642 -0.0483243093 0.247631088" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0332045741" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_030">
+            <origin xyz="0.0812963396 -0.0677263737 0.248982608" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0560366213" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_031">
+            <origin xyz="-0.0454698056 -0.0621729977 0.263650477" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0880237073" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_032">
+            <origin xyz="0.199554726 0.0478562415 0.318136424" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0128879661" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_033">
+            <origin xyz="0.157979667 -0.163595006 0.249067917" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0438373648" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_034">
+            <origin xyz="-0.0420219116 0.190226108 0.266992986" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0264525004" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_035">
+            <origin xyz="0.198880494 0.138025731 0.24215512" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0186557826" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_036">
+            <origin xyz="-0.00172168983 0.0755177289 0.252665848" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.100026764" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_037">
+            <origin xyz="0.261140794 -0.140361294 0.164267957" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0288626477" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_038">
+            <origin xyz="-0.24633576 -0.0067192507 0.399297655" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0912921056" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_039">
+            <origin xyz="0.197300345 0.116860561 0.270821065" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0173397865" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_040">
+            <origin xyz="0.116016231 -0.206203833 0.268161714" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.014974813" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_041">
+            <origin xyz="-0.248340681 0.143337011 0.265892118" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0358652584" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_042">
+            <origin xyz="-0.202050671 -0.130500451 0.138745189" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0955585316" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_043">
+            <origin xyz="-0.214469522 0.161030903 0.128948972" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0795284733" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_044">
+            <origin xyz="-0.187446505 -0.00346250623 0.259691983" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0309551656" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_045">
+            <origin xyz="-0.137381449 0.0199250579 0.241864115" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0224754829" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_046">
+            <origin xyz="-0.145381764 -0.0329173543 0.245371863" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0292606018" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_047">
+            <origin xyz="-0.195886672 -0.12552698 0.249237478" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0332949385" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_048">
+            <origin xyz="-0.258688867 -0.063314274 0.530483425" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0315006599" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_049">
+            <origin xyz="-0.059122894 0.18539919 0.839620829" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0451702625" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_050">
+            <origin xyz="-0.202875569 0.171126619 0.962515593" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0428198129" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_051">
+            <origin xyz="-0.0479593128 -0.0418062322 0.807551861" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0396440178" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_052">
+            <origin xyz="-0.0239122417 -0.122937135 0.851877391" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0358810872" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_053">
+            <origin xyz="-0.219466209 0.158405989 1.04301238" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0448858477" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_054">
+            <origin xyz="0.0243662335 0.213527352 0.522008538" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0268818494" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_055">
+            <origin xyz="-0.0345689431 0.048973307 1.05175328" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0440086275" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_056">
+            <origin xyz="0.224496663 0.135719702 1.04426849" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0417870283" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_057">
+            <origin xyz="0.15638192 0.139588803 0.65781492" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0258163381" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_058">
+            <origin xyz="0.112599172 0.054837361 0.607168853" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0291761269" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_059">
+            <origin xyz="-0.061399404 0.213277385 0.477738649" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0458273701" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_060">
+            <origin xyz="0.0485943183 0.155516714 0.233641207" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0568355955" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_061">
+            <origin xyz="-0.229879662 -0.0220935233 0.107622139" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0785308927" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_062">
+            <origin xyz="0.0254826155 0.198733211 0.830873132" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0132113881" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_063">
+            <origin xyz="-0.251025021 0.0775134861 0.0851081237" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0340470746" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_064">
+            <origin xyz="0.0902009085 0.0932988152 0.0846404359" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0180699043" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_065">
+            <origin xyz="-0.218605131 0.0775908306 0.82267195" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.050841365" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_066">
+            <origin xyz="-0.218122929 0.155774727 0.891614139" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0477485508" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_067">
+            <origin xyz="0.230932891 0.0872466862 0.0729306415" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0259028114" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_068">
+            <origin xyz="0.0591478087 -0.215109527 0.42585364" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0744944364" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_069">
+            <origin xyz="0.2047389 0.00829879008 0.260129869" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.036703188" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_070">
+            <origin xyz="0.201826751 0.115627527 0.499940068" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0469655134" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_071">
+            <origin xyz="0.170451328 0.151362047 0.637043595" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0508264937" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_072">
+            <origin xyz="0.2298062 0.10617733 0.611374199" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0389564708" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_073">
+            <origin xyz="0.117888018 0.211753875 0.481259406" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0712924674" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_074">
+            <origin xyz="0.0546071865 0.180028737 0.607324481" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0571412444" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_075">
+            <origin xyz="-0.147944808 0.114240274 0.103748657" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0510864593" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_076">
+            <origin xyz="-0.162092224 -0.0685934648 0.0939781293" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0152874151" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_077">
+            <origin xyz="0.220225886 -0.0643773749 0.100455225" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0694432259" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_078">
+            <origin xyz="-0.185861677 0.164194092 1.02233434" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0430279486" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_079">
+            <origin xyz="-0.151402518 0.00568886241 0.0943399519" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0473732576" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_080">
+            <origin xyz="-0.0709773675 -0.170641005 0.160219491" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0694102496" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_081">
+            <origin xyz="0.250628591 0.102299862 0.270616382" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0159554724" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_082">
+            <origin xyz="0.237354249 -0.181973696 0.266938865" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0187762175" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_083">
+            <origin xyz="0.0863851011 0.190949947 1.02545357" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0611109883" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_084">
+            <origin xyz="0.163139656 -0.178355321 0.629278421" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0155573898" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_085">
+            <origin xyz="0.181148127 -0.116868347 0.234659627" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0590460822" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_086">
+            <origin xyz="0.244115308 0.116450287 0.817649961" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0245232303" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_087">
+            <origin xyz="0.205237061 0.09153115 0.128789321" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0361780003" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_088">
+            <origin xyz="0.217549592 0.17872639 0.601892531" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0532826073" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_089">
+            <origin xyz="0.22720395 0.0632773116 0.804088414" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0367196309" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_090">
+            <origin xyz="0.157352105 0.0655317307 0.720376492" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0271573704" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_091">
+            <origin xyz="0.226523504 0.17006956 0.874489963" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0218893904" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_092">
+            <origin xyz="-0.17172353 -0.18247883 0.10176488" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0359340385" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_093">
+            <origin xyz="0.0573475026 -0.0153348288 0.625642717" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0209353246" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_094">
+            <origin xyz="-0.150490806 -0.190247357 0.849670589" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0238793977" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_095">
+            <origin xyz="-0.00338785211 -0.0930110589 0.963761747" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0253077168" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_096">
+            <origin xyz="0.1684542 0.178324699 1.05141532" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0389866009" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_097">
+            <origin xyz="0.0453276187 0.199089617 0.818211854" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0133728171" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_098">
+            <origin xyz="0.184715673 0.190686956 0.960040152" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0232557338" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_099">
+            <origin xyz="0.052704528 0.196890131 0.868533611" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0148386741" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_100">
+            <origin xyz="-0.00565239508 0.183587015 1.01694393" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0575896762" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_101">
+            <origin xyz="0.149299726 0.194929212 0.869602084" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0385794677" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_102">
+            <origin xyz="-0.100338176 -0.0565272234 0.103335619" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0569722019" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_103">
+            <origin xyz="0.0739222318 -0.00674421573 0.141058475" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.127984598" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_104">
+            <origin xyz="-0.0865129307 0.0823459476 0.0783289373" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0233662352" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_105">
+            <origin xyz="0.231675327 0.164092496 0.710469127" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0265019368" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_106">
+            <origin xyz="-0.123680197 -0.0998591855 0.207706347" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.054560259" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_107">
+            <origin xyz="0.249680519 -0.0777700171 0.0738754272" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0200521518" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_108">
+            <origin xyz="0.247652769 0.0788491145 0.0889671147" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0342369117" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_109">
+            <origin xyz="0.233967051 0.155696481 0.945579588" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0174127705" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_110">
+            <origin xyz="0.23678343 0.136246115 0.761240304" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0372659713" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_111">
+            <origin xyz="0.244482249 0.139574185 0.849090755" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0238323789" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_112">
+            <origin xyz="0.204464138 0.0695638135 1.04554415" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0360675342" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_113">
+            <origin xyz="0.159745082 0.150623932 0.263474762" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.01343117" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_114">
+            <origin xyz="-0.238320127 0.168452308 0.46231854" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0844322443" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_115">
+            <origin xyz="0.214791581 0.0261973869 0.244640946" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0427143611" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_116">
+            <origin xyz="-0.189412251 0.175559342 0.797215402" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0467024855" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_117">
+            <origin xyz="0.264569402 0.115899362 0.989713371" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.035952352" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_118">
+            <origin xyz="0.236279607 0.0997086242 0.86952424" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0219081268" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_119">
+            <origin xyz="0.0953660682 -0.164709225 0.136514857" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0679220706" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_120">
+            <origin xyz="0.00467802631 -0.0270028058 0.945688128" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0388238952" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_121">
+            <origin xyz="0.0365760326 0.0616407543 0.837799072" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0809037966" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_122">
+            <origin xyz="-0.0193729792 -0.0849011466 0.258900315" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0261647627" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_123">
+            <origin xyz="-0.11014688 -0.0102078598 0.252499163" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0301768724" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_124">
+            <origin xyz="0.173588023 0.0880723149 0.191282079" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0377556048" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_125">
+            <origin xyz="-0.114608772 0.134590551 0.210647255" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0862345025" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_126">
+            <origin xyz="-0.213386953 -0.121905439 0.974539757" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0346284732" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_127">
+            <origin xyz="-0.225998327 -0.0674211681 1.06122136" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.028927492" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_128">
+            <origin xyz="-0.0959323496 -0.0351990722 0.826220989" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0527033135" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_129">
+            <origin xyz="-0.232521445 -0.0171343777 1.05193901" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0437905714" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_130">
+            <origin xyz="-0.207914039 -0.0098503381 0.985583842" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0370110422" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_131">
+            <origin xyz="-0.0893226191 -0.119152546 0.637770653" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.123499438" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_132">
+            <origin xyz="-0.192865297 0.0668146014 0.939622521" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.036547333" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_133">
+            <origin xyz="-0.213764325 -0.143403932 0.915053904" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0601435751" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_134">
+            <origin xyz="-0.203951553 -0.0766228363 0.828724265" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0612487234" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_135">
+            <origin xyz="-0.197309002 -0.174833775 1.04674661" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0477086566" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_136">
+            <origin xyz="-0.197548822 -0.138058156 0.824295282" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0642624423" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_137">
+            <origin xyz="-0.197551876 0.0536416359 0.920511186" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0526682176" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_138">
+            <origin xyz="0.215848982 0.156478316 1.04823136" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0380230956" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_139">
+            <origin xyz="0.255236775 0.112012252 0.443041801" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0128680672" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_140">
+            <origin xyz="0.116570339 0.165148824 0.130821869" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0868511051" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_141">
+            <origin xyz="0.151852667 0.142434239 0.0983376652" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0426909178" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_142">
+            <origin xyz="0.152074084 -0.172910735 0.102095298" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0531068631" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_143">
+            <origin xyz="0.164182678 0.0709528923 0.648846209" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0320800992" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_144">
+            <origin xyz="-0.14614372 0.18586576 1.04506755" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0411359258" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_145">
+            <origin xyz="-0.0418953858 0.194483995 0.874764681" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0284381844" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_146">
+            <origin xyz="0.263949871 -0.107768439 0.416271389" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00350515901" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_147">
+            <origin xyz="-0.263233036 0.020230189 0.529940903" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0304517411" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_148">
+            <origin xyz="-0.237102747 0.107365608 0.541285872" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0307096876" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_149">
+            <origin xyz="-0.105395555 0.0506895706 0.894537687" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0214135218" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_150">
+            <origin xyz="0.0120426705 0.0251325164 1.02915323" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0635499507" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_151">
+            <origin xyz="-0.102885447 0.0492201634 0.932302773" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0296353363" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_152">
+            <origin xyz="-0.114324331 0.0425018966 0.844301462" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0237849895" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_153">
+            <origin xyz="0.136338919 0.0600765087 0.998070419" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0256323115" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_154">
+            <origin xyz="-0.154886872 0.0573250204 1.04214811" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.049881231" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_155">
+            <origin xyz="-0.053614717 -0.179723158 0.972322285" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0220922753" />
+            </geometry>
+        </collision>
+        <collision name="base_link_robotbuilder_sphere_156">
+            <origin xyz="-0.0819445029 0.192801356 0.911817193" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0192225855" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_link_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="wheel_fl_link">
+        <inertial>
+            <origin xyz="1.19209335241e-09 -2.38418549595e-09 -3.21865090136e-09" rpy="0 0 2.02815925832e-07" />
+            <mass value="12" />
+            <inertia ixx="0.0179945928974" ixy="-1.1111971936e-08" ixz="8.20458197998e-08" iyy="0.0116347027099" iyz="-1.92956321647e-07" izz="0.0116351437482" />
+        </inertial>
+        <visual>
+            <origin xyz="1.19209335241e-09 -2.38418549595e-09 -3.21865090136e-09" rpy="0 0 2.02815925832e-07" />
+            <geometry>
+                <mesh filename="meshes/wheel_left_core.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="wheel_fr_link">
+        <inertial>
+            <origin xyz="-1.19209238531e-09 -2.3841859795e-09 -3.21865090136e-09" rpy="0 0 -3.14159245077" />
+            <mass value="12" />
+            <inertia ixx="0.0180079278628" ixy="-2.32145676917e-07" ixz="-7.71325895433e-08" iyy="0.011642249721" iyz="-4.46736965245e-08" izz="0.0116422698122" />
+        </inertial>
+        <visual>
+            <origin xyz="-1.19209238531e-09 -2.3841859795e-09 -3.21865090136e-09" rpy="0 0 -3.14159245077" />
+            <geometry>
+                <mesh filename="meshes/wheel_right_core.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="wheel_rl_link">
+        <inertial>
+            <origin xyz="1.19209238531e-09 2.3841859795e-09 -3.21865090136e-09" rpy="0 0 2.02815925832e-07" />
+            <mass value="12" />
+            <inertia ixx="0.0180079278628" ixy="-2.32145676917e-07" ixz="-7.71325895433e-08" iyy="0.011642249721" iyz="-4.46736965245e-08" izz="0.0116422698122" />
+        </inertial>
+        <visual>
+            <origin xyz="1.19209238531e-09 2.3841859795e-09 -3.21865090136e-09" rpy="0 0 2.02815925832e-07" />
+            <geometry>
+                <mesh filename="meshes/wheel_right_core.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="wheel_rr_link">
+        <inertial>
+            <origin xyz="-1.19209335241e-09 2.38418549595e-09 -3.21865090136e-09" rpy="0 0 -3.14159245077" />
+            <mass value="12" />
+            <inertia ixx="0.0179945928974" ixy="-1.1111971936e-08" ixz="8.20458197998e-08" iyy="0.0116347027099" iyz="-1.92956321647e-07" izz="0.0116351437482" />
+        </inertial>
+        <visual>
+            <origin xyz="-1.19209335241e-09 2.38418549595e-09 -3.21865090136e-09" rpy="0 0 -3.14159245077" />
+            <geometry>
+                <mesh filename="meshes/wheel_left_core.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_joint" type="continuous">
+        <origin xyz="0.157499998808 0.172499999404 0.0780000016093" rpy="0 0 1.57079632679" />
+        <parent link="base_link" />
+        <child link="wheel_fl_link" />
+        <axis xyz="1 0 0" />
+        <dynamics damping="1000" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_1_link">
+        <inertial>
+            <origin xyz="1.86434006144e-09 1.38344266929e-09 1.38344287858e-09" rpy="1.53691485957e-08 -2.81924612278e-08 -6.12561026293e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434006144e-09 1.38344266929e-09 1.38344287858e-09" rpy="1.53691485957e-08 -2.81924612278e-08 -6.12561026293e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_1_joint" type="continuous">
+        <origin xyz="-9.6803910668e-09 0.0536076439917 -0.0258160861731" rpy="0.785398163352 0.448798931081 1.57079657403" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_1_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_2_link">
+        <inertial>
+            <origin xyz="-2.741813665e-09 0 0" rpy="4.64407213416e-08 -2.68262712404e-08 1.11118041867e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.741813665e-09 0 0" rpy="4.64407213416e-08 -2.68262712404e-08 1.11118041867e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_2_joint" type="continuous">
+        <origin xyz="1.32596412201e-08 -0.0595000037551 -3.21865093839e-09" rpy="-2.35619454875 -3.8938610003e-08 -1.57079614011" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_2_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_3_link">
+        <inertial>
+            <origin xyz="-3.55407701284e-09 -5.64839140642e-10 -5.64839112954e-10" rpy="2.82145452478e-08 -9.17466672582e-09 2.59333389024e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407701284e-09 -5.64839140642e-10 -5.64839112954e-10" rpy="2.82145452478e-08 -9.17466672582e-09 2.59333389024e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_3_joint" type="continuous">
+        <origin xyz="-1.49318858624e-09 0.0132399931923 0.0580082093775" rpy="0.785398204827 -1.34639681424 1.57079644538" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_3_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_4_link">
+        <inertial>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 -1.38344305897e-09" rpy="8.03549506492e-09 1.12901189702e-08 2.28174279924e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 -1.38344305897e-09" rpy="8.03549506492e-09 1.12901189702e-08 2.28174279924e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_4_joint" type="continuous">
+        <origin xyz="-9.68039105142e-09 0.0536076439917 0.0258160797358" rpy="0.785398163352 -0.448798931081 1.5707964852" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_4_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_5_link">
+        <inertial>
+            <origin xyz="-3.55407683858e-09 5.64839219278e-10 5.64838622666e-10" rpy="3.14177840252e-08 -1.13666273607e-07 -6.4186922453e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407683858e-09 5.64839219278e-10 5.64838622666e-10" rpy="3.14177840252e-08 -1.13666273607e-07 -6.4186922453e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_5_joint" type="continuous">
+        <origin xyz="-1.4931886071e-09 0.0132399931923 -0.0580082158148" rpy="0.785397820847 1.3463968278 1.57079615821" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_5_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_6_link">
+        <inertial>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 -2.35301874001e-10" rpy="3.39623822802e-09 6.87529941695e-09 1.40920661923e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 -2.35301874001e-10" rpy="3.39623822802e-09 6.87529941695e-09 1.40920661923e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_6_joint" type="continuous">
+        <origin xyz="8.71608642071e-09 -0.037097646445 0.0465189707875" rpy="-2.35619451067 -0.897597904715 -1.57079610033" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_6_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fl_roller_7_link">
+        <inertial>
+            <origin xyz="-2.31013119205e-09 2.35301919247e-10 2.35301911954e-10" rpy="-1.05598623837e-08 1.09752233335e-08 -1.19812018664e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013119205e-09 2.35301919247e-10 2.35301911954e-10" rpy="-1.05598623837e-08 1.09752233335e-08 -1.19812018664e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fl_roller_7_joint" type="continuous">
+        <origin xyz="8.7160864375e-09 -0.037097646445 -0.0465189772248" rpy="-2.35619451067 0.897597904715 -1.57079614763" />
+        <parent link="wheel_fl_link" />
+        <child link="wheel_fl_roller_7_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <joint name="wheel_fr_joint" type="continuous">
+        <origin xyz="0.157499998808 -0.172499999404 0.0780000016093" rpy="0 0 1.57079615821" />
+        <parent link="base_link" />
+        <child link="wheel_fr_link" />
+        <axis xyz="1 0 0" />
+        <dynamics damping="1000" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_1_link">
+        <inertial>
+            <origin xyz="-3.55407706062e-09 5.64839108256e-10 -5.64838511644e-10" rpy="-3.1417787578e-08 1.13666273607e-07 -6.4186922453e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407706062e-09 5.64839108256e-10 -5.64838511644e-10" rpy="-3.1417787578e-08 1.13666273607e-07 -6.4186922453e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_1_joint" type="continuous">
+        <origin xyz="1.49318970817e-09 -0.0132399979606 0.0580082093775" rpy="-0.785397820847 -1.3463968278 -1.57079649538" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_1_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_2_link">
+        <inertial>
+            <origin xyz="-2.741813665e-09 0 0" rpy="-4.64407248943e-08 2.68262712404e-08 1.11118059631e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.741813665e-09 0 0" rpy="-4.64407248943e-08 2.68262712404e-08 1.11118059631e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_2_joint" type="continuous">
+        <origin xyz="-1.32596410959e-08 0.0594999989867 -3.21865101174e-09" rpy="2.35619454875 3.89386099475e-08 1.57079651348" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_2_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_3_link">
+        <inertial>
+            <origin xyz="-3.5540767908e-09 -5.64839196153e-10 5.64839168465e-10" rpy="-2.82145470241e-08 9.174667614e-09 2.59333406787e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.5540767908e-09 -5.64839196153e-10 5.64839168465e-10" rpy="-2.82145470241e-08 9.174667614e-09 2.59333406787e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_3_joint" type="continuous">
+        <origin xyz="1.49318976368e-09 -0.0132399979606 -0.0580082158148" rpy="-0.785398204827 1.34639681424 -1.5707962082" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_3_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_4_link">
+        <inertial>
+            <origin xyz="-2.31013141409e-09 2.35301697203e-10 -2.35301689909e-10" rpy="1.05598597191e-08 -1.09752224453e-08 -1.19812009782e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141409e-09 2.35301697203e-10 -2.35301689909e-10" rpy="1.05598597191e-08 -1.09752224453e-08 -1.19812009782e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_4_joint" type="continuous">
+        <origin xyz="-8.7160860499e-09 0.0370976416767 0.0465189707875" rpy="2.35619451067 -0.897597904715 1.57079650596" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_4_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_5_link">
+        <inertial>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 1.38344305897e-09" rpy="-8.03549950581e-09 -1.1290118082e-08 2.28174297688e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 1.38344305897e-09" rpy="-8.03549950581e-09 -1.1290118082e-08 2.28174297688e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_5_joint" type="continuous">
+        <origin xyz="9.68039275237e-09 -0.0536076487601 -0.0258160861731" rpy="-0.785398163352 0.448798931081 -1.57079616839" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_5_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_6_link">
+        <inertial>
+            <origin xyz="1.86434028349e-09 1.38344266929e-09 -1.38344287858e-09" rpy="-1.53691521485e-08 2.81924612278e-08 -6.12561026293e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434028349e-09 1.38344266929e-09 -1.38344287858e-09" rpy="-1.53691521485e-08 2.81924612278e-08 -6.12561026293e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_6_joint" type="continuous">
+        <origin xyz="9.68039275237e-09 -0.0536076487601 0.0258160797358" rpy="-0.785398163352 -0.448798931081 -1.57079607956" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_6_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_fr_roller_7_link">
+        <inertial>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 2.35301874001e-10" rpy="-3.39624089255e-09 -6.87529897286e-09 1.40920670805e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 2.35301874001e-10" rpy="-3.39624089255e-09 -6.87529897286e-09 1.40920670805e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_fr_roller_7_joint" type="continuous">
+        <origin xyz="-8.71608593887e-09 0.0370976416767 -0.0465189772248" rpy="2.35619451067 0.897597904715 1.57079655326" />
+        <parent link="wheel_fr_link" />
+        <child link="wheel_fr_roller_7_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <joint name="wheel_rl_joint" type="continuous">
+        <origin xyz="-0.157499998808 0.172499999404 0.0780000016093" rpy="0 0 1.57079632679" />
+        <parent link="base_link" />
+        <child link="wheel_rl_link" />
+        <axis xyz="1 0 0" />
+        <dynamics damping="1000" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_1_link">
+        <inertial>
+            <origin xyz="-3.55407706062e-09 5.64839108256e-10 -5.64838511644e-10" rpy="-3.1417787578e-08 1.13666273607e-07 -6.4186922453e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407706062e-09 5.64839108256e-10 -5.64838511644e-10" rpy="-3.1417787578e-08 1.13666273607e-07 -6.4186922453e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_1_joint" type="continuous">
+        <origin xyz="-1.49318952002e-09 0.0132399979606 0.0580082093775" rpy="-0.785397820847 -1.3463968278 1.57079615821" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_1_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_2_link">
+        <inertial>
+            <origin xyz="-2.741813665e-09 0 0" rpy="-4.64407248943e-08 2.68262712404e-08 1.11118059631e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.741813665e-09 0 0" rpy="-4.64407248943e-08 2.68262712404e-08 1.11118059631e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_2_joint" type="continuous">
+        <origin xyz="1.32596402503e-08 -0.0594999989867 -3.21865101174e-09" rpy="2.35619454875 3.8938610003e-08 -1.57079614011" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_2_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_3_link">
+        <inertial>
+            <origin xyz="-3.5540767908e-09 -5.64839196153e-10 5.64839168465e-10" rpy="-2.82145470241e-08 9.174667614e-09 2.59333406787e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.5540767908e-09 -5.64839196153e-10 5.64839168465e-10" rpy="-2.82145470241e-08 9.174667614e-09 2.59333406787e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_3_joint" type="continuous">
+        <origin xyz="-1.49318957553e-09 0.0132399979606 -0.0580082158148" rpy="-0.785398204827 1.34639681424 1.57079644538" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_3_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_4_link">
+        <inertial>
+            <origin xyz="-2.31013141409e-09 2.35301697203e-10 -2.35301689909e-10" rpy="1.05598597191e-08 -1.09752224453e-08 -1.19812009782e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141409e-09 2.35301697203e-10 -2.35301689909e-10" rpy="1.05598597191e-08 -1.09752224453e-08 -1.19812009782e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_4_joint" type="continuous">
+        <origin xyz="8.71608552271e-09 -0.0370976416767 0.0465189707875" rpy="2.35619451067 -0.897597904715 -1.57079614763" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_4_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_5_link">
+        <inertial>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 1.38344305897e-09" rpy="-8.03549950581e-09 -1.1290118082e-08 2.28174297688e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 1.38344305897e-09" rpy="-8.03549950581e-09 -1.1290118082e-08 2.28174297688e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_5_joint" type="continuous">
+        <origin xyz="-9.68039199056e-09 0.0536076487601 -0.0258160861731" rpy="-0.785398163352 0.448798931081 1.5707964852" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_5_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_6_link">
+        <inertial>
+            <origin xyz="1.86434028349e-09 1.38344266929e-09 -1.38344287858e-09" rpy="-1.53691521485e-08 2.81924612278e-08 -6.12561026293e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434028349e-09 1.38344266929e-09 -1.38344287858e-09" rpy="-1.53691521485e-08 2.81924612278e-08 -6.12561026293e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_6_joint" type="continuous">
+        <origin xyz="-9.68039199056e-09 0.0536076487601 0.0258160797358" rpy="-0.785398163352 -0.448798931081 1.57079657403" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_6_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rl_roller_7_link">
+        <inertial>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 2.35301874001e-10" rpy="-3.39624089255e-09 -6.87529897286e-09 1.40920670805e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 2.35301874001e-10" rpy="-3.39624089255e-09 -6.87529897286e-09 1.40920670805e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rl_roller_7_joint" type="continuous">
+        <origin xyz="8.71608541168e-09 -0.0370976416767 -0.0465189772248" rpy="2.35619451067 0.897597904715 -1.57079610033" />
+        <parent link="wheel_rl_link" />
+        <child link="wheel_rl_roller_7_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <joint name="wheel_rr_joint" type="continuous">
+        <origin xyz="-0.157499998808 -0.172499999404 0.0780000016093" rpy="0 0 1.57079615821" />
+        <parent link="base_link" />
+        <child link="wheel_rr_link" />
+        <axis xyz="1 0 0" />
+        <dynamics damping="1000" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_1_link">
+        <inertial>
+            <origin xyz="1.86434006144e-09 1.38344266929e-09 1.38344287858e-09" rpy="1.53691485957e-08 -2.81924612278e-08 -6.12561026293e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434006144e-09 1.38344266929e-09 1.38344287858e-09" rpy="1.53691485957e-08 -2.81924612278e-08 -6.12561026293e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_1_joint" type="continuous">
+        <origin xyz="9.68039182861e-09 -0.0536076439917 -0.0258160861731" rpy="0.785398163352 0.448798931081 -1.57079607956" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_1_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_2_link">
+        <inertial>
+            <origin xyz="-2.741813665e-09 0 0" rpy="4.64407213416e-08 -2.68262712404e-08 1.11118041867e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.741813665e-09 0 0" rpy="4.64407213416e-08 -2.68262712404e-08 1.11118041867e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_2_joint" type="continuous">
+        <origin xyz="-1.32596420656e-08 0.0595000037551 -3.21865093839e-09" rpy="-2.35619454875 -3.89386099475e-08 1.57079651348" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_2_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_3_link">
+        <inertial>
+            <origin xyz="-3.55407701284e-09 -5.64839140642e-10 -5.64839112954e-10" rpy="2.82145452478e-08 -9.17466672582e-09 2.59333389024e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407701284e-09 -5.64839140642e-10 -5.64839112954e-10" rpy="2.82145452478e-08 -9.17466672582e-09 2.59333389024e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_3_joint" type="continuous">
+        <origin xyz="1.49318877439e-09 -0.0132399931923 0.0580082093775" rpy="0.785398204827 -1.34639681424 -1.5707962082" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_3_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_4_link">
+        <inertial>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 -1.38344305897e-09" rpy="8.03549506492e-09 1.12901189702e-08 2.28174279924e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="1.86434003165e-09 -1.38344297315e-09 -1.38344305897e-09" rpy="8.03549506492e-09 1.12901189702e-08 2.28174279924e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_4_joint" type="continuous">
+        <origin xyz="9.68039181323e-09 -0.0536076439917 0.0258160797358" rpy="0.785398163352 -0.448798931081 -1.57079616839" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_4_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_5_link">
+        <inertial>
+            <origin xyz="-3.55407683858e-09 5.64839219278e-10 5.64838622666e-10" rpy="3.14177840252e-08 -1.13666273607e-07 -6.4186922453e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-3.55407683858e-09 5.64839219278e-10 5.64838622666e-10" rpy="3.14177840252e-08 -1.13666273607e-07 -6.4186922453e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_5_joint" type="continuous">
+        <origin xyz="1.49318879525e-09 -0.0132399931923 -0.0580082158148" rpy="0.785397820847 1.3463968278 -1.57079649538" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_5_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_6_link">
+        <inertial>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 -2.35301874001e-10" rpy="3.39623822802e-09 6.87529941695e-09 1.40920661923e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013141779e-09 -2.3530192084e-10 -2.35301874001e-10" rpy="3.39623822802e-09 6.87529941695e-09 1.40920661923e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_6_joint" type="continuous">
+        <origin xyz="-8.7160869479e-09 0.037097646445 0.0465189707875" rpy="-2.35619451067 -0.897597904715 1.57079655326" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_6_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="wheel_rr_roller_7_link">
+        <inertial>
+            <origin xyz="-2.31013119205e-09 2.35301919247e-10 2.35301911954e-10" rpy="-1.05598623837e-08 1.09752233335e-08 -1.19812018664e-08" />
+            <mass value="0.0500000007451" />
+            <inertia ixx="2.64593750644e-05" ixy="0" ixz="0" iyy="2.68716299356e-05" iyz="7.63831799661e-10" izz="6.109085e-06" />
+        </inertial>
+        <visual>
+            <origin xyz="-2.31013119205e-09 2.35301919247e-10 2.35301911954e-10" rpy="-1.05598623837e-08 1.09752233335e-08 -1.19812018664e-08" />
+            <geometry>
+                <mesh filename="meshes/roller.stl" scale="0.5 0.5 0.5" />
+            </geometry>
+        </visual>
+    </link>
+    <joint name="wheel_rr_roller_7_joint" type="continuous">
+        <origin xyz="-8.71608696469e-09 0.037097646445 -0.0465189772248" rpy="-2.35619451067 0.897597904715 1.57079650596" />
+        <parent link="wheel_rr_link" />
+        <child link="wheel_rr_roller_7_link" />
+        <axis xyz="0 0 1" />
+        <dynamics damping="0.0010000000475" friction="0" />
+    </joint>
+    <link name="XMS5-R800-W4G3B4C_base">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_base.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="3.167" />
+            <inertia ixx="0.03116799" ixy="-0.00000065" ixz="-0.00000427" iyy="0.03071271" iyz="-0.00223656" izz="0.00587740" />
+            <origin rpy="0 0 0" xyz="1.1e-05 -0.007992 0.23584200000000002" />
+        </inertial>
+    </link>
+    <link name="XMS5-R800-W4G3B4C_link1">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="3.167" />
+            <inertia ixx="0.03116799" ixy="-0.00000065" ixz="-0.00000427" iyy="0.03071271" iyz="-0.00223656" izz="0.00587740" />
+            <origin rpy="0 0 0" xyz="1.1e-05 -0.007992 0.23584200000000002" />
+        </inertial>
+    </link>
+    <link name="XMS5-R800-W4G3B4C_link2">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="4.291" />
+            <inertia ixx="0.14042515" ixy="0.00039009" ixz="0.01494819" iyy="0.14040198" iyz="-0.00255277" izz="0.01264775" />
+            <origin rpy="0 0 0" xyz="0.016666 -0.069301 0.184671" />
+        </inertial>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_001">
+            <origin xyz="-0.00574327586 0.00180808152 -0.0958750993" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0695845187" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_002">
+            <origin xyz="0.0574767366 -0.00749664428 -0.100504011" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0532317907" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_003">
+            <origin xyz="0.401650757 -0.00133751729 -0.0943331197" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0646361858" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_004">
+            <origin xyz="0.352474213 -0.0267467499 -0.103058599" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0490296111" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_005">
+            <origin xyz="0.0143388892 -0.0268791988 -0.0723613724" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0319973864" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_006">
+            <origin xyz="0.42870748 0.014276443 -0.052683413" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0131540112" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_007">
+            <origin xyz="0.296809345 -0.0267574564 -0.103182018" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0471731499" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_008">
+            <origin xyz="0.161233664 -0.020265935 -0.100262016" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0476343296" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_009">
+            <origin xyz="0.113334358 -0.0272403192 -0.102630235" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0405293964" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_010">
+            <origin xyz="0.248912424 -0.0181723703 -0.104913443" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0413502008" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_011">
+            <origin xyz="0.210979819 -0.0194733795 -0.105861768" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0425230637" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_012">
+            <origin xyz="0.198537782 -0.0367057063 -0.101441205" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0372851118" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_013">
+            <origin xyz="0.119447686 0.000470047322 -0.0998840779" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0393862948" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_014">
+            <origin xyz="0.0191621333 0.0463280976 -0.0638734177" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00806569681" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_015">
+            <origin xyz="0.245597482 -0.0441736132 -0.102232032" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0359907709" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_016">
+            <origin xyz="0.310037613 -0.0295766462 -0.0941922739" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0319968313" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link2_robotbuilder_sphere_017">
+            <origin xyz="0.334956706 0.0133982627 -0.12172921" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00578518864" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="XMS5-R800-W4G3B4C_link3">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="2.018" />
+            <inertia ixx="0.02103842" ixy="-0.00048390" ixz="0.00402665" iyy="0.02167667" iyz="-0.00170490" izz="0.00429357" />
+            <origin rpy="0 0 0" xyz="0.0249 0.009986 0.08373900000000001" />
+        </inertial>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_001">
+            <origin xyz="0.00323621347 -0.00472629722 -0.00474153413" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0581496619" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_002">
+            <origin xyz="-0.0329874568 0.00750417588 -0.00701248739" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.030402204" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_003">
+            <origin xyz="-0.0467627123 0.132505119 -0.00133939716" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0480005965" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_004">
+            <origin xyz="-0.044708062 0.0978574306 -0.00319940131" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0485701524" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_005">
+            <origin xyz="-0.0422319956 0.164521739 -0.0145193962" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0437006131" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_006">
+            <origin xyz="-0.0450958535 0.00357564655 0.0291465428" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0195986591" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_007">
+            <origin xyz="-0.0682646707 0.170712203 0.0082436502" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.038870845" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_008">
+            <origin xyz="-0.0256082918 0.175021783 0.0134210512" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0311804041" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_009">
+            <origin xyz="-0.0308891889 0.113666087 -0.0350770988" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00732473237" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_010">
+            <origin xyz="-0.0842969194 0.13544248 -0.00806853827" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00637511024" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_011">
+            <origin xyz="-0.0294390284 0.0440244563 0.00236499752" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.059460979" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_012">
+            <origin xyz="-0.0322364122 0.147393748 0.03420268" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00585567066" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_013">
+            <origin xyz="0.0382155962 0.0173045509 0.0331459902" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.017611526" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_014">
+            <origin xyz="-0.0279781111 -0.027798051 0.0309110153" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0240586158" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_015">
+            <origin xyz="0.0296014287 0.0191062558 -0.0212119613" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0147128999" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_016">
+            <origin xyz="0.0255377963 0.0386884101 0.0418577828" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00951261632" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_017">
+            <origin xyz="-0.0598177016 0.139897853 0.0357342996" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00502640149" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_018">
+            <origin xyz="0.0137486607 0.0458340421 0.0454040989" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00941754971" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_019">
+            <origin xyz="0.0307003334 -0.036537651 0.0494330861" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00536986114" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_020">
+            <origin xyz="0.0450656191 0.00103865005 0.0463451073" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00799521804" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_021">
+            <origin xyz="-0.00167580741 -0.0490705036 0.0380462185" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00676695723" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_022">
+            <origin xyz="0.0110053802 0.0190707035 -0.0420837812" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00566742104" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_023">
+            <origin xyz="0.0437697954 -0.0187763702 0.0448666699" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0128085436" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_024">
+            <origin xyz="-0.0562325977 0.196165413 0.0360022895" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00818185229" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_025">
+            <origin xyz="-0.0469026752 -0.0140362969 0.0324971862" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00873367488" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_026">
+            <origin xyz="-0.0470952466 0.00249795453 0.0420522876" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00971103739" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_027">
+            <origin xyz="-0.0146149425 -0.0473106876 0.0433081351" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00518059963" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_028">
+            <origin xyz="-0.0100193722 0.195465177 -0.00718222512" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00440524425" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_029">
+            <origin xyz="-0.0728116781 0.187583178 0.0187000744" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00504511734" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_030">
+            <origin xyz="0.0272645578 0.0292353388 0.0358158648" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00551173883" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_031">
+            <origin xyz="0.0323402919 -0.0343825445 0.0402432382" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00796184968" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_032">
+            <origin xyz="-0.01671963 -0.0425725617 0.048003938" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00731495069" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_033">
+            <origin xyz="0.0317607336 0.0353437588 0.0288499203" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0103531908" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_034">
+            <origin xyz="0.0102503663 -0.0465396978 0.0455883332" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0100729112" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link3_robotbuilder_sphere_035">
+            <origin xyz="-0.0743177831 0.195064962 -0.0271367896" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0099321343" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="XMS5-R800-W4G3B4C_link4">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link4.stl" scale=".001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="2.005" />
+            <inertia ixx="0.01325119" ixy="0.00000061" ixz="0.00000278" iyy="0.01255684" iyz="-0.00115731" izz="0.00274485" />
+            <origin rpy="0 0 0" xyz="6.6e-05 -0.008515 -0.068865" />
+        </inertial>
+        <collision name="XMS5-R800-W4G3B4C_link4_robotbuilder_sphere_001">
+            <origin xyz="-0.00119428558 -0.0347689092 -0.000190404156" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0475308783" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link4_robotbuilder_sphere_002">
+            <origin xyz="0.00148454262 0.0272315852 -0.00124826108" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0537003018" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link4_robotbuilder_sphere_003">
+            <origin xyz="0.000203228003 -0.000160196534 -0.0587876737" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0438578092" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link4_robotbuilder_sphere_004">
+            <origin xyz="0.000447641331 -0.000412554044 -0.164101839" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0513366424" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link4_robotbuilder_sphere_005">
+            <origin xyz="-0.000486550038 0.000348806119 -0.105199732" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0416522101" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="XMS5-R800-W4G3B4C_link5">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.507" />
+            <inertia ixx="0.00503262" ixy="-0.00000608" ixz="-0.00000129" iyy="0.00261442" iyz="-0.00033165" izz="0.00394480" />
+            <origin rpy="0 0 0" xyz="3e-06 0.029172999999999998 0.007019" />
+        </inertial>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_001">
+            <origin xyz="-0.0308876019 -0.0601738095 -0.0212469827" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00425691623" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_002">
+            <origin xyz="0.0313051119 -0.0192046929 0.0661351308" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00774080213" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_003">
+            <origin xyz="-0.0257470533 -0.0197269395 0.0444393717" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0123931291" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_004">
+            <origin xyz="0.0355323404 0.0643579215 -0.0165087096" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00549499365" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_005">
+            <origin xyz="-0.000104478131 0.0301300958 -0.000235446438" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0565232411" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_006">
+            <origin xyz="0.0263040792 0.054231327 -0.0327617303" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00244951714" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_007">
+            <origin xyz="0.00743334973 -0.0512445159 -0.0168958642" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0265928172" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_008">
+            <origin xyz="-0.036755193 0.00165737735 0.0645953268" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0123078115" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_009">
+            <origin xyz="0.028671639 -0.00217719143 0.0457700603" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0193876866" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_010">
+            <origin xyz="0.000491029001 0.0184967052 0.036802873" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0424758904" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_011">
+            <origin xyz="-0.0305526163 0.0223521776 0.061882332" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00946880225" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_012">
+            <origin xyz="0.000686446321 -0.042366799 0.00112040353" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0532063693" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_013">
+            <origin xyz="-0.0241779871 -0.0760666803 0.02628888" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00369330635" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_014">
+            <origin xyz="-0.00211726199 -0.0206128787 0.0301530994" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0468451306" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_015">
+            <origin xyz="0.0350849442 -0.0096731605 0.066455245" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00751333684" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_016">
+            <origin xyz="-0.0311586391 -0.0205491576 0.0663543716" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00967734493" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_017">
+            <origin xyz="0.0178248696 -0.0345271528 0.0664720163" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00454949075" />
+            </geometry>
+        </collision>
+        <collision name="XMS5-R800-W4G3B4C_link5_robotbuilder_sphere_018">
+            <origin xyz="0.0325942002 0.0145926708 0.0639514402" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0113311522" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link6">
+        <visual>
+            <geometry>
+                <mesh filename="meshes/XMS5-R800-W4G3B4C_link6.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="0.634" />
+            <inertia ixx="0.00099702" ixy="-0.00000138" ixz="0.00000090" iyy="0.00100253" iyz="0.00000158" izz="0.00044795" />
+            <origin rpy="0 0 0" xyz="7.3e-05 7.9e-05 -0.044853000000000004" />
+        </inertial>
+        <collision name="link6_robotbuilder_sphere_001">
+            <origin xyz="-0.0206119306 0.0137016494 -0.0172774456" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0264913607" />
+            </geometry>
+        </collision>
+        <collision name="link6_robotbuilder_sphere_002">
+            <origin xyz="-0.0258612055 -0.0196099449 -0.0179875419" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0231590383" />
+            </geometry>
+        </collision>
+        <collision name="link6_robotbuilder_sphere_003">
+            <origin xyz="0.040008191 -0.00731033925 -0.0306886211" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00512874732" />
+            </geometry>
+        </collision>
+        <collision name="link6_robotbuilder_sphere_004">
+            <origin xyz="0.00131282862 -0.0301587246 -0.0185062662" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0187325999" />
+            </geometry>
+        </collision>
+        <collision name="link6_robotbuilder_sphere_005">
+            <origin xyz="0.023760438 -0.019235367 -0.0165112037" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0201211367" />
+            </geometry>
+        </collision>
+        <collision name="link6_robotbuilder_sphere_006">
+            <origin xyz="0.00281929458 0.0318020135 -0.0211192071" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0209472217" />
+            </geometry>
+        </collision>
+        <collision name="link6_robotbuilder_sphere_007">
+            <origin xyz="0.0218051262 0.0116725517 -0.0164538026" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0251538549" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="tool_link">
+        <visual>
+            <geometry>
+                <mesh filename="sanheyi_mesh/tool_brush_sanheyi_short.STL" scale="1.0 1.0 1.0" />
+            </geometry>
+            <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="0.5" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+            <origin rpy="0 0 0" xyz="0 0 0.03" />
+        </inertial>
+        <collision name="tool_link_robotbuilder_sphere_003">
+            <origin xyz="0.000274753373 0.0185603369 0.285850197" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.014239436" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_005">
+            <origin xyz="0.00747219659 0.00804693997 0.271356136" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00564119965" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_008">
+            <origin xyz="-0.0175142046 0.0232122429 0.285268694" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0141938152" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_018">
+            <origin xyz="0.0185544994 0.0259494558 0.277062416" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00735326298" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_020">
+            <origin xyz="0.0325026438 -0.00559889525 0.278555393" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00490448624" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_025">
+            <origin xyz="-0.0209152102 0.029234359 0.284060538" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0114316829" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_029">
+            <origin xyz="0.0203094017 -0.0266458988 0.286162317" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0121989548" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_030">
+            <origin xyz="-0.00870412868 0.0142978383 0.284992158" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0189041719" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_031">
+            <origin xyz="-0.00733565912 -0.00184411195 0.24605234" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00808867626" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_034">
+            <origin xyz="0.0182204023 -0.0196322855 0.285024822" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0130209858" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_035">
+            <origin xyz="-0.00297683547 0.00318612135 0.225122362" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0107191727" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_036">
+            <origin xyz="-0.00705410866 -0.0300894771 0.282711059" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0100763068" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_040">
+            <origin xyz="0.0209081024 0.0217030309 0.282494605" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0129098222" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_042">
+            <origin xyz="-0.000299723179 -0.042762477 0.289015979" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00702210888" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_043">
+            <origin xyz="0.028411502 0.0160619263 0.286293328" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.014110514" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_044">
+            <origin xyz="0.0222249962 -0.00969506241 0.150739074" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0109149776" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_045">
+            <origin xyz="-0.0223500542 -0.0560287349 0.0858591124" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00721418904" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_046">
+            <origin xyz="-0.00608872063 0.00972517394 0.0190676525" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0177834257" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_047">
+            <origin xyz="0.00972904451 0.0132898707 0.0587540306" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0141799422" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_048">
+            <origin xyz="-0.00425383775 -0.0434989557 0.0493905842" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0146701187" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_049">
+            <origin xyz="0.000695130031 -0.00412922679 0.0955159739" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0350878499" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_050">
+            <origin xyz="-0.000165490143 0.000833827886 0.168968394" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.044462055" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_052">
+            <origin xyz="-0.0185519475 0.0171735976 0.0640770346" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00818770286" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_053">
+            <origin xyz="0.0166609399 -0.0605972111 0.0819816813" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00647476176" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_054">
+            <origin xyz="-0.0395983905 0.0143492138 0.010260867" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0109857433" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_058">
+            <origin xyz="0.0222467091 0.0186595451 0.280944675" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0114942398" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_060">
+            <origin xyz="0.0423254073 0.00706839561 0.286791056" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00784665346" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_064">
+            <origin xyz="-0.00214920752 0.00593033247 0.206146389" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.011764437" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_065">
+            <origin xyz="-0.000863758614 -0.029833395 0.050800696" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0151669132" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_066">
+            <origin xyz="0.0179102868 -0.062815465 0.0621757507" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00882627349" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_067">
+            <origin xyz="0.00607745163 0.0268803202 0.00646416331" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00794799626" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_068">
+            <origin xyz="0.0211087838 -0.0196707491 0.145369455" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0103795193" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_069">
+            <origin xyz="-0.00408320734 -0.0401718877 0.121749014" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00488176756" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_070">
+            <origin xyz="-0.0204835031 0.0138607444 0.0567573234" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0056229122" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_071">
+            <origin xyz="-0.00828418881 -0.0323654264 0.0749302804" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0190918203" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_072">
+            <origin xyz="0.0643437877 0.031122515 0.0149816042" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.010087858" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_074">
+            <origin xyz="0.00117621163 -0.00404389435 0.239643872" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.011624869" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_075">
+            <origin xyz="-0.0100548062 -0.0541380309 0.110827386" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0110242134" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_076">
+            <origin xyz="-0.0354066901 -0.00929022953 0.0105104633" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0102097951" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_077">
+            <origin xyz="-0.0600607097 -0.00935928244 0.0103544286" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00581316696" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_078">
+            <origin xyz="0.00268730894 0.00259601837 0.234014824" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0114609245" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_079">
+            <origin xyz="0.00868734717 -0.0293280873 0.125566512" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0213261433" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_081">
+            <origin xyz="0.00833723135 -0.0427584387 0.289629072" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00782123953" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_082">
+            <origin xyz="-0.0449643619 -0.0049720048 0.0124546466" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00780769391" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_083">
+            <origin xyz="-0.0040491526 0.00864586234 0.0745664462" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0334031843" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_084">
+            <origin xyz="0.00578142283 -0.0520281866 0.0554825701" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0133863539" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_085">
+            <origin xyz="0.0102263726 -0.0165699515 0.132223904" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0129543152" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_086">
+            <origin xyz="-0.0281524602 -0.0111887073 0.00756327715" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00691855699" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_087">
+            <origin xyz="-0.0533364899 0.00387711544 0.0166861676" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0141227059" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_088">
+            <origin xyz="-0.000566657051 -0.0408514589 0.0774599239" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0271960534" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_089">
+            <origin xyz="0.0124681089 -0.0379492342 0.137123078" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.022516543" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_090">
+            <origin xyz="-0.00229994813 -0.000192953827 0.215846434" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0133812064" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_095">
+            <origin xyz="-0.0501709916 -0.00517245149 0.146309406" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00827710144" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_096">
+            <origin xyz="0.0104253646 -0.0485006236 0.0593734011" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0153957661" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_097">
+            <origin xyz="0.0113132745 0.000659597863 0.0117776664" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00950696133" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_099">
+            <origin xyz="-0.0439384803 -0.00459674606 0.14822039" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00639762217" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_101">
+            <origin xyz="-0.0155490283 -0.0546848327 0.0993570015" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0123159504" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_105">
+            <origin xyz="-0.00804837607 0.0230390001 0.0138069913" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00750747276" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_106">
+            <origin xyz="-0.00876457617 0.00132411066 0.170735583" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0223626569" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_107">
+            <origin xyz="0.0132710841 0.0501120798 0.146102071" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0084843142" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_108">
+            <origin xyz="0.00569334533 -0.0444930047 0.0862962529" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0177104827" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_109">
+            <origin xyz="-0.0375890173 -0.0255192369 0.142404035" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00494133495" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_110">
+            <origin xyz="-0.036576204 0.0356145352 0.147548959" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0084173847" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_111">
+            <origin xyz="0.0124672232 -0.0546478778 0.0800747052" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0096866712" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_112">
+            <origin xyz="-0.0438846014 0.00727384258 0.0162569303" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0139543992" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_113">
+            <origin xyz="-0.00817015115 0.0233311821 0.0179867875" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00697906967" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_114">
+            <origin xyz="0.0370210111 -0.0120603219 0.284300417" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00929114316" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_115">
+            <origin xyz="-0.0192566793 -0.0352235138 0.28950274" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0121331541" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_119">
+            <origin xyz="0.0106857186 0.0259834193 0.27951926" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00596756628" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_120">
+            <origin xyz="0.0211025886 0.0235531535 0.279295087" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0101587577" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_121">
+            <origin xyz="-0.0300488118 0.0225003883 0.282640278" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00772570539" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_122">
+            <origin xyz="-0.00591641106 -0.0102990139 0.131831214" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0204592682" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_123">
+            <origin xyz="-0.0189414211 0.0116593344 0.0847269371" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00832182262" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_124">
+            <origin xyz="0.0163789932 -0.0503187589 0.0852943286" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00816351734" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_125">
+            <origin xyz="-0.0243031178 -0.0517197028 0.0780561641" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00646988256" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_126">
+            <origin xyz="0.0452369824 0.00874991156 0.145832628" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00626826193" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_127">
+            <origin xyz="0.00625456357 -0.0444612727 0.108043544" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0185579211" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_128">
+            <origin xyz="-0.0569811501 0.018693164 0.00315430202" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00606473768" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_129">
+            <origin xyz="-0.0127006359 -0.0513330139 0.128898576" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0178192053" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_130">
+            <origin xyz="0.00275936746 -0.00375419226 0.251583666" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0116813947" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_134">
+            <origin xyz="-0.0341946594 -0.0158490222 0.288736641" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0110823344" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_136">
+            <origin xyz="0.035733562 -0.0293679833 0.289751351" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00509935245" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_138">
+            <origin xyz="0.0103238858 0.035383258 0.27681005" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00709494157" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_141">
+            <origin xyz="0.0237131324 -0.0557633229 0.102215551" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00782047771" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_142">
+            <origin xyz="-0.0128431246 -0.0233070813 0.282248706" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0128110815" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_143">
+            <origin xyz="0.0307665523 -0.0292830989 0.288455665" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00960044283" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_144">
+            <origin xyz="-0.0426608808 -0.0136885606 0.1448984" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00742524769" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_145">
+            <origin xyz="-0.0414592847 0.0256867558 0.145399481" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00889406074" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_150">
+            <origin xyz="0.0337376669 0.0301281977 0.143198952" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0124395536" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_154">
+            <origin xyz="0.00315504242 0.00638251193 0.236172169" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00546720112" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_155">
+            <origin xyz="-0.0187674612 0.025674196 0.279476345" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00937652308" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_159">
+            <origin xyz="0.0361666083 -0.00913915504 0.282861114" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0086506037" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_164">
+            <origin xyz="-0.0389754809 -0.0166118611 0.1431631" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00496519404" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_166">
+            <origin xyz="-0.0297986642 0.0135669569 0.279243916" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0104561141" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_167">
+            <origin xyz="-0.0300447587 0.0212018844 0.285646349" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0141925886" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_168">
+            <origin xyz="-0.0201504715 0.0109899808 0.277409196" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0090048844" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_169">
+            <origin xyz="-0.00408955431 0.00132225559 0.206506804" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.010366153" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_171">
+            <origin xyz="-0.0140023055 -0.0235889833 0.163836047" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00490714191" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_173">
+            <origin xyz="-0.061332088 0.00322564482 0.0093042478" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0104565797" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_174">
+            <origin xyz="0.0528551154 -0.0189126991 0.143471435" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0106298551" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_175">
+            <origin xyz="0.0366872922 0.0368874222 0.144994125" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0107548563" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_176">
+            <origin xyz="-0.0200925581 -0.0503930748 0.0804952905" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00942534208" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_177">
+            <origin xyz="-0.0184685644 0.00495689316 0.0254646875" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00960721262" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_178">
+            <origin xyz="-0.00216009771 0.0428842753 0.142415047" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00803188421" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_179">
+            <origin xyz="0.0184171926 -0.0326255336 0.111172237" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0139047429" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_180">
+            <origin xyz="-0.018375773 -0.0235380363 0.159705207" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0063789757" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_182">
+            <origin xyz="-0.0118347341 0.0180499107 0.05623338" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0102442494" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_183">
+            <origin xyz="0.00519781187 0.00152316829 0.213732436" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00493863923" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_184">
+            <origin xyz="-0.00519861141 0.00836882461 0.110304177" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0217642542" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_185">
+            <origin xyz="-0.00874819607 0.0113860015 0.0670646504" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.033859428" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_186">
+            <origin xyz="0.01047552 0.00748408539 0.0930960029" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0201131087" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_187">
+            <origin xyz="0.0513275452 -0.0126204938 0.142230794" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00999101624" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_188">
+            <origin xyz="-0.0122026447 0.0164519157 0.0818562582" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0170620456" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_189">
+            <origin xyz="-0.0292911865 0.0274557546 0.14651078" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0088128373" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_190">
+            <origin xyz="-0.00913401507 -0.0295509826 0.106204614" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0215095226" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_194">
+            <origin xyz="-0.0569936596 -0.00315048103 0.0112520317" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0110629033" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_195">
+            <origin xyz="-0.000186605597 -0.0013609468 0.246560588" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00931411237" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_198">
+            <origin xyz="-0.00749238301 0.0139174089 0.0147061171" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0108254422" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_199">
+            <origin xyz="-0.0309095662 -0.00451443158 0.27869451" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.006707747" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_200">
+            <origin xyz="0.0185141079 0.0392107368 0.149078742" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00789990183" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_205">
+            <origin xyz="-0.0191517118 -0.0487374663 0.101888917" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0127321351" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_206">
+            <origin xyz="-0.0555963106 -0.00936484151 0.0114780152" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00630296115" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_207">
+            <origin xyz="-0.017255865 -0.0155201899 0.126181141" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00833369698" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_208">
+            <origin xyz="-0.0595671386 -0.0105093122 0.0168760307" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0110235279" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_209">
+            <origin xyz="0.0501250811 0.0110883983 0.144477695" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00827712752" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_210">
+            <origin xyz="-0.0424279831 0.0259184446 0.142436564" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00912433583" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_212">
+            <origin xyz="0.00735811936 -0.0486883 0.0848191381" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00855127536" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_213">
+            <origin xyz="-0.0177340992 0.0416336954 0.147222266" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00761676906" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_215">
+            <origin xyz="-0.00366809662 0.00352808717 0.272915572" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0102440473" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_217">
+            <origin xyz="-0.00783124566 -0.0492495596 0.0470282212" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0111100981" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_218">
+            <origin xyz="-0.0170421712 -0.0546632595 0.102191597" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00710399495" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_219">
+            <origin xyz="-0.0166252721 -0.0558336936 0.130664364" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.012759788" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_220">
+            <origin xyz="-0.0144633874 -0.0515846498 0.127677515" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0137615995" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_223">
+            <origin xyz="0.0161359459 -0.0437922589 0.115362622" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0155057339" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_225">
+            <origin xyz="0.0520269051 0.00224528206 0.151066288" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00918876007" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_226">
+            <origin xyz="0.0272835381 -0.00144889136 0.143904269" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00989414379" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_227">
+            <origin xyz="-0.0185181424 -0.0523261465 0.0483310223" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00987893064" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_228">
+            <origin xyz="0.013083986 -0.0130620217 0.113819793" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0164326802" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_229">
+            <origin xyz="0.00588094583 -0.05502031 0.0391360596" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00542863365" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_230">
+            <origin xyz="0.0216234736 0.00348373805 0.104025118" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00925210025" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_231">
+            <origin xyz="0.00562954601 -0.0419438221 0.140923709" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00489677349" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_232">
+            <origin xyz="-0.0172410272 -0.0534500331 0.0468640029" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00663745636" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_234">
+            <origin xyz="-0.0224215183 0.0295720194 0.284095019" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00931917969" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_235">
+            <origin xyz="0.0164852999 -0.0439482816 0.0819936842" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00812934246" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_236">
+            <origin xyz="-0.044391647 0.0112546496 0.00779188611" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0102040013" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_237">
+            <origin xyz="-0.0530797094 0.0130355703 0.0114060603" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00763245905" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_241">
+            <origin xyz="0.00405785581 0.0346676521 0.277994782" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00801729038" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_243">
+            <origin xyz="-0.0265243351 -0.00833755359 0.277022034" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00721384399" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_245">
+            <origin xyz="-0.0658568889 0.00157050136 0.0194286145" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00675625028" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_252">
+            <origin xyz="-0.0180104356 -0.0125211608 0.274481773" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00527123734" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_253">
+            <origin xyz="0.0472238027 0.0126663242 0.144811586" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00940049347" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_255">
+            <origin xyz="0.0112256613 0.0344781876 0.281910688" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00802104361" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_260">
+            <origin xyz="-0.0107236579 -0.0326057673 0.282252401" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00925784372" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_261">
+            <origin xyz="-0.0235727131 -0.0392254218 0.0814706013" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00506099546" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_262">
+            <origin xyz="0.014082795 -0.0547978804 0.0473114103" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00787440501" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_264">
+            <origin xyz="0.0444408841 -0.00299040531 0.146910191" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00674195634" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_266">
+            <origin xyz="0.023223117 0.0231679808 0.282276809" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00863612629" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_267">
+            <origin xyz="0.023533415 0.0298662744 0.280199051" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00692109019" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_269">
+            <origin xyz="-0.0165348072 0.00761548989 0.128654763" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0121325888" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_270">
+            <origin xyz="0.00929835346 0.000632108247 0.0721056983" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0209851731" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_271">
+            <origin xyz="-0.00940411352 -0.0497791767 0.0849447399" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0177327171" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_272">
+            <origin xyz="0.0179457776 -0.0218825061 0.183739007" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00672732387" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_273">
+            <origin xyz="0.0379576311 0.00349776121 0.283615112" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00855121203" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_274">
+            <origin xyz="-0.00264847977 0.0087450454 0.247064248" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00693833223" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_275">
+            <origin xyz="0.00107419107 -0.00550454669 0.0347048901" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0498319156" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_276">
+            <origin xyz="0.0678487942 -0.0508534051 0.0122794695" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0462619178" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_277">
+            <origin xyz="0.0681002736 0.0094392132 0.021959791" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0276713576" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_278">
+            <origin xyz="0.0711843297 0.0564831607 0.0216378104" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0132846106" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_279">
+            <origin xyz="-0.00171132921 -0.03629715 0.279435515" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00705925608" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_280">
+            <origin xyz="-0.00696061505 0.000792821578 0.219918594" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00823243707" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_281">
+            <origin xyz="-0.0219621081 0.0418332219 0.150638193" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00658287667" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_282">
+            <origin xyz="-0.00925284531 0.0517074205 0.140781119" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0127203753" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_283">
+            <origin xyz="-0.0299928561 0.00436401879 0.278831214" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00827507023" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_284">
+            <origin xyz="-0.0372750461 0.0278613027 0.150253668" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00668623019" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_285">
+            <origin xyz="0.0323498249 0.0310916211 0.151812717" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.004751103" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_286">
+            <origin xyz="-0.0506649092 8.15003368e-05 0.147535279" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00990743749" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_287">
+            <origin xyz="-0.0542847328 0.00810445659 0.15178071" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00516400579" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_288">
+            <origin xyz="0.00436269445 -0.0556505248 0.0976206809" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00955569465" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_289">
+            <origin xyz="0.0810144544 0.0568126068 0.0278489217" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0102959424" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_290">
+            <origin xyz="0.0769473165 0.0417175554 0.0208586492" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00600498589" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_291">
+            <origin xyz="0.0801612213 0.0597331524 0.0244636703" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0107271271" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_292">
+            <origin xyz="0.0689677 0.0517457314 0.0132764401" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0138859395" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_293">
+            <origin xyz="0.000438754738 0.0269777812 0.139631063" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.010021898" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_294">
+            <origin xyz="-0.0120486431 -0.0149821443 0.112645075" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00820668507" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_295">
+            <origin xyz="0.0302097742 -0.0677374229 0.0329794101" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0118571678" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_296">
+            <origin xyz="0.0865442306 0.061653357 0.0323660411" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0110755637" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_297">
+            <origin xyz="0.0653314367 0.0486440882 0.0142610604" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.010659962" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_298">
+            <origin xyz="0.0747739524 0.0520797744 0.0213635731" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0113275629" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_299">
+            <origin xyz="0.0044057006 0.0453069247 0.147035047" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00688360026" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_300">
+            <origin xyz="0.0322696976 0.0140320035 0.152670547" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00519209495" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_301">
+            <origin xyz="-0.00115540402 0.00886797439 0.186523795" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00781619549" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_302">
+            <origin xyz="0.0414566807 -0.0314611346 0.146609843" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0128494864" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_303">
+            <origin xyz="0.071516037 0.0600226521 0.015801575" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0141005442" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_304">
+            <origin xyz="0.0699808002 0.0495486371 0.0166228898" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0127835656" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_305">
+            <origin xyz="0.00429342873 0.000896248908 0.224871963" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00542730186" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_306">
+            <origin xyz="0.0142511176 0.0403268263 0.141934395" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.00653235801" />
+            </geometry>
+        </collision>
+        <collision name="tool_link_robotbuilder_sphere_307">
+            <origin xyz="0.0625627711 -0.0666917711 -0.0326355621" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.0132576367" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="tool_tip_link">
+        <visual>
+            <geometry>
+                <sphere radius="0.001" />
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 0.5" />
+            </material>
+        </visual>
+    </link>
+    <joint name="joint1" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_base" />
+        <child link="XMS5-R800-W4G3B4C_link1" />
+        <limit effort="113" lower="-1.57" upper="1.57" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="0 0 0" xyz="0.0 0.0 0.328" />
+    </joint>
+    <joint name="joint2" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_link1" />
+        <child link="XMS5-R800-W4G3B4C_link2" />
+        <limit effort="113" lower="-2.7925" upper="2.618" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="-1.5708 -1.446441 0.0" xyz="0.0 0.0 0.0" />
+    </joint>
+    <joint name="joint3" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_link2" />
+        <child link="XMS5-R800-W4G3B4C_link3" />
+        <limit effort="70" lower="-2.9671" upper="2.4435" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="3.1415926 0 1.446441" xyz="0.403113 0.0 0.0" />
+    </joint>
+    <joint name="joint4" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_link3" />
+        <child link="XMS5-R800-W4G3B4C_link4" />
+        <limit effort="25" lower="-3.2" upper="3.2" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="-1.5708 0 0" xyz="-0.05 0.4 0.0" />
+    </joint>
+    <joint name="joint5" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_link4" />
+        <child link="XMS5-R800-W4G3B4C_link5" />
+        <limit effort="25" lower="-3.2" upper="3.2" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="1.5708 0 0" xyz="0.0 0.136 0.0" />
+    </joint>
+    <joint name="joint6" type="revolute">
+        <parent link="XMS5-R800-W4G3B4C_link5" />
+        <child link="link6" />
+        <limit effort="19" lower="-3.49" upper="3.49" velocity="3.141592653589793" />
+        <axis xyz="0 0 1" />
+        <origin rpy="-1.5708 0.0 0" xyz="0.0 0.1035 0.0" />
+    </joint>
+    <joint name="joint_tool_fixed" type="fixed">
+        <parent link="link6" />
+        <child link="tool_link" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+    <joint name="joint_tip" type="fixed">
+        <parent link="tool_link" />
+        <child link="tool_tip_link" />
+        <origin xyz="0 0 0.369" rpy="0 0 0" />
+    </joint>
+    <transmission name="tran1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint1">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor1">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint2">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor2">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint3">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor3">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint4">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor4">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint5">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor5">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="tran6">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint6">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor6">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <joint name="root_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="XMS5-R800-W4G3B4C_base" />
+        <origin xyz="0.17 -0.062 0.52" rpy="0 0 0" />
+    </joint>
+</robot>
