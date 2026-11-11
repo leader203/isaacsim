@@ -165,6 +165,12 @@ def main():
     if _quiet_runtime_debug:
         env_cfg.quiet_runtime_debug = True
 
+    # 显式设置抗锯齿为 FXAA：逐帧独立采集 RGB，不跨帧累积采样（避免拖影）
+    env_cfg.sim.render.antialiasing_mode = "FXAA"
+    # 降噪：提高直接光照采样数（默认 1）+ 显式开 DL 去噪，减少相机 RGB 噪点
+    env_cfg.sim.render.samples_per_pixel = 8
+    env_cfg.sim.render.enable_dl_denoiser = True
+
     RecordWrapper.crop_env_cfg(env_cfg, task_cfg)
 
     # ── 创建环境 ──────────────────────────────────────────────────────────────
@@ -471,10 +477,14 @@ def main():
         if "tool_tip_link" in robot.data.body_names
         else _tool_idx
     )
-    _cam_mount_uses_link5 = args_cli.task in {
-        _SPHERE_RAW_USD_LIGHT_TASK_ID,
-        _GRIPPER_JOINT_PRISMATIC_SPHERE_RAW_USD_LIGHT_TASK_ID,
-    }
+    _cam_mount_uses_link5 = (
+        args_cli.task
+        in {
+            _SPHERE_RAW_USD_LIGHT_TASK_ID,
+            _GRIPPER_JOINT_PRISMATIC_SPHERE_RAW_USD_LIGHT_TASK_ID,
+        }
+        and not getattr(base_env.cfg, "cam_follows_tool", False)
+    )
     _link5_idx = None
     _cam_t_in_link5 = None
     _cam_q_in_link5 = None
@@ -502,12 +512,12 @@ def main():
         tool_pos_w_now = robot.data.body_pos_w[:, _tool_idx, :]
         tool_quat_w_now = robot.data.body_quat_w[:, _tool_idx, :]
         cam_offset = torch.tensor(
-            [[0.6533, -0.2706, 0.2706, -0.6533]],
+            [[0.704883, 0.056034, -0.056034, -0.704883]],
             dtype=tool_quat_w_now.dtype,
             device=tool_quat_w_now.device,
         )
         cam_t_in_tool = torch.tensor(
-            [getattr(base_env.cfg, "cam_t_in_tool", (0.08, 0.0, 0.01))],
+            [getattr(base_env.cfg, "cam_t_in_tool", (0.12, 0.0, 0.30))],
             dtype=tool_quat_w_now.dtype,
             device=tool_quat_w_now.device,
         )

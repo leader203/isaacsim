@@ -348,8 +348,11 @@ def gripper_prismatic_execute_grab_spec() -> dict:
             "move_to_pre_target": {
                 "required": False,
                 "type": "bool",
-                "default": True,
-                "description": "Move to the shared planning/pre-target joint pose before planning the target.",
+                "default": False,
+                "description": (
+                    "Move to the shared planning/pre-target joint pose before planning the target. "
+                    "Default False: plan straight to the target from the current arm pose."
+                ),
             },
             "paper_cleanup_mode": {
                 "required": False,
@@ -410,13 +413,23 @@ def gripper_prismatic_take_out_spec() -> dict:
         "name": "gripper_prismatic_take_out",
         "description": (
             "For prismatic gripper tasks, plan and execute to a drop pose while holding the gripper closed, "
-            "open the gripper to release, then return to the shared planning/pre-target joint pose open."
+            "open the gripper to release. By default the arm then holds still (no post-drop motion); "
+            "pass return_to_pre_target_open=true to additionally return to the shared planning/pre-target pose open."
         ),
         "parameters": {
             "name": {
                 "required": False,
                 "type": "string",
                 "description": "Optional case name shown in job results.",
+            },
+            "return_to_pre_target_open": {
+                "required": False,
+                "type": "bool",
+                "default": False,
+                "description": (
+                    "After opening the gripper, also move back to the shared planning/pre-target joint pose. "
+                    "Default False: hold still after the drop, so no post-drop motion leaks into videos/demos."
+                ),
             },
             "drop_target_pos": {
                 "required": False,

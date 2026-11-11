@@ -38,8 +38,8 @@ _DEFAULT_PRISMATIC_GRIPPER_OPEN_M = 0.0
 _PRISMATIC_GRIPPER_GRASP_M = 0.02
 _PRISMATIC_GRIPPER_MIN_M = 0.0
 _PRISMATIC_GRIPPER_MAX_M = 0.025
-_GRIPPER_DROP_TARGET_POS_W = [2.097, -1.068, 0.727]
-_GRIPPER_DROP_TARGET_QUAT_WXYZ = [-0.057, -0.598, -0.798, -0.043]
+_GRIPPER_DROP_TARGET_POS_W = [2.097, -1.10, 0.727]
+_GRIPPER_DROP_TARGET_QUAT_WXYZ = [-0.004, -0.715, -0.699, 0.016]   # 改为抓取姿态(与 default_target_quat 一致)，手腕只需转 ~20°
 _GRIPPER_GRASP_VEL_EPS_RAD_S = 0.01
 _GRIPPER_GRASP_POS_EPS_RAD = 0.01
 _PRISMATIC_GRIPPER_GRASP_VEL_EPS_M_S = 0.001
@@ -461,7 +461,7 @@ parser.add_argument(
 parser.add_argument(
     "--steps_per_waypoint",
     type=int,
-    default=10,
+    default=6,
     help="Number of env.step() calls used for each non-final cuRobo waypoint.",
 )
 parser.add_argument(
@@ -641,6 +641,26 @@ parser.add_argument(
     help="Extra radius buffer in meters added by cuRobo to all robot collision spheres.",
 )
 parser.add_argument(
+    "--curobo_lock_joints",
+    type=str,
+    default="",
+    help=(
+        "Comma-separated name=value pairs of arm joints to lock in the cuRobo robot cfg "
+        "(e.g. 'joint4=0.0'). Locked joints are removed from the planning cspace and held at "
+        "the given value. Empty string (default) disables locking."
+    ),
+)
+parser.add_argument(
+    "--curobo_cspace_distance_weight",
+    type=str,
+    default="joint4=4.0",
+    help=(
+        "Comma-separated name=value pairs overriding per-joint cspace_distance_weight "
+        "(default 1.0 for unlisted joints). Higher = cuRobo penalises moving that joint more, "
+        "which damps branch-flip / large rotations on that joint. Empty string disables."
+    ),
+)
+parser.add_argument(
     "--curobo_collision_activation_distance",
     type=float,
     default=0.06,
@@ -661,14 +681,21 @@ parser.add_argument(
 parser.add_argument(
     "--curobo_num_ik_seeds",
     type=int,
-    default=16,
+    default=8,
     help="Number of cuRobo IK seeds used for each pose plan.",
 )
 parser.add_argument(
     "--curobo_num_trajopt_seeds",
     type=int,
-    default=8,
+    default=4,
     help="Number of cuRobo trajectory optimization seeds used for each pose plan.",
+)
+parser.add_argument(
+    "--curobo_random_seed",
+    type=int,
+    default=123,
+    help="cuRobo random seed for reproducibility. Change it (e.g. 123/456/789) to get "
+    "different IK/trajopt solutions for more varied demos.",
 )
 parser.add_argument(
     "--curobo_high_z_tolerance_threshold_m",
@@ -736,6 +763,38 @@ parser.add_argument(
     type=int,
     default=8000,
     help="Port for --tool_api_server.",
+)
+parser.add_argument(
+    "--record_dataset",
+    type=str,
+    default="",
+    help="HDF5 file path to record cube-grasp demonstrations. One demo = one full SOP "
+    "(grab -> move_arm_to_joints -> take_out -> move_arm_to_joints). Empty disables recording.",
+)
+parser.add_argument(
+    "--record_cameras",
+    action=argparse.BooleanOptionalAction,
+    default=True,
+    help="Record cam_tool / cam_fixed RGBD frames into each demo (requires rendering).",
+)
+parser.add_argument(
+    "--record_flush_every",
+    type=int,
+    default=64,
+    help="Flush recorded frames to the HDF5 file every N frames.",
+)
+parser.add_argument(
+    "--record_max_frames_per_demo",
+    type=int,
+    default=5000,
+    help="Safety cap on frames per demo; longer demos are truncated with a warning.",
+)
+parser.add_argument(
+    "--record_stride",
+    type=int,
+    default=4,
+    help="Record one frame every N env.steps. Full-rate 460x460 dual-camera RGBD is ~3MB/"
+    "step (~30-60GB per full SOP); stride=5 gives ~768 frames (~2GB) per demo (24fps).",
 )
 parser.add_argument(
     "--initial_robot_id",
@@ -840,6 +899,31 @@ def _require_curobo_preflight() -> None:
 _require_curobo_preflight()
 
 
+def _curobo_name_value_pairs(arg_name: str) -> dict[str, float]:
+    """Parse a 'name=value,name=value' CLI string into {name: float}."""
+    raw = str(getattr(args_cli, arg_name, "") or "").strip()
+    if not raw:
+        return {}
+    pairs: dict[str, float] = {}
+    for chunk in raw.split(","):
+        chunk = chunk.strip()
+        if not chunk:
+            continue
+        if "=" not in chunk:
+            raise ValueError(f"{arg_name} entry must be name=value, got {chunk!r}")
+        name, value = chunk.split("=", 1)
+        pairs[name.strip()] = float(value)
+    return pairs
+
+
+def _curobo_lock_joints_from_args() -> dict[str, float]:
+    return _curobo_name_value_pairs("--curobo_lock_joints")
+
+
+def _curobo_cspace_distance_weight_from_args() -> dict[str, float]:
+    return _curobo_name_value_pairs("--curobo_cspace_distance_weight")
+
+
 def _regenerate_curobo_robot_cfg_from_urdf(
     urdf_path: str | Path,
     output_path: str | Path,
@@ -857,6 +941,8 @@ def _regenerate_curobo_robot_cfg_from_urdf(
         base_link=base_link,
         tool_frame=tool_frame,
         joint_names=joint_names,
+        lock_joints=_curobo_lock_joints_from_args(),
+        cspace_distance_weight=_curobo_cspace_distance_weight_from_args(),
     )
 
 
@@ -1105,6 +1191,8 @@ from curobo_pose_plan_utils.curobo_arm_drive import (
     arm_drive_debug_suffix as _arm_drive_debug_suffix_impl,
 )
 from curobo_pose_plan_utils.curobo_camera_tools import (
+    CAM_Q_IN_TOOL as _CAM_Q_IN_TOOL,
+    CAM_T_IN_TOOL as _CAM_T_IN_TOOL,
     reset_link5_camera_mount as _reset_link5_camera_mount_impl,
     save_spot_capture_frame as _save_spot_capture_frame_impl,
     show_camera_windows as _show_camera_windows_impl,
@@ -1376,6 +1464,11 @@ def _trajectory_waypoint_velocity(
     )
 
 
+# 固定相机亚像素抖动 tick：每次 sync 自增，保证相邻渲染的相机变换必然不同
+# （render product 只会在相机变换变化时重渲染，位姿重复 → 输出空白帧 → 视频闪烁）。
+_FIXED_CAM_SYNC_TICK: list[int] = [0]
+
+
 def _sync_fixed_camera_pose(env) -> None:
     """固定相机每步把位姿写入 Fabric（set_world_poses），与持续出图的 cam_tool 一致。
 
@@ -1390,18 +1483,28 @@ def _sync_fixed_camera_pose(env) -> None:
     _cf = env.scene.sensors.get("cam_fixed", None)
     if _cf is None:
         return
-    # 用传感器自身帧计数做抖动基准（每步 +1，不受本函数被调用次数影响）
-    try:
-        _frame = int(_cf._frame[0].item())
-    except Exception:
-        _frame = 0
-    _dith = 0.00005 if _frame % 2 == 0 else -0.00005
-    _pos_t = torch.tensor([[1.66468 + _dith, -1.00862, 1.96617]], dtype=torch.float32, device=_cf.device)
-    _quat_t = torch.tensor([[0.53479, -0.46169, 0.45678, 0.54054]], dtype=torch.float32, device=_cf.device)
+    # 抖动必须"相邻渲染必不同"：旧的 ±0.05mm 双值翻转抖动（按 _frame 奇偶）在
+    # "同一物理步渲染两次"（env.step 内部渲染 + record_frame 强制渲染）的路径下
+    # 会写回与上一次渲染相同的位姿 → render product 的相机变换不产生 change →
+    # 跳过重渲染 → 读到空白帧（每 3 帧一张全白）。这里改用单调非重复序列：
+    # 每次 sync 自增 tick，dith=(3*tick)%7-3 步进 0.15mm、包络 ±0.15mm，
+    # 亚像素、有界不漂移、相邻值必不同 → 每次渲染相机变换都变化 → 每帧重渲染。
+    _FIXED_CAM_SYNC_TICK[0] += 1
+    _tick = _FIXED_CAM_SYNC_TICK[0]
+    _dith = 0.00005 * ((3 * _tick) % 7 - 3)
+    _pos_t = torch.tensor([[1.81735 + _dith, -1.24027, 2.19445]], dtype=torch.float32, device=_cf.device)
+    _quat_t = torch.tensor([[0.5621, -0.4323, 0.4429, 0.5485]], dtype=torch.float32, device=_cf.device)
     try:
         _cf.set_world_poses(_pos_t, _quat_t, convention="world")
     except Exception as exc:
         print(f"[CamFixed] sync failed: {exc}", flush=True)
+
+
+# ── HDF5 demo 录制全局状态 ────────────────────────────────────────────────────
+# _DEMO_RECORDER：HDF5DemoRecorder 实例（--record_dataset 时在 main() 创建），否则 None。
+# _RECORD_ACTIVE：工具 executor 执行期间为 True，只在这期间逐帧采样（跳过 idle 帧）。
+_DEMO_RECORDER = None
+_RECORD_ACTIVE = False
 
 
 def _step(env, render: bool = True) -> None:
@@ -1431,6 +1534,33 @@ def _step(env, render: bool = True) -> None:
     if render:
         env.sim.render()
         _show_camera_windows(env)
+
+
+def _install_demo_recording_step(env) -> None:
+    """在 env.step 外层包装 HDF5 帧采集。
+
+    覆盖两种模式：
+      - direct 模式（common profile 任务）：env.step 已被替换为 direct_env_step → _step()。
+      - 普通模式（如默认 gripper 任务）：env.step 为 ManagerBasedEnv.step()。
+    用 env.step 包装而非 _step 内钩子，是因为普通模式根本不走自定义 _step()。
+    执行期间（_RECORD_ACTIVE=True）每步采样一帧；录制未启用时原样返回。
+    """
+    if _DEMO_RECORDER is None:
+        return
+    original_step = env.step
+
+    def recording_step(action):
+        result = original_step(action)
+        if _RECORD_ACTIVE and _DEMO_RECORDER is not None:
+            try:
+                # 相机渲染由 record_frame 内部按 stride 帧触发（GUI/headless 都覆盖）
+                robot = getattr(env, "_allstar_active_tool_robot", env.scene["robot"])
+                _DEMO_RECORDER.record_frame(env, robot, "grasp_test_cube_1")
+            except Exception:
+                pass  # 录制绝不让仿真崩溃
+        return result
+
+    env.step = recording_step
 
 
 def _execute_joint_target(
@@ -1989,15 +2119,42 @@ def _prim_world_pos(stage, prim_path: str) -> tuple[float, float, float] | None:
     return (float(t[0]), float(t[1]), float(t[2]))
 
 
-def _pos_in_trash_bin_aabb(pos_w) -> bool:
-    """Check if a world position is inside the trash-bin collection AABB."""
+def _pos_in_trash_bin_aabb(env, pos_w) -> bool:
+    """方块是否真的落在垃圾桶里。
+
+    用垃圾桶的**实时位姿**构造包围盒（原来写死 (2.097,-1.095)，桶被撞走后照样判 true）。
+    另外要求桶基本立着：桶的 up 轴与世界 +Z 夹角 < 30°，桶倒了直接判失败。
+    """
     if pos_w is None:
         return False
-    TRASH_BIN_AABB = (
-        (2.097 - 0.12, -1.095 - 0.12, -0.05),  # min
-        (2.097 + 0.12, -1.095 + 0.12, 0.01 + 0.40),  # max
+    import math
+
+    try:
+        bin_asset = env.scene["trash_bin"]
+        pose = bin_asset.data.root_pose_w[0]
+        bin_pos = [float(pose[0]), float(pose[1]), float(pose[2])]
+        qx, qy = float(pose[4]), float(pose[5])
+        up_z = 1.0 - 2.0 * (qx * qx + qy * qy)  # R·(0,0,1) 的 z 分量
+    except Exception as exc:
+        print(f"[TrashBinCheck] 读不到垃圾桶位姿，退回标称位置: {exc}", flush=True)
+        bin_pos = [2.097, -1.095, 0.010]
+        up_z = 1.0
+
+    if up_z < math.cos(math.radians(30.0)):
+        print(f"[TrashBinCheck] 垃圾桶倒了(up_z={up_z:.3f}) → 判定为未入桶", flush=True)
+        return False
+
+    aabb = (
+        (bin_pos[0] - 0.12, bin_pos[1] - 0.12, bin_pos[2] - 0.06),
+        (bin_pos[0] + 0.12, bin_pos[1] + 0.12, bin_pos[2] + 0.40),
     )
-    return all(TRASH_BIN_AABB[0][i] <= pos_w[i] <= TRASH_BIN_AABB[1][i] for i in range(3))
+    inside = all(aabb[0][i] <= pos_w[i] <= aabb[1][i] for i in range(3))
+    print(
+        f"[TrashBinCheck] bin={[round(v, 3) for v in bin_pos]} up_z={up_z:.3f} "
+        f"cube={[round(v, 3) for v in pos_w]} inside={inside}",
+        flush=True,
+    )
+    return inside
 
 
 def _object_world_pos(env, prim_path: str, *, default_z_from_prim: bool = True) -> tuple[float, float, float] | None:
@@ -3843,6 +4000,9 @@ def _run_tool_api_server(
     if _common_profile_enabled():
         _set_active_robot_context(active_robot_id, move_to_work_pose=False)
         _install_common_direct_env_step()
+    # HDF5 demo 录制：在所有 env.step 包装（video/stabilizer/direct）之后套最外层，
+    # 这样 direct 与普通两种模式都能逐帧采集，且不会重复计数。
+    _install_demo_recording_step(env)
 
     def _current_gripper_joint1_pos_or_none() -> float | None:
         state = _gripper_joint1_state(robot)
@@ -4676,7 +4836,8 @@ def _run_tool_api_server(
         target_frame = str(parameters.get("target_frame", "world")).lower()
         if target_frame not in {"world", "base"}:
             raise ValueError("gripper_prismatic_execute_grab target_frame must be either 'world' or 'base'.")
-        move_to_pre_target = bool(parameters.get("move_to_pre_target", True))
+        # 默认 False：不再先回规划起始位姿，直接规划到 target（方块上方）。传 true 可恢复。
+        move_to_pre_target = bool(parameters.get("move_to_pre_target", False))
 
         if move_to_pre_target:
             print(
@@ -5403,7 +5564,7 @@ def _run_tool_api_server(
             for _ in range(settle_steps):
                 _step(env, render=False)
             cube_pos_after = _object_world_pos(env, grasped_path)
-            paper_collected = _pos_in_trash_bin_aabb(cube_pos_after)
+            paper_collected = _pos_in_trash_bin_aabb(env, cube_pos_after)
             print(
                 f"[GraspCube] take_out phys_check pos={cube_pos_after} "
                 f"collected={paper_collected}",
@@ -5430,21 +5591,32 @@ def _run_tool_api_server(
         _LAST_GRASPED_PAPER_PATH = None
         # ---------------------------------------
 
-        returned_open_with_plan = _plan_and_execute_cspace_target(
-            env=env,
-            robot=robot,
-            case_name=case_name,
-            phase_name="drop_return_pre_target_open",
-            urdf_path=urdf_path,
-            robot_cfg_path=robot_cfg_path,
-            base_link=base_link,
-            tool_frame=tool_frame,
-            joint_names=joint_names,
-            scene_mesh_obstacles=scene_mesh_obstacles,
-            target_q=pre_target_q,
-            hold_gripper_joint1_pos=open_gripper_q,
-            final_settle=True,
-        )
+        # 投放后是否再回规划起始位姿。默认 False：投放完就让机械臂停在原地，
+        # 否则数据集/视频里会多出一段"投完又抬起来"的动作（而且会污染 demo 尾部）。
+        return_to_pre_target_open = bool(parameters.get("return_to_pre_target_open", False))
+        if return_to_pre_target_open:
+            returned_open_with_plan = _plan_and_execute_cspace_target(
+                env=env,
+                robot=robot,
+                case_name=case_name,
+                phase_name="drop_return_pre_target_open",
+                urdf_path=urdf_path,
+                robot_cfg_path=robot_cfg_path,
+                base_link=base_link,
+                tool_frame=tool_frame,
+                joint_names=joint_names,
+                scene_mesh_obstacles=scene_mesh_obstacles,
+                target_q=pre_target_q,
+                hold_gripper_joint1_pos=open_gripper_q,
+                final_settle=True,
+            )
+        else:
+            returned_open_with_plan = False
+            print(
+                f"[GripperPrismaticTakeOut] case={case_name} return_to_pre_target_open=False; "
+                "holding current pose after drop (no post-drop motion).",
+                flush=True,
+            )
         final_return_q = robot.data.joint_pos[0, arm_ids].detach()
         _, return_err_max, return_err = _joint_error(pre_target_q, final_return_q)
         # Clear saved grab trajectory after drop (paper is no longer grasped)
@@ -5452,7 +5624,9 @@ def _run_tool_api_server(
         _LAST_GRAB_TRAJECTORY = None
         _LAST_GRAB_GRIPPER_POS = None
         return {
-            "executed": bool(returned_open_with_plan),
+            # executed 表示"投放这一步做完了"。原来它等于 returned_open_with_plan，
+            # 关掉投放后回位后会让 SOP 误判成"投放未执行"。
+            "executed": True,
             "drop_executed": True,
             "opened_gripper": True,
             "returned_to_pre_target_open": bool(returned_open_with_plan),
@@ -5786,11 +5960,54 @@ def _run_tool_api_server(
         output_executor=execute_base_keyboard_teleop,
         spec=_base_keyboard_teleop_spec(),
     )
+    def _with_demo_recording(
+        output_executor,
+        *,
+        begin_demo: bool = False,
+        phase: str | None = None,
+        result_kind: str | None = None,
+    ):
+        """HDF5 demo 录制包装。
+
+        - begin_demo：打开新 demo（同时收尾上一条），用于 execute_grab。
+        - phase：切换到对应阶段标签（move_arm_to_joints → return，take_out → take_out）。
+        - result_kind：执行结束后记录成功标签（grab / take_out）。
+        执行期间置 _RECORD_ACTIVE=True，让 env.step 录制包装逐帧采样；结束后复位。
+        未启用录制（_DEMO_RECORDER is None）时原样返回 executor，行为完全不变。
+        """
+        if _DEMO_RECORDER is None:
+            return output_executor
+
+        def wrapped(tool_output, parameters):
+            global _RECORD_ACTIVE
+            if begin_demo:
+                _DEMO_RECORDER.begin_demo(parameters)
+            elif phase:
+                _DEMO_RECORDER.set_phase(phase)
+            _RECORD_ACTIVE = True
+            try:
+                result = output_executor(tool_output, parameters)
+                if result_kind:
+                    _DEMO_RECORDER.note_result(result_kind, result)
+                    if result_kind == "take_out":
+                        # 投放做完就收尾：后面的回位/空转帧不该进数据集。
+                        # 原先只在下一次 grab 的 begin_demo 里收尾，会把投放后的动作也录进去。
+                        _DEMO_RECORDER.finalize_demo()
+                return result
+            finally:
+                _RECORD_ACTIVE = False
+
+        return wrapped
+
     if _common_profile_enabled() or _is_prismatic_gripper_joint_profile():
         registry.register(
             "gripper_prismatic_execute_grab",
             _wrap_tool_type("gripper", "gripper_prismatic_execute_grab", gripper_prismatic_execute_grab_plan_tool),
-            output_executor=execute_gripper_prismatic_execute_grab,
+            output_executor=_with_demo_recording(
+                execute_gripper_prismatic_execute_grab,
+                begin_demo=True,
+                result_kind="grab",
+            ),
             spec=_gripper_prismatic_execute_grab_spec(),
         )
         registry.register(
@@ -5800,19 +6017,31 @@ def _run_tool_api_server(
                 "gripper_prismatic_move_arm_to_joints",
                 gripper_prismatic_move_arm_to_joints_plan_tool,
             ),
-            output_executor=execute_gripper_prismatic_move_arm_to_joints,
+            output_executor=_with_demo_recording(
+                execute_gripper_prismatic_move_arm_to_joints,
+                phase="return",
+            ),
             spec=_gripper_prismatic_move_arm_to_joints_spec(),
         )
         registry.register(
             "gripper_prismatic_take_out",
             _wrap_tool_type("gripper", "gripper_prismatic_take_out", gripper_prismatic_take_out_plan_tool),
-            output_executor=execute_gripper_prismatic_take_out,
+            output_executor=_with_demo_recording(
+                execute_gripper_prismatic_take_out,
+                phase="take_out",
+                result_kind="take_out",
+            ),
             spec=_gripper_prismatic_take_out_spec(),
         )
         registry.register(
             "gripper_prismatic_local_lift",
             _wrap_tool_type("gripper", "gripper_prismatic_local_lift", gripper_prismatic_local_lift_plan_tool),
-            output_executor=execute_gripper_prismatic_local_lift,
+            # 必须包录制包装：否则抬升期间 _RECORD_ACTIVE=False，一帧不采，
+            # 视频会从抓取结束直接闪到投放开始（抬升过程整个丢失）。
+            output_executor=_with_demo_recording(
+                execute_gripper_prismatic_local_lift,
+                phase="lift",
+            ),
             spec=_gripper_prismatic_local_lift_spec(),
         )
     bridge = SimulationToolBridge(registry)
@@ -6148,6 +6377,153 @@ def _run_tool_api_server(
     registry.register("_diagnose_stage", _diagnose_stage_tool,
                       spec={"name": "_diagnose_stage", "description": "Stage collision diagnosis"})
 
+    def reset_env_tool(parameters: dict) -> dict:
+        """重置环境（自动采集用，避免每次重启仿真）。
+
+        - env.reset()：底盘/机械臂/场景回到初始状态
+        - 显式把机械臂写回起始位姿（与启动那段一致，防止 reset 事件没落到默认位姿）
+        - 可选把 grasp_test_cube_1 挪到指定 XY（刚体要走 write_root_pose_to_sim）
+        - 最后空跑若干步让 PhysX 稳定
+        """
+        if not isinstance(parameters, dict):
+            parameters = {}
+        settle_steps = int(parameters.get("settle_steps", 30))
+        env.reset()
+
+        # 底盘归位：env.reset() 只触发 cfg 里 mode="reset" 的事件（那边只有关节/马桶/碰撞，
+        # 没有任何 root 位姿的事件），所以底盘不会被重置。底盘稳定器只管高度/姿态、不管 XY
+        # 位置，机械臂的反作用力会把它一点点推走，多轮累积。这里显式写回初始 root 位姿。
+        root_state = robot.data.default_root_state.detach().clone()
+        robot.write_root_pose_to_sim(root_state[:, :7])
+        robot.write_root_velocity_to_sim(root_state[:, 7:])
+        root_pos0 = [round(float(v), 5) for v in root_state[0, :3]]
+
+        _arm_ids = _arm_joint_ids(robot)
+        _arm_event = getattr(getattr(env.cfg, "events", None), "init_arm_joint_position", None)
+        _arm_params = getattr(_arm_event, "params", None)
+        _home = _arm_params.get("default_pos") if isinstance(_arm_params, dict) else None
+        if _home is None:
+            _home = robot.data.default_joint_pos[0, _arm_ids].tolist()
+        _home_q = torch.as_tensor(_home, device=robot.device, dtype=robot.data.joint_pos.dtype).view(1, -1)
+        robot.write_joint_state_to_sim(_home_q, torch.zeros_like(_home_q), joint_ids=_arm_ids)
+        robot.set_joint_position_target(_home_q, joint_ids=_arm_ids)
+
+        cube_xy = parameters.get("cube_xy")
+        cube_pos_w = None
+        if cube_xy is not None and len(cube_xy) == 2:
+            try:
+                cube = env.scene["grasp_test_cube_1"]
+            except Exception:
+                cube = None
+            if cube is not None:
+                z = float(parameters.get("cube_z", 0.021))
+                pose = torch.tensor(
+                    [[float(cube_xy[0]), float(cube_xy[1]), z, 1.0, 0.0, 0.0, 0.0]],
+                    device=robot.device, dtype=torch.float32,
+                )
+                cube.write_root_pose_to_sim(pose)
+                cube.write_root_velocity_to_sim(torch.zeros((1, 6), device=robot.device))
+                cube_pos_w = [float(cube_xy[0]), float(cube_xy[1]), z]
+                # ⚠️ 光写物理不够：gripper_prismatic_execute_grab 的 paper_cleanup_mode 是读
+                # grasp_test_cube_1 的 **USD 世界变换**来定位抓取目标的。只改物理不改 USD，
+                # 规划就会仍然指向方块的原位置 → 机械臂去空处 → 夹不到。
+                try:
+                    from pxr import Gf, UsdGeom
+                    prim = _stage.GetPrimAtPath("/World/envs/env_0/grasp_test_cube_1")
+                    if prim.IsValid():
+                        ops = UsdGeom.Xformable(prim).GetOrderedXformOps()
+                        if ops:
+                            ops[0].Set(Gf.Vec3d(float(cube_xy[0]), float(cube_xy[1]), z))
+                        else:
+                            UsdGeom.Xformable(prim).AddTranslateOp().Set(
+                                Gf.Vec3d(float(cube_xy[0]), float(cube_xy[1]), z)
+                            )
+                        print(f"[ResetEnv] USD xform of grasp_test_cube_1 set to {cube_pos_w}", flush=True)
+                    else:
+                        print("[ResetEnv] ⚠️ grasp_test_cube_1 prim 未找到，USD 变换没更新", flush=True)
+                except Exception as exc:
+                    print(f"[ResetEnv] ⚠️ 写 USD 变换失败（规划可能仍指向旧位置）: {exc}", flush=True)
+            else:
+                print("[ResetEnv] grasp_test_cube_1 not found in scene; cube_xy ignored.", flush=True)
+
+        # 垃圾桶：**每次 reset 都写回标称位姿**。
+        # 机械臂抓取/投放时可能把桶撞歪或撞走；桶的位置不对会让 drop_target（固定坐标）
+        # 打偏、入桶判定和后续数据都失真。标称位姿 (2.097,-1.095) 与马桶碰撞体重叠约
+        # 6cm，settle 时 PhysX 可能把它往外挤一点，所以复位后再 settle，并记录最终位置。
+        bin_pos0 = None
+        bin_nominal = None
+        try:
+            bin_obj = env.scene["trash_bin"]
+        except Exception:
+            bin_obj = None
+        if bin_obj is not None:
+            try:
+                st = bin_obj.data.default_root_state.detach().clone()
+                bin_nominal = [round(float(v), 5) for v in st[0, :3]]
+                before = [round(float(v), 5) for v in bin_obj.data.root_pose_w[0, :3]]
+                bin_obj.write_root_pose_to_sim(st[:, :7])
+                bin_obj.write_root_velocity_to_sim(st[:, 7:])
+                print(
+                    f"[TrashBinReset] 垃圾桶复位 before={before} nominal={bin_nominal}",
+                    flush=True,
+                )
+            except Exception as exc:
+                print(f"[TrashBinReset] 读/复位垃圾桶失败: {exc}", flush=True)
+
+        for _ in range(max(1, settle_steps)):
+            _step(env, render=True)
+
+        # 报 settle 之后的实际位姿，并检查是否被马桶挤走太多
+        if bin_obj is not None:
+            try:
+                bp = bin_obj.data.root_pose_w[0]
+                bin_pos0 = [round(float(v), 5) for v in bp[:3]]
+                if bin_nominal is not None:
+                    drift = sum((a - b) ** 2 for a, b in zip(bin_pos0, bin_nominal)) ** 0.5
+                    if drift > 0.05:
+                        print(
+                            f"[TrashBinReset] ⚠️ 垃圾桶 settle 后偏离标称 {drift:.3f}m "
+                            f"(pos={bin_pos0}, nominal={bin_nominal})",
+                            flush=True,
+                        )
+            except Exception:
+                pass
+
+        print(
+            f"[ResetEnv] done base_pos_w={root_pos0} cube_pos_w={cube_pos_w} "
+            f"bin_pos_w={bin_pos0} settle_steps={settle_steps}",
+            flush=True,
+        )
+        return {
+            "reset": True,
+            "base_pos_w": root_pos0,
+            "cube_pos_w": cube_pos_w,
+            "bin_pos_w": bin_pos0,
+            "settle_steps": settle_steps,
+        }
+
+    registry.register(
+        "reset_env",
+        reset_env_tool,
+        spec={
+            "name": "reset_env",
+            "description": (
+                "Reset the whole environment (env.reset + arm back to home pose + optional cube "
+                "teleport) without restarting the simulator. Used between demos for auto collection."
+            ),
+            "parameters": {
+                "cube_xy": {
+                    "required": False,
+                    "type": "array[float]",
+                    "length": 2,
+                    "description": "Optional world XY to teleport grasp_test_cube_1 to.",
+                },
+                "cube_z": {"required": False, "type": "float", "default": 0.021},
+                "settle_steps": {"required": False, "type": "int", "default": 30},
+            },
+        },
+    )
+
     server, server_thread = serve_bridge_in_thread(
         bridge,
         host=args_cli.tool_api_host,
@@ -6195,6 +6571,7 @@ def _run_tool_api_server(
 
 
 def main() -> None:
+    global _DEMO_RECORDER
     # 常驻 cuRobo worker 进程在程序退出时必须清理，否则残留进程继续占用 GPU 显存。
     import atexit
 
@@ -6209,13 +6586,53 @@ def main() -> None:
     if args_cli.record_video:
         env_cfg.viewer.resolution = tuple(args_cli.video_resolution)
 
+    # 相机渲染：
+    # - 抗锯齿必须用 FXAA（纯空间）：cam_fixed 有"亚毫米抖动强制每帧重渲染"补丁，
+    #   DLSS/TAA 这类时域 AA 会因时域历史被每帧重置而闪烁/变空白/出红绿伪影。
+    # - spp + DL 去噪：减少直接光照噪点。spp 越高越慢越吃显存，cuRobo 只分 ~4GB，可降到 4。
+    env_cfg.sim.render.antialiasing_mode = "FXAA"
+    env_cfg.sim.render.samples_per_pixel = 8
+    env_cfg.sim.render.enable_dl_denoiser = True
+
     env = ManagerBasedRLEnv(cfg=env_cfg, render_mode="rgb_array" if args_cli.record_video else None)
+    if args_cli.record_dataset:
+        from curobo_pose_plan_utils.hdf5_demo_recorder import HDF5DemoRecorder
+
+        _DEMO_RECORDER = HDF5DemoRecorder(
+            args_cli.record_dataset,
+            enable_cameras=args_cli.record_cameras,
+            flush_every=args_cli.record_flush_every,
+            max_frames_per_demo=args_cli.record_max_frames_per_demo,
+            stride=args_cli.record_stride,
+            cam_follows_tool=bool(getattr(env_cfg, "cam_follows_tool", False)),
+            cam_t_in_tool=tuple(getattr(env_cfg, "cam_t_in_tool", _CAM_T_IN_TOOL)),
+            cam_q_in_tool=_CAM_Q_IN_TOOL,
+        )
+        print(
+            f"[HDF5DemoRecorder] recording enabled -> {args_cli.record_dataset} "
+            f"(cameras={args_cli.record_cameras})",
+            flush=True,
+        )
     video_recorder = None
     try:
         video_recorder = _attach_video_recorder(env)
         env.reset()
         robot = env.scene["robot"]
         _apply_arm_drive_overrides(robot, label="post_env_reset")
+        # 起始机械臂位姿：启动阶段 _step 直接 sim.step()，不经过 action manager，actuator 的
+        # 位置目标缓冲保持初始值 → 机械臂被驱到 0 位（直着向上），表现为"打开环境时抬升的过程"。
+        # 这里按 cfg 里 init_arm_joint_position 的 default_pos 显式写一次关节状态 + 位置目标。
+        _arm_ids = _arm_joint_ids(robot)
+        _arm_event = getattr(getattr(env.cfg, "events", None), "init_arm_joint_position", None)
+        _arm_params = getattr(_arm_event, "params", None)
+        _home_arm = _arm_params.get("default_pos") if isinstance(_arm_params, dict) else None
+        if _home_arm is None:
+            _home_arm = robot.data.default_joint_pos[0, _arm_ids].tolist()
+        _home_arm_q = torch.as_tensor(
+            _home_arm, device=robot.device, dtype=robot.data.joint_pos.dtype
+        ).view(1, -1)
+        robot.write_joint_state_to_sim(_home_arm_q, torch.zeros_like(_home_arm_q), joint_ids=_arm_ids)
+        robot.set_joint_position_target(_home_arm_q, joint_ids=_arm_ids)
         _reset_link5_camera_mount(env)
         _sync_link5_camera(env, robot)
         _sync_fixed_camera_pose(env)
@@ -6851,6 +7268,9 @@ def main() -> None:
     finally:
         if video_recorder is not None:
             video_recorder.close()
+        if _DEMO_RECORDER is not None:
+            # 收尾最后一条未闭合的 demo（完整 SOP 结束时再退出的场景）
+            _DEMO_RECORDER.close()
         env.close()
         simulation_app.close()
 

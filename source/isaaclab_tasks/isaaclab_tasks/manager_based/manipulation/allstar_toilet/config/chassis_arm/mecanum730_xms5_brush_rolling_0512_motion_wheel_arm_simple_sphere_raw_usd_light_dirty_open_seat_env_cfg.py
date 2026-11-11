@@ -11,14 +11,14 @@ from .mecanum730_xms5_brush_rolling_0512_motion_wheel_arm_simple_raw_usd_dirty_o
     Mecanum730XMS5BrushRolling0512MotionWheelArmSimpleSphereRawUsdDirtyOpenSeatSceneCfg,
 )
 
-_TARGET_BASE_POS_W = (1.832, -0.264, 0.010)
+_TARGET_BASE_POS_W = (1.832, 0.0, 0.010)
 _TARGET_BASE_ROT_WXYZ = (0.702153052995162, 0.0, 0.0, -0.712026045990997)
 _TARGET_ARM_JOINT_POS = (
     0.099483767364,
     -0.200712863979,
     -0.799360797413,
     0.0,
-    -1.850049007114,
+    1.0,
     0.0,
 )
 

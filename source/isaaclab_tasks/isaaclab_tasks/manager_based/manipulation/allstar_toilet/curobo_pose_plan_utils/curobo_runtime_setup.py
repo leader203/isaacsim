@@ -65,6 +65,8 @@ def regenerate_curobo_robot_cfg_from_urdf(
     base_link: str,
     tool_frame: str,
     joint_names: list[str],
+    lock_joints: dict[str, float] | None = None,
+    cspace_distance_weight: dict[str, float] | None = None,
 ) -> Path:
     """Refresh cuRobo robot cfg from URDF sphere collisions."""
     script_dir = Path(script_dir)
@@ -88,6 +90,8 @@ def regenerate_curobo_robot_cfg_from_urdf(
         base_link=base_link,
         tool_frame=tool_frame,
         joint_names=joint_names,
+        lock_joints=lock_joints,
+        cspace_distance_weight=cspace_distance_weight,
     )
     output_path.parent.mkdir(parents=True, exist_ok=True)
     import yaml
@@ -99,6 +103,8 @@ def regenerate_curobo_robot_cfg_from_urdf(
     counts = {link_name: len(spheres) for link_name, spheres in collision_spheres.items()}
     print(
         f"[CuroboRobotCfg] regenerated_from_urdf={urdf_path} output={output_path} "
+        f"lock_joints={dict(lock_joints or {})} "
+        f"cspace_distance_weight={dict(cspace_distance_weight or {})} "
         f"collision_sphere_count={sum(counts.values())} "
         f"collision_sphere_buffer={collision_sphere_buffer:.6f} per_link={counts}",
         flush=True,

@@ -73,6 +73,8 @@ class Mecanum730XMS5GripperJointPrismaticMotionWheelArmSimpleSphereRawUsdLightDi
     """Same light scene and controls as the gripper-joint task, with the prismatic gripper USD."""
 
     enable_collision_debug_visuals = False
+    # cam_tool 刚性跟随 tool_link（夹爪），joint6 转动时相机与夹爪相对姿态不变。
+    cam_follows_tool = True
 
     scene: Mecanum730XMS5GripperJointPrismaticMotionWheelArmSimpleSphereRawUsdLightDirtyOpenSeatSceneCfg = (
         Mecanum730XMS5GripperJointPrismaticMotionWheelArmSimpleSphereRawUsdLightDirtyOpenSeatSceneCfg(

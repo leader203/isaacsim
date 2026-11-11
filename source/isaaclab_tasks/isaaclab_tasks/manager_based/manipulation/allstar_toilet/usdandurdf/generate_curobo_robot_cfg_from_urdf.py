@@ -220,6 +220,19 @@ def _self_collision_buffer(
     return {link_name: -buffer_value for link_name in collision_links}
 
 
+def _cspace_distance_weights(
+    joint_names: list[str],
+    overrides: dict[str, float] | None,
+) -> list[float]:
+    """Per-joint cspace_distance_weight (default 1.0). Higher = cuRobo penalises moving it more."""
+    weights = [1.0] * len(joint_names)
+    for name, value in (overrides or {}).items():
+        if name not in joint_names:
+            raise RuntimeError(f"cspace_distance_weight joint {name!r} not in {joint_names}")
+        weights[joint_names.index(name)] = float(value)
+    return weights
+
+
 def build_robot_cfg(
     *,
     urdf_path: Path,
@@ -230,6 +243,8 @@ def build_robot_cfg(
     tool_frame: str = "tool_tip_link",
     joint_names: list[str] | None = None,
     default_joint_position: list[float] | None = None,
+    lock_joints: dict[str, float] | None = None,
+    cspace_distance_weight: dict[str, float] | None = None,
 ) -> dict[str, Any]:
     root = ET.parse(urdf_path).getroot()
     joint_names = list(joint_names or DEFAULT_JOINT_NAMES)
@@ -258,7 +273,7 @@ def build_robot_cfg(
                 "asset_root_path": str(asset_root_path),
                 "base_link": base_link,
                 "tool_frames": [tool_frame],
-                "lock_joints": {},
+                "lock_joints": dict(lock_joints or {}),
                 "extra_links": None,
                 "collision_link_names": list(collision_link_names),
                 "collision_spheres": collision_spheres,
@@ -275,7 +290,9 @@ def build_robot_cfg(
                     "joint_names": list(joint_names),
                     "default_joint_position": list(default_joint_position),
                     "null_space_weight": [1.0] * len(joint_names),
-                    "cspace_distance_weight": [1.0] * len(joint_names),
+                    "cspace_distance_weight": _cspace_distance_weights(
+                        joint_names, cspace_distance_weight
+                    ),
                     "max_jerk": 500.0,
                     "max_acceleration": 15.0,
                     "position_limit_clip": 0.01,

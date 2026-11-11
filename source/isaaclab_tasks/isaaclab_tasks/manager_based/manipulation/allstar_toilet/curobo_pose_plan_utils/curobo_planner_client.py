@@ -16,6 +16,7 @@ class PlannerClientConfig:
     orientation_tolerance_rad: float
     num_ik_seeds: int
     num_trajopt_seeds: int
+    random_seed: int
     high_z_tolerance_threshold_m: float
     high_z_position_tolerance_m: float
     high_z_orientation_tolerance_rad: float
@@ -29,6 +30,7 @@ def planner_client_config_from_args(args_cli, *, scene_cuboid_obstacles: list[di
         orientation_tolerance_rad=math.radians(args_cli.curobo_orientation_tolerance_deg),
         num_ik_seeds=int(args_cli.curobo_num_ik_seeds),
         num_trajopt_seeds=int(args_cli.curobo_num_trajopt_seeds),
+        random_seed=int(getattr(args_cli, "curobo_random_seed", 123)),
         high_z_tolerance_threshold_m=float(args_cli.curobo_high_z_tolerance_threshold_m),
         high_z_position_tolerance_m=float(args_cli.curobo_high_z_position_tolerance_m),
         high_z_orientation_tolerance_rad=math.radians(args_cli.curobo_high_z_orientation_tolerance_deg),
@@ -60,6 +62,7 @@ def base_worker_payload(
         "orientation_tolerance_rad": cfg.orientation_tolerance_rad,
         "num_ik_seeds": cfg.num_ik_seeds,
         "num_trajopt_seeds": cfg.num_trajopt_seeds,
+        "random_seed": cfg.random_seed,
     }
 
 

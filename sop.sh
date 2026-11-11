@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-# sop.sh — Grasp Test Cube SOP 一键执行脚本（抓 grasp_test_cube → 回位 → 投放垃圾桶 → 回位）
+# sop.sh — Grasp Test Cube SOP 一键执行脚本（抓 grasp_test_cube → 原地抬升 → 投放垃圾桶 → 回位）
 #
 # 用法:
 #   ./sop.sh                     # FastAPI 仿真服务已在运行（另开终端启动过）
@@ -123,13 +123,16 @@ if ! json_has_true paper_grasped; then
 fi
 log "① ✅ 抓到 cube"
 
-# ── ② 夹持回位 ──────────────────────────────────────────────────────────────
-log "② 夹持回位 (gripper_prismatic_move_arm_to_joints)"
-invoke_tool '{"tool_name":"gripper_prismatic_move_arm_to_joints","parameters":{"name":"grab_return"}}'
+# ── ② 原地抬升 ──────────────────────────────────────────────────────────────
+# 抓完直接投放时，规划起点是贴地的抓取姿态（很"憋屈"），IK 容易解不出来 / 翻 joint4。
+# local_lift 保持 XY 和姿态不变、world +Z 抬 0.18m，把机械臂从低位拔出来再投放。
+# （之前那步"回起始位姿"删掉后就需要它来替代——但只抬升，不改姿态，动作不突兀。）
+log "② 原地抬升 (gripper_prismatic_local_lift)"
+invoke_tool '{"tool_name":"gripper_prismatic_local_lift","parameters":{"name":"pre_drop_lift","lift_height_m":0.30}}'
 if ! json_has_true executed; then
-  fail "② 回位失败，终止 SOP"
+  fail "② 抬升失败，终止 SOP"
 fi
-log "② ✅ 回位成功"
+log "② ✅ 抬升完成"
 
 # ── ③ 投放垃圾桶 ────────────────────────────────────────────────────────────
 log "③ 投放垃圾桶 (gripper_prismatic_take_out)"
@@ -142,13 +145,9 @@ if ! json_has_true paper_collected; then
 fi
 log "③ ✅ cube 已入桶"
 
-# ── ④ 张开回位 ──────────────────────────────────────────────────────────────
-log "④ 张开回位 (gripper_prismatic_move_arm_to_joints)"
-invoke_tool '{"tool_name":"gripper_prismatic_move_arm_to_joints","parameters":{"name":"grab_return_open"}}'
-if ! json_has_true executed; then
-  fail "④ 回位失败"
-fi
-log "④ ✅ 回位成功"
+# 投放成功即结束：不再做"张开回位"。
+# 数据集也在 take_out 执行完就收尾（见 run_curobo_pose_plan_test.py 的 _with_demo_recording），
+# 所以投放之后的回位/空转帧不会进 demo。
 
 log "===== Grasp Test Cube SOP 完成 ✅ ====="
 log "本 SOP 不含挪桶/桶复位；完整版见 garbage_pickup_sop 方案。"

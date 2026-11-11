@@ -1035,6 +1035,7 @@ def _build_runtime(payload: dict) -> dict:
     collision_activation_distance = float(payload.get("collision_activation_distance", 0.02))
     num_ik_seeds = int(payload.get("num_ik_seeds", 64))
     num_trajopt_seeds = int(payload.get("num_trajopt_seeds", 8))
+    random_seed = int(payload.get("random_seed", 123))
     default_position_tolerance, default_orientation_tolerance = _default_pose_tolerances(payload)
     high_z_position_tolerance, high_z_orientation_tolerance = _high_z_pose_tolerances(payload)
     high_z_threshold = float(payload.get("high_z_tolerance_threshold_m", 0.5))
@@ -1049,6 +1050,7 @@ def _build_runtime(payload: dict) -> dict:
         "planner safety params "
         f"collision_activation_distance={collision_activation_distance:.6f} "
         f"num_ik_seeds={num_ik_seeds} num_trajopt_seeds={num_trajopt_seeds} "
+        f"random_seed={random_seed} "
         f"max_batch_size={max_batch_size} "
         f"default_position_tolerance={default_position_tolerance:.6f} "
         f"default_orientation_tolerance={default_orientation_tolerance:.6f} "
@@ -1080,6 +1082,7 @@ def _build_runtime(payload: dict) -> dict:
             self_collision_check=True,
             num_ik_seeds=num_ik_seeds,
             num_trajopt_seeds=num_trajopt_seeds,
+            random_seed=random_seed,
             position_tolerance=position_tolerance,
             orientation_tolerance=orientation_tolerance,
             optimizer_collision_activation_distance=collision_activation_distance,

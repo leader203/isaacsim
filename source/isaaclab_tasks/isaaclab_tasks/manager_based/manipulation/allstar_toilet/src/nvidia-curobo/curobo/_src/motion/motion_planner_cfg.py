@@ -53,7 +53,7 @@ class MotionPlannerCfg:
         collision_cache: Optional[Dict[str, int]] = None,
         self_collision_check: bool = True,
         device_cfg: DeviceCfg = DeviceCfg(),
-        num_ik_seeds: int = 32,
+        num_ik_seeds: int = 8,
         num_trajopt_seeds: int = 4,
         position_tolerance: float = 0.005,
         orientation_tolerance: float = 0.05,

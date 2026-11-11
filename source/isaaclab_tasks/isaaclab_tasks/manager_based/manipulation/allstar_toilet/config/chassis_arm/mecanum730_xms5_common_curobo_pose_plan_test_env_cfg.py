@@ -157,9 +157,14 @@ class Mecanum730XMS5CommonCuroboPosePlanTestEnvCfg(
     robot_profiles = copy.deepcopy(ROBOT_PROFILES)
     default_robot_id = "brush_rolling_0512"
     enable_collision_debug_visuals = False
+    # cam_tool 刚性跟随 tool_link（夹爪/工具），joint6 转动时相机与夹爪相对姿态不变。
+    # 关闭时回退到旧的 link5 固定安装行为。
+    cam_follows_tool = True
 
     def __post_init__(self):
         super().__post_init__()
         self.enable_collision_debug_visuals = False
-        self.episode_length_s = 300.0
+        # 关掉回合超时：工具服务是长驻的，超时会在 SOP 中途自动 reset
+        # （改前是 300s，仿真的时间推进比墙钟快很多，一条 SOP 就会超）
+        self.episode_length_s = 1.0e6
         self.scene.robot = _apply_common_arm_tuning(self.scene.robot)

@@ -15,10 +15,13 @@ if TYPE_CHECKING:
 
 
 # ── camera-to-link TF constants (must match run_record_mobile_arm.py) ────────
-# Position offset: +8 cm along tool_link X, +1 cm along tool_link Z
-_CAM_T_IN_TOOL = (0.08, 0.0, 0.01)
-# Rotation offset (wxyz): Ry+45° ⊗ Rz-90°
-_CAM_Q_IN_TOOL = (0.6533, -0.2706, 0.2706, -0.6533)
+# cam_follows_tool=True 时相机刚性跟随 tool_link，以下 offset 就是相机相对夹爪的固定
+# 位姿，joint6 转动时不会变化。
+# Position offset: +12 cm along tool_link X, +30 cm along tool_link Z（靠近夹爪末端，
+# 避免 45cm 长的 tool_base_link 本体遮挡手指；同时保留足够视野让方块始终在画面内）
+_CAM_T_IN_TOOL = (0.12, 0.0, 0.30)
+# Rotation offset (wxyz): 光轴朝 tool z≈1.05（相对 +Z 内倾约 9°），并翻转 180° 使画面正立
+_CAM_Q_IN_TOOL = (0.704883, 0.056034, -0.056034, -0.704883)
 
 
 def _cam_t_in_tool(env: ManagerBasedEnv) -> tuple[float, float, float]:
