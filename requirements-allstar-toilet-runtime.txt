@@ -21,6 +21,9 @@ tomli==2.4.0
 hydra-core==1.3.2
 gymnasium==1.2.1
 h5py==3.16.0
+# Data collection / conversion pipeline (hdf5_to_groot.py, extract_grasp_segments.py)
+pandas==2.3.3
+pyarrow==25.0.1
 tensorboard==2.20.0
 numba==0.61.2
 onnx==1.21.0
