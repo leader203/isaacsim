@@ -82,6 +82,13 @@ tests/
 # Isaac Sim / packman package cache
 **/_cache/
 
+# USD scene/robot assets under data/ are tracked via Git LFS (.gitattributes).
+# _cache/ and .thumbs/ stay ignored via their directory rules above.
+!source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/allstar_toilet/data/**/*.usd
+!source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/allstar_toilet/data/**/*.usda
+!source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/allstar_toilet/data/**/*.usdc
+!source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/allstar_toilet/data/**/*.usdz
+
 # Vendored cuRobo source: "builder" dirs and tests/ are code, not build artifacts
 !**/nvidia-curobo/curobo/**/builder/
 !**/nvidia-curobo/curobo/**/builder/**
